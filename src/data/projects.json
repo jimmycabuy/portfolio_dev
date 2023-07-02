@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Uwork",
+    "subtitle": "Graphic Design, UI/UX Design & Web Development",
+    "description": "I developed Uwork, a mobile app at La Capsule Bootcamp. It connects jobseekers with companies, simplifying and democratizing the hiring process. Uwork revolutionizes traditional hiring, making it user-friendly and accessible. This project showcases my expertise in mobile app development and UX design.",
+    "type": "app",
+    "src": "1-uwork",
+    "alt": "uwork",
+    "href": "https://youtu.be/pDvhGFhw3gk"
+  },
+  {
+    "title": "Portfolio thedailyjim",
+    "subtitle": "Web Design & Web Development",
+    "description": "During my free time, I have another name and a different passion alongside coding—meet 'thedailyjim,' the photographer in me. Ever since my early years, I have been captivated by the art of photography, constantly seeking opportunities to venture beyond the confines of my home and capture the essence of life and the beauty of the surrounding landscapes.",
+    "type": "web",
+    "src": "2-tdj",
+    "alt": "thedailyjim",
+    "href": "https://www.thedailyjim.be"
+  },
+  {
+    "title": "Decathlon #1",
+    "subtitle": "Web Development",
+    "description": "As part of the Decathlon recruitment process, I completed a web development exercise to demonstrate my abilities and qualify for the front-end developers team. The task involved replicating a Figma web page from scratch, showcasing my proficiency in HTML, CSS, and JavaScript. I focused on attention to detail, responsiveness, and clean code, aiming to deliver a seamless user experience.",
+    "type": "web",
+    "src": "3-decathlon",
+    "alt": "decathlon",
+    "href": "https://decathlon-exo.vercel.app/"
+  },
+  {
+    "title": "Decathlon #2",
+    "subtitle": "Web Development",
+    "description": "In the second Decathlon exercise, I recreated a Figma design while adding features like a search bar, pagination (12 sports per page), and the option to filter Decathlon represented sports. I prioritized a seamless user experience and followed coding best practices. This exercise showcased my ability to enhance functionality in web design.",
+    "type": "web",
+    "src": "4-decathlon",
+    "alt": "decathlon",
+    "href": "https://decathlon-jimmy.vercel.app/"
+  }
+]
