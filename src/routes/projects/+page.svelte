@@ -39,7 +39,7 @@
                 </svg>
               </span>
               <div class="title-wrapper">
-                <h2 class="text-xs sm:text-lg">{project.title}</h2>
+                <h2 class="text-sm sm:text-lg">{project.title}</h2>
                 <p class="tag text-xs sm:text-xs">{project.type}</p>
               </div>
             </div>
