@@ -39,16 +39,19 @@
                 </svg>
               </span>
               <div class="title-wrapper">
-                <h2>{project.title}</h2>
-                <p class="tag text-sm">{project.type}</p>
+                <h2 class="text-xs sm:text-lg">{project.title}</h2>
+                <p class="tag text-xs sm:text-xs">{project.type}</p>
               </div>
             </div>
-            <h4>{project.subtitle}</h4>
+            <h4 class="text-xs sm:text-lg">{project.subtitle}</h4>
           </div>
         </a>
       {/each}
       {#if currentProject}
-        <p class="mt-4 text-justify" transition:fade={{ duration: 300 }}>
+        <p
+          class="project_description mt-4 text-justify"
+          transition:fade={{ duration: 300 }}
+        >
           {currentProject.description}
         </p>
       {/if}
@@ -67,8 +70,8 @@
 
 <style>
   main {
-    height: 70vh;
-    max-height: 70vh;
+    height: 80vh;
+    max-height: 80vh;
     overflow: hidden;
   }
 
@@ -84,7 +87,7 @@
   .bloc_left {
     width: 50%;
     height: 70%;
-    padding-top: 3rem;
+    padding-top: 5rem;
   }
 
   .bloc_right {
@@ -178,5 +181,23 @@
 
   p {
     color: #a1a1a1;
+  }
+
+  @media (max-width: 1023px) {
+    main {
+      height: fit-content;
+      max-height: fit-content;
+    }
+    .container_projects {
+      height: fit-content;
+    }
+    .bloc_right,
+    .project_description {
+      display: none;
+    }
+    .bloc_left {
+      width: 100%;
+      padding: 0;
+    }
   }
 </style>

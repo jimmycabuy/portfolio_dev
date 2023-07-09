@@ -1,7 +1,7 @@
 [
   {
     "title": "Uwork",
-    "subtitle": "Graphic Design, UI/UX Design & Web Development",
+    "subtitle": "UI/UX Design & Web Development",
     "description": "I developed Uwork, a mobile app at La Capsule Bootcamp. It connects jobseekers with companies, simplifying and democratizing the hiring process. Uwork revolutionizes traditional hiring, making it user-friendly and accessible. This project showcases my expertise in mobile app development and UX design.",
     "type": "app",
     "src": "1-uwork",
@@ -9,7 +9,7 @@
     "href": "https://youtu.be/pDvhGFhw3gk"
   },
   {
-    "title": "Portfolio thedailyjim",
+    "title": "thedailyjim",
     "subtitle": "Web Design & Web Development",
     "description": "During my free time, I have another name and a different passion alongside coding—meet 'thedailyjim,' the photographer in me. Ever since my early years, I have been captivated by the art of photography, constantly seeking opportunities to venture beyond the confines of my home and capture the essence of life and the beauty of the surrounding landscapes.",
     "type": "web",
