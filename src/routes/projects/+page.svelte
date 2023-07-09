@@ -185,8 +185,8 @@
 
   @media (max-width: 1023px) {
     main {
-      height: max-content;
-      max-height: max-content;
+      height: fit-content;
+      max-height: fit-content;
     }
     .container_projects {
       height: fit-content;
