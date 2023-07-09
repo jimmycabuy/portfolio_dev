@@ -5,8 +5,8 @@
 </script>
 
 <main class="flex-1 bg-zinc-800 flex justify-center items-center">
-  <div class="flex justify-between py-6 px-12 items-center">
-    <div class="max-w-[50%]">
+  <div class="container_home flex justify-between py-6 px-12 items-center">
+    <div class="profile-container max-w-[50%]">
       <div class="flex flex-col gap-6">
         <div>
           <h3 class="inline-block">Front-end developer & photographer</h3>
@@ -115,5 +115,40 @@
   .image_banner {
     max-width: 75%;
     max-height: 75%;
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      font-size: xxx-large;
+    }
+    h3 {
+      font-size: smaller;
+    }
+    .image-container {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    main {
+      max-height: fit-content;
+    }
+    .container_home {
+      height: fit-content;
+      flex-direction: column;
+    }
+
+    .profile-container {
+      max-width: 100%;
+    }
+    .image-container {
+      max-width: 70%;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    p{
+      text-align: justify;
+    }
   }
 </style>

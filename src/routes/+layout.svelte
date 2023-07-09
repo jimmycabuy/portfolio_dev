@@ -5,7 +5,7 @@
   import "../app.css";
 </script>
 
-<div class="flex flex-col min-h-screen text-white">
+<div class="flex flex-col text-white sm:min-h-screen">
   <Navbar />
   <slot />
   <Footer />
