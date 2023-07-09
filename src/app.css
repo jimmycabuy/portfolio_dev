@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: "DeeDee";
-  src: url("../fonts/DeeDee.ttf") format("truetype");
+  src: url("/fonts/DeeDee.ttf") format("truetype");
   /* Autres déclarations de police si nécessaire, par exemple font-weight, font-style */
 }
 
 @font-face {
   font-family: "DeeDee-Bold";
-  src: url("../fonts/DeeDee-Bold.ttf") format("truetype");
+  src: url("/fonts/DeeDee-Bold.ttf") format("truetype");
   /* Autres déclarations de police si nécessaire, par exemple font-weight, font-style */
 }
 
