@@ -136,7 +136,7 @@
     }
 
     .profile-container {
-      max-width: 90%;
+      max-width: 100%;
     }
     .image-container {
       max-width: 90%;
