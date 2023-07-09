@@ -190,6 +190,7 @@
     }
     .container_projects {
       height: fit-content;
+      margin: 60px 0;
     }
     .bloc_right,
     .project_description {
