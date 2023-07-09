@@ -124,9 +124,6 @@
     h3 {
       font-size: smaller;
     }
-    .image-container {
-      max-width: 100%;
-    }
   }
 
   @media (max-width: 1023px) {
@@ -139,15 +136,15 @@
     }
 
     .profile-container {
-      max-width: 100%;
+      max-width: 90%;
     }
     .image-container {
-      max-width: 70%;
+      max-width: 90%;
       justify-content: center;
       margin-top: 2rem;
     }
 
-    p{
+    p {
       text-align: justify;
     }
   }
