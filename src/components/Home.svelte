@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>Jimmy Cabuy | Web Developer</title>
+  <title>Jimmy C. | Web Developer.</title>
 </svelte:head>
 
 <main class="flex-1 bg-zinc-800 flex justify-center items-center">
