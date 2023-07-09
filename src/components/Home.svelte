@@ -102,7 +102,7 @@
 
   .image-container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
   }
   .image_banner {
