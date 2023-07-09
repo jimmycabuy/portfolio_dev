@@ -9,7 +9,7 @@
     <div class="profile-container max-w-[50%]">
       <div class="flex flex-col gap-6">
         <div>
-          <h3 class="inline-block">Front-end developer & photographer</h3>
+          <h3 class="inline-block" style="padding-top: 5px;">Front-end developer & photographer</h3>
         </div>
         <h1 class="text-7xl">Jimmy Cabuy</h1>
         <p>

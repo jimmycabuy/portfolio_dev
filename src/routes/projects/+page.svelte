@@ -140,6 +140,7 @@
     border-radius: 20px;
     padding: 2px 7px;
     color: #fff;
+    padding-top: 3px;
   }
 
   h4 {
