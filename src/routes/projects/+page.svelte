@@ -9,6 +9,10 @@
   };
 </script>
 
+<svelte:head>
+  <title>thedailyjim | Projects</title>
+</svelte:head>
+
 <main class="py-6 px-12 flex-1 bg-zinc-800 flex justify-center items-center">
   <div class="container_projects">
     <div class="bloc_left">
