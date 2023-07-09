@@ -183,6 +183,12 @@
     color: #a1a1a1;
   }
 
+  @media (max-width: 387px){
+    .tag{
+      display: none;
+    }
+  }
+
   @media (max-width: 1023px) {
     main {
       height: fit-content;
