@@ -57,4 +57,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  @media (max-width: 1023px) {
+    .mouse-follower {
+      display: none;
+    }
+  }
 </style>
