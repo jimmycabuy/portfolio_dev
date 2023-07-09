@@ -4,6 +4,10 @@
   const pdf = "/document/jimmy_cabuy_resume.pdf";
 </script>
 
+<svelte:head>
+  <title>Jimmy Cabuy | Web Developer</title>
+</svelte:head>
+
 <main class="flex-1 bg-zinc-800 flex justify-center items-center">
   <div class="container_home flex justify-between py-6 px-12 items-center">
     <div class="profile-container max-w-[50%]">
