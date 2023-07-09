@@ -30,7 +30,6 @@ button:hover {
   cursor: pointer;
 }
 
-body{
-  max-height: 100vh;
+html{
   background-color: #27272A;
 }
