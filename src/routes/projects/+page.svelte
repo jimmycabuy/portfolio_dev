@@ -19,10 +19,9 @@
       {#each projectsJSON as project}
         <!-- svelte-ignore a11y-mouse-events-have-key-events -->
         <a
-          href={project.href}
+          href="projects/{project.route}"
           on:mouseover={() => setProject(project)}
           on:mouseout={() => setProject(null)}
-          target="_blank"
         >
           <div class="one_project">
             <div class="flex items-center">
@@ -189,8 +188,8 @@
     color: #a1a1a1;
   }
 
-  @media (max-width: 387px){
-    .tag{
+  @media (max-width: 387px) {
+    .tag {
       display: none;
     }
   }

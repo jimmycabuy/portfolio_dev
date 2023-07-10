@@ -6,7 +6,10 @@
     "type": "app",
     "src": "1-uwork",
     "alt": "uwork",
-    "href": "https://youtu.be/pDvhGFhw3gk"
+    "href": "https://youtu.be/pDvhGFhw3gk",
+    "route": "uwork",
+    "year": 2022,
+    "techno": "React Native, Node.js, MongoDB, Expo"
   },
   {
     "title": "thedailyjim",
@@ -15,7 +18,10 @@
     "type": "web",
     "src": "2-tdj",
     "alt": "thedailyjim",
-    "href": "https://www.thedailyjim.be"
+    "href": "https://www.thedailyjim.be",
+    "route": "thedailyjim",
+    "year": 2022,
+    "techno": "Sapper, Svelte, Vercel"
   },
   {
     "title": "Decathlon #1",
@@ -24,7 +30,10 @@
     "type": "web",
     "src": "3-decathlon",
     "alt": "decathlon",
-    "href": "https://decathlon-exo.vercel.app/"
+    "href": "https://decathlon-exo.vercel.app/",
+    "route": "decathlon-1",
+    "year": 2022,
+    "techno": "React, Vercel"
   },
   {
     "title": "Decathlon #2",
@@ -33,6 +42,9 @@
     "type": "web",
     "src": "4-decathlon",
     "alt": "decathlon",
-    "href": "https://decathlon-jimmy.vercel.app/"
+    "href": "https://decathlon-jimmy.vercel.app/",
+    "route": "decathlon-2",
+    "year": 2023,
+    "techno": "SveleKit, Vercel"
   }
 ]
