@@ -1,8 +1,19 @@
 <script>
+  const env = "https://jimmy-cabuy.vercel.app";
   import { page } from "$app/stores";
   const project = $page.params.project;
   import projectsJSON from "../../../data/projects.json";
   const subProjectDetails = projectsJSON.find((item) => item.route === project);
+
+  const previousProject = () => {
+    location.reload();
+    window.location.href = `${env}/projects/${subProjectDetails.previous}`;
+  };
+
+  const nextProject = () => {
+    location.reload();
+    window.location.href = `${env}/${subProjectDetails.next}`;
+  };
 </script>
 
 <main
@@ -45,7 +56,7 @@
             viewBox="3 0 24 20"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-5 h-5"
+            class="w-5 h-5 svg_view_website"
             color="#fff"
           >
             <path
@@ -58,6 +69,42 @@
         </span>
       </a>
     </div>
+  </div>
+  <div class="container_navigation">
+    <button on:click={previousProject} style="display: inline-flex; gap:5px">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-5 h-5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+        />
+      </svg>
+      Previous
+    </button>
+    <button on:click={nextProject} style="display: inline-flex; gap:5px">
+      Next
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-5 h-5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+        />
+      </svg>
+    </button>
   </div>
 </main>
 
@@ -117,7 +164,8 @@
     margin-bottom: 2rem;
   }
 
-  a {
+  a,
+  button {
     position: relative;
     text-decoration: none;
     width: fit-content;
@@ -133,7 +181,8 @@
     text-align: left;
   }
 
-  a::after {
+  a::after,
+  button::after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -144,7 +193,8 @@
     transition: width 0.3s ease-in-out;
   }
 
-  a:hover::after {
+  a:hover::after,
+  button:hover::after {
     width: 100%;
   }
 
@@ -152,6 +202,14 @@
     width: fit-content;
     max-width: fit-content;
     display: inline-flex;
+  }
+
+  .container_navigation {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
   }
 
   @media (max-width: 1023px) {
@@ -162,7 +220,8 @@
 
     .bloc_title,
     .container_image,
-    .container_one_project {
+    .container_one_project,
+    .container_navigation {
       width: 100%;
     }
 
@@ -184,7 +243,7 @@
     .bloc_right {
       width: 100%;
     }
-    svg {
+    .svg_view_website {
       display: none;
     }
     a {
