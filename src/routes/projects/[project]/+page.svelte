@@ -215,7 +215,7 @@
   @media (max-width: 1023px) {
     .container_one_project {
       flex-direction: column;
-      font-size: smaller;
+      font-size: 90%;
     }
 
     .bloc_title,
