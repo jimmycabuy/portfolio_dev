@@ -8,13 +8,15 @@
 <main
   class="py-6 px-12 flex-1 flex justify-center items-center flex-col md:px-24"
 >
-  <div class="bloc_image">
-    <img
-      src={`/assets/${subProjectDetails.src}.webp`}
-      alt={subProjectDetails.title}
-    />
+  <div class="container_image flex justify-center">
+    <div class="bloc_image">
+      <img
+        src={`/assets/${subProjectDetails.src}.webp`}
+        alt={subProjectDetails.title}
+      />
+    </div>
   </div>
-  <div class="w-full">
+  <div class="bloc_title">
     <h1>{subProjectDetails.title}</h1>
   </div>
   <div class="container_one_project">
@@ -71,8 +73,12 @@
     text-transform: uppercase;
   }
 
+  .container_image {
+    width: 75%;
+    margin-top: -7rem;
+  }
   .bloc_image {
-    border-radius: 40px;
+    border-radius: 0 0 40px 40px;
     overflow: hidden; /* Pour cacher les parties de l'image dépassant du bloc */
     margin-bottom: 2rem;
   }
@@ -87,8 +93,12 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    width: 100%;
+    width: 75%;
     gap: 1rem;
+  }
+
+  .bloc_title {
+    width: 75%;
   }
 
   .bloc_left {
@@ -150,10 +160,23 @@
       font-size: smaller;
     }
 
+    .bloc_title,
+    .container_image,
+    .container_one_project {
+      width: 100%;
+    }
+
+    .container_image {
+      margin-top: 0;
+    }
+
     .bloc_left {
       width: 100%;
     }
 
+    .bloc_image {
+      border-radius: 40px;
+    }
     .bloc_right {
       width: 100%;
     }
