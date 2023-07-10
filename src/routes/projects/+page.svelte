@@ -50,14 +50,14 @@
           </div>
         </a>
       {/each}
-      {#if currentProject}
+      <!-- {#if currentProject}
         <p
           class="project_description mt-4 text-justify"
           transition:fade={{ duration: 300 }}
         >
           {currentProject.description}
         </p>
-      {/if}
+      {/if} -->
     </div>
     <div class="bloc_right">
       {#if currentProject}
@@ -91,7 +91,9 @@
   .bloc_left {
     width: 50%;
     height: 70%;
-    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .bloc_right {

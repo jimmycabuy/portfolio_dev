@@ -157,11 +157,11 @@
     .bloc_right {
       width: 100%;
     }
-    svg{
-        display: none;
+    svg {
+      display: none;
     }
-    a{
-        color: #a1a1a1;
+    a {
+      color: #a1a1a1;
     }
   }
 </style>
