@@ -12,7 +12,7 @@
 
   const nextProject = () => {
     location.reload();
-    window.location.href = `${env}/${subProjectDetails.next}`;
+    window.location.href = `${env}/projects/${subProjectDetails.next}`;
   };
 </script>
 
