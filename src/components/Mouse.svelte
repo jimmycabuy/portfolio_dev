@@ -45,6 +45,7 @@
     border-radius: 50%;
     pointer-events: none;
     background: none;
+    z-index: 1;
   }
 
   .mouse-follower .dot {
