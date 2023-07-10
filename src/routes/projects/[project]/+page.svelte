@@ -172,7 +172,7 @@
   }
 
   .col1 {
-    width: 30%;
+    width: 15%;
     text-align: left;
   }
 
