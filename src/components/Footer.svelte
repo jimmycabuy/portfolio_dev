@@ -5,7 +5,7 @@
 </script>
 
 <footer
-  class="bg-zinc-800 py-6 px-12 flex flex-row justify-between items-center"
+  class="py-6 px-12 flex flex-row justify-between items-center"
 >
   <div class="block_left_home flex flex-row justify-start items-center gap-16">
     <!-- <div class="w-20 h-20 rounded-full overflow-hidden">
@@ -64,6 +64,7 @@
   footer {
     height: 10vh;
     max-height: 10vh;
+    z-index: 1;
   }
   .email_me {
     padding-left: 0.5rem;

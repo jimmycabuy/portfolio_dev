@@ -2,7 +2,7 @@
 </script>
 
 <nav
-  class="bg-zinc-800 py-6 px-12 flex flex-row justify-between items-center text-white"
+  class="py-6 px-12 flex flex-row justify-between items-center text-white"
 >
   <div>
     <h2 class="text-lg sm:text-3xl">
@@ -18,6 +18,7 @@
   nav {
     height: 10vh;
     max-height: 10vh;
+    z-index: 1;
   }
 
   @media (max-width: 767px) {

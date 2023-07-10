@@ -13,7 +13,7 @@
   <title>Jimmy C. | My Work.</title>
 </svelte:head>
 
-<main class="py-6 px-12 flex-1 bg-zinc-800 flex justify-center items-center">
+<main class="py-6 px-12 flex-1 flex justify-center items-center">
   <div class="container_projects">
     <div class="bloc_left">
       {#each projectsJSON as project}
@@ -77,6 +77,7 @@
     height: 80vh;
     max-height: 80vh;
     overflow: hidden;
+    z-index: 1;
   }
 
   .container_projects {

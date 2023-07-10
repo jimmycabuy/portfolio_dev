@@ -8,7 +8,7 @@
   <title>Jimmy C. | Web Developer.</title>
 </svelte:head>
 
-<main class="flex-1 bg-zinc-800 flex justify-center items-center">
+<main class="flex-1flex justify-center items-center">
   <div class="container_home flex justify-between py-6 px-12 items-center">
     <div class="profile-container max-w-[50%]">
       <div class="flex flex-col gap-6">
@@ -71,6 +71,7 @@
     height: 80vh;
     max-height: 80vh;
     overflow: hidden;
+    z-index: 1;
   }
   h3 {
     /* background-color: #fff; */
