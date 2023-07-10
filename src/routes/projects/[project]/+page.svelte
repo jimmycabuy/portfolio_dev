@@ -141,7 +141,7 @@
     flex-direction: row;
     height: 100%;
     width: 75%;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .bloc_title {
@@ -177,8 +177,8 @@
   }
 
   .col2 {
-    width: 70%;
-    text-align: left;
+    width: 85%;
+    text-align: right;
   }
 
   a::after,
@@ -231,10 +231,6 @@
 
     .bloc_left {
       width: 100%;
-    }
-
-    .col2 {
-      text-align: right;
     }
 
     .bloc_image {
