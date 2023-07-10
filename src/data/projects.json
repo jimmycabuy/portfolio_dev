@@ -25,7 +25,15 @@
     "year": 2022,
     "techno": "Sapper, Svelte, Vercel",
     "previous": "uwork",
-    "next": "decathlon-1"
+    "next": "decathlon-1",
+    "pictures": [
+      "tdj-screen-1",
+      "tdj-screen-2",
+      "tdj-screen-3",
+      "tdj-screen-4",
+      "tdj-screen-5",
+      "tdj-screen-6"
+    ]
   },
   {
     "title": "Decathlon #1",

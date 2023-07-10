@@ -70,6 +70,16 @@
       </a>
     </div>
   </div>
+
+  {#if subProjectDetails.pictures}
+    <div class="container_image_screens">
+      {#each subProjectDetails.pictures as picture}
+        <div class="bloc_image_screen">
+          <img src="/assets/screens/{picture}.webp" alt="test" />
+        </div>
+      {/each}
+    </div>
+  {/if}
   <div class="container_navigation">
     <button on:click={previousProject} style="display: inline-flex; gap:5px">
       <svg
@@ -126,14 +136,30 @@
   }
   .bloc_image {
     border-radius: 0 0 40px 40px;
-    overflow: hidden; /* Pour cacher les parties de l'image dépassant du bloc */
+    overflow: hidden;
     margin-bottom: 2rem;
   }
 
   .bloc_image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Pour ajuster l'image en conservant son ratio d'aspect */
+    object-fit: cover;
+  }
+
+  .container_image_screens {
+    width: 75%;
+  }
+
+  .bloc_image_screen {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .bloc_image_screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .container_one_project {
@@ -202,6 +228,7 @@
     width: fit-content;
     max-width: fit-content;
     display: inline-flex;
+    margin-bottom: 2rem;
   }
 
   .container_navigation {
@@ -221,7 +248,8 @@
     .bloc_title,
     .container_image,
     .container_one_project,
-    .container_navigation {
+    .container_navigation,
+    .container_image_screens {
       width: 100%;
     }
 
