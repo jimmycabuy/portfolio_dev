@@ -174,6 +174,10 @@
       width: 100%;
     }
 
+    .col2 {
+      text-align: right;
+    }
+
     .bloc_image {
       border-radius: 40px;
     }
