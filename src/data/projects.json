@@ -12,9 +12,14 @@
     "techno": "React Native, Node.js, MongoDB",
     "previous": "decathlon-2",
     "next": "thedailyjim",
-    "pictures": [
-      "uwork-screen-1",
-      "uwork-screen-2"
+    "pictures": ["uwork-screen-1", "uwork-screen-2"],
+    "picturesMobile": [
+      "uwork-screen-1m",
+      "uwork-screen-2m",
+      "uwork-screen-3m",
+      "uwork-screen-4m",
+      "uwork-screen-5m",
+      "uwork-screen-6m"
     ]
   },
   {
@@ -37,6 +42,14 @@
       "tdj-screen-4",
       "tdj-screen-5",
       "tdj-screen-6"
+    ],
+    "picturesMobile": [
+      "tdj-screen-1",
+      "tdj-screen-2",
+      "tdj-screen-3",
+      "tdj-screen-4",
+      "tdj-screen-5",
+      "tdj-screen-6"
     ]
   },
   {
@@ -52,7 +65,8 @@
     "techno": "React, Vercel",
     "previous": "thedailyjim",
     "next": "decathlon-2",
-    "pictures": ["dec1-screen-1", "dec1-screen-2"]
+    "pictures": ["dec1-screen-1", "dec1-screen-2"],
+    "picturesMobile": ["dec1-screen-1", "dec1-screen-2"]
   },
   {
     "title": "Decathlon #2",
@@ -67,6 +81,7 @@
     "techno": "SveleKit, Vercel",
     "previous": "decathlon-1",
     "next": "uwork",
-    "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"]
+    "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"],
+    "picturesMobile": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"]
   }
 ]

@@ -72,10 +72,19 @@
   </div>
 
   {#if subProjectDetails.pictures}
-    <div class="container_image_screens">
+    <div class="container_image_screens desktop">
       {#each subProjectDetails.pictures as picture}
         <div class="bloc_image_screen">
-          <img src="/assets/screens/{picture}.webp" alt="test" />
+          <img src="/assets/screens/{picture}.webp" alt={picture} />
+        </div>
+      {/each}
+    </div>
+  {/if}
+  {#if subProjectDetails.picturesMobile}
+    <div class="container_image_screens mobile">
+      {#each subProjectDetails.picturesMobile as picture}
+        <div class="bloc_image_screen">
+          <img src="/assets/screens/{picture}.webp" alt={picture} />
         </div>
       {/each}
     </div>
@@ -148,6 +157,10 @@
 
   .container_image_screens {
     width: 75%;
+  }
+
+  .mobile {
+    display: none;
   }
 
   .bloc_image_screen {
@@ -272,6 +285,15 @@
     }
     a {
       color: #a1a1a1;
+    }
+  }
+
+  @media (max-width: 787px) {
+    .mobile {
+      display: block;
+    }
+    .desktop{
+      display: none;
     }
   }
 </style>
