@@ -4,10 +4,8 @@
   const year = date.getFullYear();
 </script>
 
-<footer
-  class="py-6 px-12 flex flex-row justify-between items-center"
->
-  <div class="block_left_home flex flex-row justify-start items-center gap-16">
+<footer class="py-6 px-12 flex flex-row justify-between items-center">
+  <div class="block_left_home flex flex-row justify-start items-center gap-8">
     <!-- <div class="w-20 h-20 rounded-full overflow-hidden">
       <img
         src="https://jimmycabuy.vercel.app/images/portrait.webp"
@@ -22,9 +20,9 @@
         target="_blank"
       >
         <span class="icon">{@html mail}</span>
-        <span class="email_me text-xl text-zinc-400">Email me</span>
+        <span class="email_me text-md text-zinc-400">Email me</span>
         <span class="share mb-1 hover:cursor-pointer">
-          {@html share}
+          <!-- {@html share} -->
         </span>
       </a>
     </div>
@@ -35,9 +33,9 @@
         target="_blank"
       >
         <span class="icon">{@html github}</span>
-        <span class="email_me text-xl text-zinc-400">Github</span>
+        <span class="email_me text-md text-zinc-400">Github</span>
         <span class="share mb-1 hover:cursor-pointer">
-          {@html share}
+          <!-- {@html share} -->
         </span>
       </a>
     </div>
@@ -48,9 +46,9 @@
         target="_blank"
       >
         <span class="icon">{@html instagram}</span>
-        <span class="email_me text-xl text-zinc-400">Instagram</span>
+        <span class="email_me text-md text-zinc-400">Instagram</span>
         <span class="share mb-1 hover:cursor-pointer">
-          {@html share}
+          <!-- {@html share} -->
         </span>
       </a>
     </div>
@@ -71,23 +69,22 @@
     padding-right: 0.5rem;
   }
   .icon {
-    margin-bottom: 0.085rem;
+    margin-bottom: 0.2rem;
   }
 
   /* Media Queries*/
 
   /* smartphone  */
   @media (max-width: 767px) {
-    .email_me {
-      font-size: medium;
-    }
-
     p {
       font-size: smaller;
     }
   }
   /* tablet  */
   @media (max-width: 1023px) {
+    .email_me {
+      font-size: large;
+    }
     footer {
       gap: 3rem;
       height: fit-content;
