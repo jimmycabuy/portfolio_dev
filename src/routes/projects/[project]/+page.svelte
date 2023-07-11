@@ -292,7 +292,7 @@
     .mobile {
       display: block;
     }
-    .desktop{
+    .desktop {
       display: none;
     }
   }
