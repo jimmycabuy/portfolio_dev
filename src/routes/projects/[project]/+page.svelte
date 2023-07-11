@@ -153,7 +153,7 @@
   .bloc_image_screen {
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   .bloc_image_screen img {
