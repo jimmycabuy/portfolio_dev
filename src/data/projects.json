@@ -14,12 +14,12 @@
     "next": "thedailyjim",
     "pictures": ["uwork-screen-1", "uwork-screen-2"],
     "picturesMobile": [
-      "uwork-screen-1m",
-      "uwork-screen-2m",
-      "uwork-screen-3m",
-      "uwork-screen-4m",
-      "uwork-screen-5m",
-      "uwork-screen-6m"
+      "uwork-screen-mobile-1",
+      "uwork-screen-mobile-2",
+      "uwork-screen-mobile-3",
+      "uwork-screen-mobile-4",
+      "uwork-screen-mobile-5",
+      "uwork-screen-mobile-6"
     ]
   },
   {
@@ -44,12 +44,12 @@
       "tdj-screen-6"
     ],
     "picturesMobile": [
-      "tdj-screen-1",
-      "tdj-screen-2",
-      "tdj-screen-3",
-      "tdj-screen-4",
-      "tdj-screen-5",
-      "tdj-screen-6"
+      "tdj-screen-mobile-1",
+      "tdj-screen-mobile-2",
+      "tdj-screen-mobile-3",
+      "tdj-screen-mobile-4",
+      "tdj-screen-mobile-5",
+      "tdj-screen-mobile-6"
     ]
   },
   {
@@ -66,7 +66,7 @@
     "previous": "thedailyjim",
     "next": "decathlon-2",
     "pictures": ["dec1-screen-1", "dec1-screen-2"],
-    "picturesMobile": ["dec1-screen-1", "dec1-screen-2"]
+    "picturesMobile": ["dec1-screen-mobile-1", "dec1-screen-mobile-2"]
   },
   {
     "title": "Decathlon #2",
@@ -82,6 +82,6 @@
     "previous": "decathlon-1",
     "next": "uwork",
     "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"],
-    "picturesMobile": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"]
+    "picturesMobile": ["dec2-screen-mobile-1", "dec2-screen-mobile-2", "dec2-screen-mobile-3"]
   }
 ]
