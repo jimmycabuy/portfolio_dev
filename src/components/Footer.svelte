@@ -1,18 +1,11 @@
 <script>
-  import { mail, share, github, instagram } from "../icons";
+  import { mail, github, instagram, linkedin } from "../icons";
   const date = new Date();
   const year = date.getFullYear();
 </script>
 
 <footer class="py-6 px-12 flex flex-row justify-between items-center 4xl:px-72">
   <div class="block_left_home flex flex-row justify-start items-center gap-8">
-    <!-- <div class="w-20 h-20 rounded-full overflow-hidden">
-      <img
-        src="https://jimmycabuy.vercel.app/images/portrait.webp"
-        alt="jimmy-cabuy-profile-picture"
-        class="w-full h-full object-cover scale-125"
-      />
-    </div> -->
     <div class="flex flex-row justify-between gap-1 items-end">
       <a
         class="flex items-center"
@@ -21,9 +14,7 @@
       >
         <span class="icon">{@html mail}</span>
         <span class="email_me text-md text-zinc-400">Email me</span>
-        <span class="share mb-1 hover:cursor-pointer">
-          <!-- {@html share} -->
-        </span>
+        <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
     <div class="flex flex-row justify-between gap-1 items-end">
@@ -34,9 +25,18 @@
       >
         <span class="icon">{@html github}</span>
         <span class="email_me text-md text-zinc-400">Github</span>
-        <span class="share mb-1 hover:cursor-pointer">
-          <!-- {@html share} -->
-        </span>
+        <span class="share mb-1 hover:cursor-pointer" />
+      </a>
+    </div>
+    <div class="flex flex-row justify-between gap-1 items-end">
+      <a
+        class="flex items-center"
+        href="https://linkedin.com/in/jimmycabuy"
+        target="_blank"
+      >
+        <span class="icon">{@html linkedin}</span>
+        <span class="email_me text-md text-zinc-400">LinkedIn</span>
+        <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
     <div class="flex flex-row justify-between gap-1 items-end">
@@ -47,9 +47,7 @@
       >
         <span class="icon">{@html instagram}</span>
         <span class="email_me text-md text-zinc-400">Instagram</span>
-        <span class="share mb-1 hover:cursor-pointer">
-          <!-- {@html share} -->
-        </span>
+        <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
   </div>

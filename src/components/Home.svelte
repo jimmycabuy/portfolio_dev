@@ -17,18 +17,6 @@
         </div>
         <h1 class="text-7xl">Jimmy Cabuy</h1>
         <p>
-          <!-- Hey! I'm Jimmy, a versatile full-stack web/mobile developer, web
-          designer, and photographer. With a degree in e-business, I gained over
-          2 years of experience in digital marketing, specializing in content
-          creation, social ads, and social media management. I then embarked on
-          a 6-month adventure capturing the essence of diverse cultures and
-          landscapes through my camera lens. Passionate about web development, I
-          completed an intensive JavaScript Bootcamp, solidifying my technical
-          foundations. Currently, I'm thrilled to be a front-end developer at
-          Decathlon, creating exceptional web experiences. My journey from
-          digital marketing to world exploration and web development has shaped
-          me into a curious and creative professional, constantly seeking new
-          challenges. -->
           Hi! I'm Jimmy, a versatile full-stack developer, designer, and photographer
           with a degree in e-business. I have 2+ years of digital marketing experience,
           specializing in content creation and social media management. After a 6-month
