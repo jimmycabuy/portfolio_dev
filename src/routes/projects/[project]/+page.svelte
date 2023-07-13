@@ -145,7 +145,7 @@
 
   .container_image {
     width: 75%;
-    margin-top: -7rem;
+    margin-top: -7.5rem;
   }
   .bloc_image {
     border-radius: 0 0 40px 40px;
