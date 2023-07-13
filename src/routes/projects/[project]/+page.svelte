@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-  <title>Jimmy C. | {subProjectDetails.title}.</title>
+  <title>Jimmy C. | My Work. | {subProjectDetails.title}.</title>
 </svelte:head>
 
 <main
