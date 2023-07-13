@@ -1,5 +1,5 @@
 <script>
-  const env = "https://jimmy-cabuy.vercel.app";
+  const env = "https://jimmycabuy.vercel.app";
   import { page } from "$app/stores";
   const project = $page.params.project;
   import projectsJSON from "../../../data/projects.json";
