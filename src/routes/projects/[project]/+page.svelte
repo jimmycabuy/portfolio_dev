@@ -16,6 +16,10 @@
   };
 </script>
 
+<svelte:head>
+  <title>Jimmy C. | {subProjectDetails.title}.</title>
+</svelte:head>
+
 <main
   class="py-6 px-12 flex-1 flex justify-center items-center flex-col md:px-24"
 >
