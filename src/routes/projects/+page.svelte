@@ -43,21 +43,13 @@
               </span>
               <div class="title-wrapper">
                 <h2 class="text-sm sm:text-lg">{project.title}</h2>
-                <p class="tag text-xs sm:text-xs">{project.type}</p>
+                <p class="tag text-xs sm:text-xs">{project.tag}</p>
               </div>
             </div>
             <h4 class="text-xs sm:text-lg">{project.subtitle}</h4>
           </div>
         </a>
       {/each}
-      <!-- {#if currentProject}
-        <p
-          class="project_description mt-4 text-justify"
-          transition:fade={{ duration: 300 }}
-        >
-          {currentProject.description}
-        </p>
-      {/if} -->
     </div>
     <div class="bloc_right">
       {#if currentProject}
@@ -102,23 +94,6 @@
     width: 50%;
     height: 70%;
   }
-
-  /* .animate-slide-in {
-    animation-name: slideIn;
-    animation-duration: 0.7s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  } */
 
   .one_project {
     display: flex;
@@ -205,8 +180,7 @@
       height: fit-content;
       margin: 40px 0;
     }
-    .bloc_right,
-    .project_description {
+    .bloc_right {
       display: none;
     }
     .bloc_left {

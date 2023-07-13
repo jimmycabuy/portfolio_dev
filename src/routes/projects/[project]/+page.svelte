@@ -65,7 +65,7 @@
               d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
             />
           </svg>
-          <span>View website</span>
+          <span>View {subProjectDetails.type}</span>
         </span>
       </a>
     </div>
