@@ -2,7 +2,7 @@
 </script>
 
 <nav
-  class="py-6 px-12 flex flex-row justify-between items-center text-white"
+  class="py-6 px-12 flex flex-row justify-between items-center text-white 4xl:px-72"
 >
   <div>
     <h2 class="text-lg sm:text-3xl">

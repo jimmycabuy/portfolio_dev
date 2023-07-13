@@ -4,7 +4,7 @@
   const year = date.getFullYear();
 </script>
 
-<footer class="py-6 px-12 flex flex-row justify-between items-center">
+<footer class="py-6 px-12 flex flex-row justify-between items-center 4xl:px-72">
   <div class="block_left_home flex flex-row justify-start items-center gap-8">
     <!-- <div class="w-20 h-20 rounded-full overflow-hidden">
       <img

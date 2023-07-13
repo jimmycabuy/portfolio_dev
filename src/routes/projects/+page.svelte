@@ -13,7 +13,7 @@
   <title>Jimmy C. | My Work.</title>
 </svelte:head>
 
-<main class="py-6 px-12 flex-1 flex justify-center items-center">
+<main class="py-6 px-12 flex-1 flex justify-center items-center 4xl:px-72">
   <div class="container_projects">
     <div class="bloc_left">
       {#each projectsJSON as project}

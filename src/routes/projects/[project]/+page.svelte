@@ -21,7 +21,7 @@
 </svelte:head>
 
 <main
-  class="py-6 px-12 flex-1 flex justify-center items-center flex-col md:px-24"
+  class="py-6 px-12 flex-1 flex justify-center items-center flex-col md:px-24 4xl:px-72"
 >
   <div class="container_image flex justify-center">
     <div class="bloc_image">

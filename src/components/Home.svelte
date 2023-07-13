@@ -8,8 +8,8 @@
   <title>Jimmy C. | Web Developer.</title>
 </svelte:head>
 
-<main class="flex-1 flex justify-center items-center">
-  <div class="container_home flex justify-between py-6 px-12 items-center">
+<main class="flex-1 flex justify-center items-center py-6 px-12 4xl:px-72">
+  <div class="container_home flex justify-between items-center">
     <div class="profile-container max-w-[50%]">
       <div class="flex flex-col gap-6">
         <div>
