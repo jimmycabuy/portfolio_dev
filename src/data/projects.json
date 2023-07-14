@@ -57,7 +57,7 @@
   {
     "title": "Decathlon #1",
     "subtitle": "Web Development",
-    "description": "As part of the Decathlon recruitment process, I completed a web development exercise to demonstrate my abilities and qualify for the front-end developers team. The task involved replicating a Figma web page from scratch, showcasing my proficiency in HTML, CSS, and JavaScript. I focused on attention to detail, responsiveness, and clean code, aiming to deliver a seamless user experience.",
+    "description": "As a personal project, I recreated selected pages of the Decathlon website using Decathlon APIs just for fun. I successfully replicated web pages from scratch, demonstrating proficiency in HTML, CSS, and JavaScript. I prioritized attention to detail, responsiveness, and clean code to deliver a seamless user experience.",
     "tag": "web",
     "type": "website",
     "src": "3-decathlon",
@@ -74,7 +74,7 @@
   {
     "title": "Decathlon #2",
     "subtitle": "Web Development",
-    "description": "In the second Decathlon exercise, I recreated a Figma design while adding features like a search bar, pagination (12 sports per page), and the option to filter Decathlon represented sports. I prioritized a seamless user experience and followed coding best practices. This exercise showcased my ability to enhance functionality in web design.",
+    "description": "For fun, I recreated a Decathlon-inspired design using Decathlon APIs. I added features like a search bar, pagination (12 sports per page), and the ability to filter Decathlon represented sports. Emphasizing a seamless user experience, I followed coding best practices to enhance functionality in web design.",
     "tag": "web",
     "type": "website",
     "src": "4-decathlon",
