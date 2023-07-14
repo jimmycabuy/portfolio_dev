@@ -13,7 +13,7 @@
         target="_blank"
       >
         <span class="icon">{@html mail}</span>
-        <span class="email_me text-md text-zinc-400">Email me</span>
+        <span class="link_footer_name text-md text-zinc-400">Email me</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
@@ -24,7 +24,7 @@
         target="_blank"
       >
         <span class="icon">{@html github}</span>
-        <span class="email_me text-md text-zinc-400">Github</span>
+        <span class="link_footer_name text-md text-zinc-400">Github</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
@@ -35,7 +35,7 @@
         target="_blank"
       >
         <span class="icon">{@html linkedin}</span>
-        <span class="email_me text-md text-zinc-400">LinkedIn</span>
+        <span class="link_footer_name text-md text-zinc-400">LinkedIn</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
@@ -46,7 +46,7 @@
         target="_blank"
       >
         <span class="icon">{@html instagram}</span>
-        <span class="email_me text-md text-zinc-400">Instagram</span>
+        <span class="link_footer_name text-md text-zinc-400">Instagram</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
@@ -62,7 +62,7 @@
     max-height: 10vh;
     z-index: 1;
   }
-  .email_me {
+  .link_footer_name {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
@@ -80,25 +80,14 @@
   }
   /* tablet  */
   @media (max-width: 1023px) {
-    .email_me {
-      font-size: smaller;
-    }
     footer {
       gap: 3rem;
       height: fit-content;
       max-height: fit-content;
-    }
-    footer,
-    .block_left_home {
       flex-direction: column;
     }
 
-    .block_left_home {
-      gap: 0;
-    }
-
-    .icon,
-    .share {
+    .link_footer_name {
       display: none;
     }
   }
