@@ -185,7 +185,7 @@
     }
     .container_projects {
       height: fit-content;
-      margin: 80px 0;
+      margin: 60px 0;
     }
     .bloc_right {
       display: none;
