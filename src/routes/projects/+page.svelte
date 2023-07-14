@@ -148,7 +148,7 @@
     gap: 12px;
   }
 
-  .one_project:hover .title-wrapper {
+  /* .one_project:hover .title-wrapper {
     animation: bounce 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) alternate;
   }
 
@@ -159,7 +159,7 @@
     to {
       transform: translateX(20px);
     }
-  }
+  } */
 
   p {
     color: #a1a1a1;
