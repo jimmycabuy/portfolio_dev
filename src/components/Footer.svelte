@@ -81,7 +81,7 @@
   /* tablet  */
   @media (max-width: 1023px) {
     .email_me {
-      font-size: large;
+      font-size: smaller;
     }
     footer {
       gap: 3rem;
