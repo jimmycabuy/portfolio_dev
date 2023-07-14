@@ -231,22 +231,25 @@
     text-align: right;
   }
 
-  a::after,
-  button::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s ease-in-out;
+  @media (min-width: 1023px) {
+    a::after,
+    button::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease-in-out;
+    }
+  
+    a:hover::after,
+    button:hover::after {
+      width: 100%;
+    }
   }
 
-  a:hover::after,
-  button:hover::after {
-    width: 100%;
-  }
 
   .view_website {
     width: fit-content;

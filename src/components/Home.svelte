@@ -13,16 +13,19 @@
     <div class="profile-container max-w-[50%]">
       <div class="flex flex-col gap-6">
         <div>
-          <h3 class="inline-block" style="padding-top: 5px;">Front-end developer & photographer</h3>
+          <h3 class="inline-block" style="padding-top: 5px;">
+            Front-end developer & photographer
+          </h3>
         </div>
         <h1 class="text-7xl">Jimmy Cabuy</h1>
         <p>
-          Hi! I'm Jimmy, a versatile full-stack developer, designer, and photographer
-          with a degree in e-business. I have 2+ years of digital marketing experience,
-          specializing in content creation and social media management. After a 6-month
-          photography adventure, I completed a JavaScript Bootcamp and now work as
-          a front-end developer at Decathlon. I'm a curious and creative professional
-          always seeking new challenges.
+          Hi! I'm Jimmy, a versatile full-stack developer, designer, and
+          photographer with a degree in e-business. I have 2+ years of digital
+          marketing experience, specializing in content creation and social
+          media management. After a 6-month photography adventure, I completed a
+          JavaScript Bootcamp and now work as a front-end developer at
+          Decathlon. I'm a curious and creative professional always seeking new
+          challenges.
         </p>
         <!-- <Skills /> -->
         <a href={pdf} target="_blank" rel="noopener noreferrer">
@@ -85,19 +88,21 @@
     width: fit-content;
   }
 
-  a::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #a1a1a1;
-    transition: width 0.3s ease-in-out;
-  }
+  @media (min-width: 1023px) {
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #a1a1a1;
+      transition: width 0.3s ease-in-out;
+    }
 
-  a:hover::after {
-    width: 100%;
+    a:hover::after {
+      width: 100%;
+    }
   }
 
   .image-container {
