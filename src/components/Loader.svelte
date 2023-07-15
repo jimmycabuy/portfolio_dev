@@ -70,4 +70,11 @@
       transform: rotate(360deg);
     }
   }
+
+  @media (max-width: 787px) {
+    .loader {
+      width: 70px;
+      height: 70px;
+    }
+  }
 </style>
