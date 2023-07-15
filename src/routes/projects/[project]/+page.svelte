@@ -4,6 +4,7 @@
   const project = $page.params.project;
   import projectsJSON from "../../../data/projects.json";
   const subProjectDetails = projectsJSON.find((item) => item.route === project);
+  import { blur } from "svelte/transition";
 
   const previousProject = () => {
     location.reload();
@@ -22,10 +23,13 @@
 
 <main
   class="py-6 px-12 flex-1 flex justify-center items-center flex-col md:px-24 4xl:px-72"
+  out:blur
+  in:blur
 >
   <div class="container_image flex justify-center">
     <div class="bloc_image">
       <img
+        preload
         src={`/assets/${subProjectDetails.src}.webp`}
         alt={subProjectDetails.title}
       />
@@ -79,7 +83,7 @@
     <div class="container_image_screens desktop">
       {#each subProjectDetails.pictures as picture}
         <div class="bloc_image_screen">
-          <img src="/assets/screens/{picture}.webp" alt={picture} />
+          <img preload src="/assets/screens/{picture}.webp" alt={picture} />
         </div>
       {/each}
     </div>
@@ -88,7 +92,7 @@
     <div class="container_image_screens mobile">
       {#each subProjectDetails.picturesMobile as picture}
         <div class="bloc_image_screen">
-          <img src="/assets/screens/{picture}.webp" alt={picture} />
+          <img preload src="/assets/screens/{picture}.webp" alt={picture} />
         </div>
       {/each}
     </div>
@@ -243,13 +247,12 @@
       background-color: #fff;
       transition: width 0.3s ease-in-out;
     }
-  
+
     a:hover::after,
     button:hover::after {
       width: 100%;
     }
   }
-
 
   .view_website {
     width: fit-content;

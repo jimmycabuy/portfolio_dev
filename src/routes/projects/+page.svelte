@@ -1,6 +1,6 @@
 <script>
   import projectsJSON from "../../data/projects.json";
-  import { fade } from "svelte/transition";
+  import { blur } from "svelte/transition";
 
   let currentProject = null;
 
@@ -13,7 +13,7 @@
   <title>Jimmy C. | My Work.</title>
 </svelte:head>
 
-<main class="py-6 px-12 flex-1 flex justify-center items-center 4xl:px-72">
+<main class="py-6 px-12 flex-1 flex justify-center items-center 4xl:px-72" in:blur>
   <div class="container_projects">
     <div class="bloc_left">
       {#each projectsJSON as project}
