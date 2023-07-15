@@ -20,7 +20,7 @@
   });
 </script>
 
-<div class="loading min-h-screen">
+<div class="loading">
   <span class="loader" />
 </div>
 
@@ -32,6 +32,7 @@
     height: 100vh;
     max-height: 100vh;
     z-index: 1;
+    overflow: hidden;
   }
 
   .loader {
