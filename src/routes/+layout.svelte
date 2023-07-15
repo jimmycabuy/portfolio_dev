@@ -7,9 +7,9 @@
   import "../app.css";
   let isLoading = true;
 
-  // setTimeout(() => {
-  //   isLoading = false;
-  // }, 2500);
+  setTimeout(() => {
+    isLoading = false;
+  }, 2500);
 </script>
 
 {#if isLoading}
