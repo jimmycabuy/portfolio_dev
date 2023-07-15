@@ -20,7 +20,7 @@
   });
 </script>
 
-<div class="loading">
+<div class="loading min-h-screen">
   <span class="loader" />
 </div>
 
@@ -31,6 +31,7 @@
     align-items: center;
     height: 100vh;
     max-height: 100vh;
+    z-index: 1;
   }
 
   .loader {

@@ -12,14 +12,15 @@
   }, 2500);
 </script>
 
-{#if isLoading}
-  <Loader />
-{:else}
-  <div class="flex flex-col text-white sm:min-h-screen">
+<div class="flex flex-col text-white sm:min-h-screen">
+  {#if isLoading}
+    <Loader />
+    <Background />
+  {:else}
     <Navbar />
     <slot />
     <Footer />
     <Mouse />
     <Background />
-  </div>
-{/if}
+  {/if}
+</div>
