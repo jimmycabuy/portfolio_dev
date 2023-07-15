@@ -77,6 +77,7 @@
     .loader {
       width: 70px;
       height: 70px;
+      height: 80vh;
     }
   }
 </style>
