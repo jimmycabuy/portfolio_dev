@@ -74,10 +74,12 @@
   }
 
   @media (max-width: 787px) {
+    .loading {
+      height: 80vh;
+    }
     .loader {
       width: 70px;
       height: 70px;
-      height: 80vh;
     }
   }
 </style>
