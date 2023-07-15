@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   onMount(() => {
-    var loadingDiv = document.querySelector(".loading");
+    var loadingDiv = document.querySelector(".loader");
     loadingDiv.style.opacity = "0";
     loadingDiv.style.filter = "blur(6px)";
     setTimeout(function () {
@@ -10,11 +10,11 @@
       loadingDiv.style.filter = "blur(0)";
     }, 500);
     setTimeout(function () {
-      var loadingDiv = document.querySelector(".loading");
+      var loadingDiv = document.querySelector(".loader");
       loadingDiv.style.filter = "blur(6px)";
     }, 2200);
     setTimeout(function () {
-      var loadingDiv = document.querySelector(".loading");
+      var loadingDiv = document.querySelector(".loader");
       loadingDiv.style.opacity = "0";
     }, 2400);
   });
@@ -31,9 +31,6 @@
     align-items: center;
     height: 100vh;
     max-height: 100vh;
-    opacity: 0;
-    filter: blur(6px);
-    transition: opacity 0.5s, filter 0.5s;
   }
 
   .loader {
@@ -45,6 +42,9 @@
     box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
       0 5px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    opacity: 0;
+    filter: blur(6px);
+    transition: opacity 0.5s, filter 0.5s;
   }
   .loader:before,
   .loader:after {
