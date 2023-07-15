@@ -1,4 +1,5 @@
 <script>
+  import Background from "./Background.svelte";
   import { onMount } from "svelte";
   onMount(() => {
     var loadingDiv = document.querySelector(".loader");
@@ -23,6 +24,7 @@
 <div class="loading">
   <span class="loader" />
 </div>
+<Background />
 
 <style>
   .loading {

@@ -5,6 +5,9 @@
   import Background from "../components/Background.svelte";
   import Loader from "../components/Loader.svelte";
   import "../app.css";
+  import { page } from "$app/stores";
+
+  const isParamsInUrl = Object.keys($page.params).length !== 0;
   let isLoading = true;
 
   setTimeout(() => {
@@ -13,9 +16,8 @@
 </script>
 
 <div class="flex flex-col text-white sm:min-h-screen">
-  {#if isLoading}
+  {#if isLoading && !isParamsInUrl}
     <Loader />
-    <Background />
   {:else}
     <Navbar />
     <slot />
