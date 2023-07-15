@@ -30,6 +30,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    max-height: 100vh;
     opacity: 0;
     filter: blur(6px);
     transition: opacity 0.5s, filter 0.5s;

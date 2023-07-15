@@ -7,19 +7,19 @@
   import "../app.css";
   let isLoading = true;
 
-  setTimeout(() => {
-    isLoading = false;
-  }, 2500);
+  // setTimeout(() => {
+  //   isLoading = false;
+  // }, 2500);
 </script>
 
-<div class="flex flex-col text-white sm:min-h-screen">
-  {#if isLoading}
-    <Loader />
-  {:else}
+{#if isLoading}
+  <Loader />
+{:else}
+  <div class="flex flex-col text-white sm:min-h-screen">
     <Navbar />
     <slot />
     <Footer />
     <Mouse />
     <Background />
-  {/if}
-</div>
+  </div>
+{/if}
