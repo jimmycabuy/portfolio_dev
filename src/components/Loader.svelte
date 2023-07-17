@@ -31,10 +31,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    max-height: 100vh;
+    height: 100%;
+    width: 100%;
     z-index: 1;
     overflow: hidden;
+    position: fixed;
+    background-color: red;
   }
 
   .loader {
