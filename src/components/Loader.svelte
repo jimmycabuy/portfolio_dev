@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     max-height: 100vh;
     z-index: 1;
     overflow: hidden;
@@ -76,10 +76,10 @@
   }
 
   @media (max-width: 1100px) {
-    .loading {
+    /* .loading {
       min-height: calc(100vh - 100px);
       max-height: 100vh;
-    }
+    } */
     .loader {
       width: 70px;
       height: 70px;
