@@ -76,11 +76,7 @@
     }
   }
 
-  @media (max-width: 1100px) {
-    /* .loading {
-      min-height: calc(100vh - 100px);
-      max-height: 100vh;
-    } */
+  @media (max-width: 767px) {
     .loader {
       width: 70px;
       height: 70px;
