@@ -75,7 +75,7 @@
     }
   }
 
-  @media (max-width: 787px) {
+  @media (max-width: 1100px) {
     .loading {
       height: 80vh;
     }
