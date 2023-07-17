@@ -36,7 +36,6 @@
     z-index: 1;
     overflow: hidden;
     position: fixed;
-    background-color: red;
   }
 
   .loader {
