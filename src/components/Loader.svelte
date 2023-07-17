@@ -77,7 +77,8 @@
 
   @media (max-width: 1100px) {
     .loading {
-      height: 80vh;
+      min-height: calc(100vh - 100px);
+      max-height: 100vh;
     }
     .loader {
       width: 70px;
