@@ -1,5 +1,6 @@
 <script>
   import ProjectsNavigation from "../../../components/ProjectsNavigation.svelte";
+  import ProgressBar from "../../../components/ProgressBar.svelte";
   import { page } from "$app/stores";
   import projectsJSON from "../../../data/projects.json";
   import { blur } from "svelte/transition";
@@ -23,6 +24,7 @@
   <title>Jimmy C. | My Work. | {subProjectDetails.title}.</title>
 </svelte:head>
 
+<ProgressBar/>
 <main
   class="py-6 px-12 flex-1 flex justify-center items-center flex-col md:px-24 4xl:px-72"
   out:blur
