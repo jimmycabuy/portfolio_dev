@@ -11,7 +11,7 @@
     "route": "uwork",
     "year": 2022,
     "techno": "React Native, Node.js, MongoDB",
-    "previous": "decathlon-2",
+    "previous": "jimpad",
     "next": "thedailyjim",
     "pictures": ["uwork-screen-1", "uwork-screen-2"],
     "picturesMobile": [
@@ -84,12 +84,39 @@
     "year": 2023,
     "techno": "SvelteKit",
     "previous": "decathlon-1",
-    "next": "uwork",
+    "next": "jimpad",
     "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"],
     "picturesMobile": [
       "dec2-screen-mobile-1",
       "dec2-screen-mobile-2",
       "dec2-screen-mobile-3"
+    ]
+  },
+  {
+    "title": "Jim's Pad",
+    "subtitle": "Web Design & Web Development",
+    "description": "Welcome to Jim's Pad - the go-to app that streamlines your note management tasks. With Jim's Pad, you can easily add, edit, and delete notes, ensuring you stay organized and in control of your information.",
+    "tag": "web",
+    "type": "website",
+    "src": "5-jimpad",
+    "alt": "jimpad",
+    "href": "https://notes-app-jim.vercel.app/",
+    "route": "jimpad",
+    "year": 2023,
+    "techno": "SvelteKit, Tailwind, Firebase",
+    "previous": "decathlon-2",
+    "next": "uwork",
+    "pictures": [
+      "jimpad-screen-1",
+      "jimpad-screen-2",
+      "jimpad-screen-3",
+      "jimpad-screen-4"
+    ],
+    "picturesMobile": [
+      "jimpad-screen-mobile-1",
+      "jimpad-screen-mobile-2",
+      "jimpad-screen-mobile-3",
+      "jimpad-screen-mobile-4"
     ]
   }
 ]

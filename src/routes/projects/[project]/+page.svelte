@@ -5,7 +5,7 @@
   import projectsJSON from "../../../data/projects.json";
   import { blur } from "svelte/transition";
 
-  const env = "https://jimmycabuy.vercel.app";
+  const env = $page.url.origin;
   const project = $page.params.project;
   const subProjectDetails = projectsJSON.find((item) => item.route === project);
 
