@@ -10,7 +10,7 @@
 </svelte:head>
 
 <main
-  class="flex-1 flex justify-center items-center py-6 px-12 4xl:px-72"
+  class="flex-1 flex justify-center items-center py-6 px-12 4xl:px-72 min-h-[70vh]"
   in:blur
 >
   <div class="container_home flex justify-between items-center">
@@ -141,9 +141,10 @@
       max-width: 100%;
     }
     .image-container {
-      max-width: 90%;
+      /* max-width: 90%;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 2rem; */
+      display: none;
     }
 
     p {
