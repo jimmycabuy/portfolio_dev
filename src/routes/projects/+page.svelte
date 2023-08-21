@@ -177,12 +177,7 @@
   }
 
   @media (max-width: 1023px) {
-    main {
-      height: fit-content;
-      max-height: fit-content;
-    }
     .container_projects {
-      height: fit-content;
       margin: 60px 0;
     }
     .bloc_right {
