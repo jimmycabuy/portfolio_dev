@@ -14,7 +14,7 @@
 </svelte:head>
 
 <main
-  class="py-6 px-12 flex-1 flex justify-center items-center 4xl:px-72 min-h-[70vh]"
+  class="py-6 px-12 flex-1 flex justify-center items-center 4xl:px-72"
   in:blur
 >
   <div class="container_projects">
@@ -68,8 +68,6 @@
 
 <style>
   main {
-    height: 80vh;
-    max-height: 80vh;
     overflow: hidden;
     z-index: 1;
   }
@@ -78,14 +76,12 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    height: 100vh;
     width: 100vw;
     gap: 1rem;
   }
 
   .bloc_left {
     width: 50%;
-    height: 70%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -95,7 +91,6 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 70%;
   }
 
   .one_project {
