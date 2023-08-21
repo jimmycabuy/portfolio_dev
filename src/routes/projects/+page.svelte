@@ -13,10 +13,7 @@
   <title>Jimmy C. | My Work.</title>
 </svelte:head>
 
-<main
-  class="py-6 px-12 flex-1 flex justify-center items-center 4xl:px-72"
-  in:blur
->
+<main class="px-12 flex justify-center items-center 4xl:px-72" in:blur>
   <div class="container_projects">
     <div class="bloc_left">
       {#each projectsJSON as project}
@@ -177,9 +174,6 @@
   }
 
   @media (max-width: 1023px) {
-    .container_projects {
-      margin: 60px 0;
-    }
     .bloc_right {
       display: none;
     }

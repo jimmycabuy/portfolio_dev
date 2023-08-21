@@ -28,7 +28,8 @@
 </div>
 
 <style>
-  div{
+  div {
     min-height: 100dvh;
+    justify-content: space-between;
   }
 </style>

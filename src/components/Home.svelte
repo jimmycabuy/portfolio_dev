@@ -10,7 +10,7 @@
 </svelte:head>
 
 <main
-  class="flex-1 flex justify-center items-center py-6 px-12 4xl:px-72"
+  class="flex justify-center items-center py-6 px-12 4xl:px-72"
   in:blur
 >
   <div class="container_home flex justify-between items-center">
