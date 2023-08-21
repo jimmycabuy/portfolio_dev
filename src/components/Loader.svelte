@@ -31,11 +31,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 100dvh;
+    width: 100vw;
     z-index: 1;
-    overflow: hidden;
-    position: fixed;
   }
 
   .loader {

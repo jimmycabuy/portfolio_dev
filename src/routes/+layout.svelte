@@ -15,7 +15,7 @@
   }, 2500);
 </script>
 
-<div class="flex flex-col text-white sm:min-h-screen">
+<div class="flex flex-col text-white">
   {#if isLoading && !isParamsInUrl}
     <Loader />
   {:else}
@@ -26,3 +26,9 @@
     <Background />
   {/if}
 </div>
+
+<style>
+  div{
+    min-height: 100dvh;
+  }
+</style>
