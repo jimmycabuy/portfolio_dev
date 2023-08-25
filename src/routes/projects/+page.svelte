@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-  <title>Jimmy C. | My Work..</title>
+  <title>Jimmy C. | My Work.</title>
 </svelte:head>
 
 <main class="px-12 flex justify-center items-center 4xl:px-72" in:blur>
