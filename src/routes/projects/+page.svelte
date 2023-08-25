@@ -94,9 +94,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #a1a1a1;
     height: 5rem;
     position: relative;
+  }
+
+  a {
+    border-bottom: 2px solid #a1a1a1;
+  }
+
+  .bloc_left a:last-child {
+    border:none;
   }
 
   .tag {
