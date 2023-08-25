@@ -29,91 +29,95 @@
   <title>Jimmy C. | My Work. | {subProjectDetails.title}.</title>
 </svelte:head>
 
-<ProgressBar />
 {#if isLoading}
   <Spinner />
-{:else}
-  <main
-    class="py-6 px-12 flex justify-center items-center flex-col md:px-24 4xl:px-72"
-    out:blur
-    in:blur
-  >
-    <div class="container_image flex justify-center">
-      <div class="bloc_image">
-        <img
-          preload
-          src={`/assets/${subProjectDetails.src}.webp`}
-          alt={subProjectDetails.title}
-        />
-      </div>
-    </div>
-    <div class="bloc_title">
-      <h1>{subProjectDetails.title}</h1>
-    </div>
-    <div class="container_one_project">
-      <div class="bloc_left">
-        <div class="flex gap-12">
-          <h6 class="col1">CATEGORY</h6>
-          <h6 class="col2">{subProjectDetails.subtitle}</h6>
-        </div>
-        <div class="flex gap-12">
-          <h6 class="col1">YEAR</h6>
-          <h6 class="col2">{subProjectDetails.year}</h6>
-        </div>
-        <div class="flex gap-12">
-          <h6 class="col1">TECHNO</h6>
-          <h6 class="col2">{subProjectDetails.techno}</h6>
-        </div>
-      </div>
-
-      <div class="bloc_right">
-        <p>{subProjectDetails.description}</p>
-        <a href={subProjectDetails.href} target="_blank">
-          <span class="view_website">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="3 0 24 20"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5 svg_view_website"
-              color="#fff"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-              />
-            </svg>
-            <span>View {subProjectDetails.type}</span>
-          </span>
-        </a>
-      </div>
-    </div>
-
-    {#if subProjectDetails.pictures}
-      <div class="container_image_screens desktop">
-        {#each subProjectDetails.pictures as picture}
-          <div class="bloc_image_screen">
-            <img preload src="/assets/screens/{picture}.webp" alt={picture} />
-          </div>
-        {/each}
-      </div>
-    {/if}
-    {#if subProjectDetails.picturesMobile}
-      <div class="container_image_screens mobile">
-        {#each subProjectDetails.picturesMobile as picture}
-          <div class="bloc_image_screen">
-            <img preload src="/assets/screens/{picture}.webp" alt={picture} />
-          </div>
-        {/each}
-      </div>
-    {/if}
-    <ProjectsNavigation {nextProject} {prevProject} />
-  </main>
 {/if}
 
+<ProgressBar />
+<main
+  class="py-6 px-12 flex justify-center items-center flex-col md:px-24 4xl:px-72"
+  class:is_loading={isLoading}
+  out:blur
+  in:blur
+>
+  <div class="container_image flex justify-center">
+    <div class="bloc_image">
+      <img
+        preload
+        src={`/assets/${subProjectDetails.src}.webp`}
+        alt={subProjectDetails.title}
+      />
+    </div>
+  </div>
+  <div class="bloc_title">
+    <h1>{subProjectDetails.title}</h1>
+  </div>
+  <div class="container_one_project">
+    <div class="bloc_left">
+      <div class="flex gap-12">
+        <h6 class="col1">CATEGORY</h6>
+        <h6 class="col2">{subProjectDetails.subtitle}</h6>
+      </div>
+      <div class="flex gap-12">
+        <h6 class="col1">YEAR</h6>
+        <h6 class="col2">{subProjectDetails.year}</h6>
+      </div>
+      <div class="flex gap-12">
+        <h6 class="col1">TECHNO</h6>
+        <h6 class="col2">{subProjectDetails.techno}</h6>
+      </div>
+    </div>
+
+    <div class="bloc_right">
+      <p>{subProjectDetails.description}</p>
+      <a href={subProjectDetails.href} target="_blank">
+        <span class="view_website">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="3 0 24 20"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 svg_view_website"
+            color="#fff"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+            />
+          </svg>
+          <span>View {subProjectDetails.type}</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  {#if subProjectDetails.pictures}
+    <div class="container_image_screens desktop">
+      {#each subProjectDetails.pictures as picture}
+        <div class="bloc_image_screen">
+          <img preload src="/assets/screens/{picture}.webp" alt={picture} />
+        </div>
+      {/each}
+    </div>
+  {/if}
+  {#if subProjectDetails.picturesMobile}
+    <div class="container_image_screens mobile">
+      {#each subProjectDetails.picturesMobile as picture}
+        <div class="bloc_image_screen">
+          <img preload src="/assets/screens/{picture}.webp" alt={picture} />
+        </div>
+      {/each}
+    </div>
+  {/if}
+  <ProjectsNavigation {nextProject} {prevProject} />
+</main>
+
 <style>
+  .is_loading {
+    display: none;
+  }
   main {
     z-index: 1;
   }
