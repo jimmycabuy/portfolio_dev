@@ -7,16 +7,25 @@
 
   const env = $page.url.origin;
   const project = $page.params.project;
-  const subProjectDetails = projectsJSON.find((item) => item.route === project);
+  const currentIndex = projectsJSON.findIndex((item) => item.route === project);
+  const subProjectDetails = projectsJSON[currentIndex];
+  const nextProject =
+    currentIndex + 1 < projectsJSON.length
+      ? projectsJSON[currentIndex + 1]
+      : projectsJSON[0];
+  const prevProject =
+    currentIndex - 1 >= 0
+      ? projectsJSON[currentIndex - 1]
+      : projectsJSON[projectsJSON.length - 1];
 
-  const previousProject = () => {
+  const handlePreviousProject = () => {
     location.reload();
-    window.location.href = `${env}/projects/${subProjectDetails.previous}`;
+    window.location.href = `${env}/projects/${prevProject.route}`;
   };
 
-  const nextProject = () => {
+  const handleNextProject = () => {
     location.reload();
-    window.location.href = `${env}/projects/${subProjectDetails.next}`;
+    window.location.href = `${env}/projects/${nextProject.route}`;
   };
 </script>
 
@@ -24,7 +33,7 @@
   <title>Jimmy C. | My Work. | {subProjectDetails.title}.</title>
 </svelte:head>
 
-<ProgressBar/>
+<ProgressBar />
 <main
   class="py-6 px-12 flex justify-center items-center flex-col md:px-24 4xl:px-72"
   out:blur
@@ -102,8 +111,10 @@
     </div>
   {/if}
   <ProjectsNavigation
-    on:nextproject={nextProject}
-    on:previousproject={previousProject}
+    on:nextproject={handleNextProject}
+    on:previousproject={handlePreviousProject}
+    {nextProject}
+    {prevProject}
   />
 </main>
 

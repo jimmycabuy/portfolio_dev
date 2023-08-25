@@ -1,6 +1,8 @@
 <script>
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
+
+  export let prevProject, nextProject;
 </script>
 
 <div class="container_navigation">
@@ -22,13 +24,13 @@
         d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
       />
     </svg>
-    Previous
+    {prevProject.title}
   </button>
   <button
     on:click={() => dispatch("nextproject")}
     style="display: inline-flex; gap:5px"
   >
-    Next
+    {nextProject.title}
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
