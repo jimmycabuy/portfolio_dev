@@ -1,14 +1,14 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  const dispatch = createEventDispatcher();
-
   export let prevProject, nextProject;
 </script>
 
 <div class="container_navigation">
-  <button
-    on:click={() => dispatch("previousproject")}
+  <a
+    href="/projects/{prevProject.route}"
     style="display: inline-flex; gap:5px"
+    data-sveltekit-preload-code
+    data-sveltekit-reload
+    data-sveltekit-prefetch
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,10 +25,13 @@
       />
     </svg>
     {prevProject.title}
-  </button>
-  <button
-    on:click={() => dispatch("nextproject")}
+  </a>
+  <a
+    href="/projects/{nextProject.route}"
     style="display: inline-flex; gap:5px"
+    data-sveltekit-preload-code
+    data-sveltekit-reload
+    data-sveltekit-prefetch
   >
     {nextProject.title}
     <svg
@@ -45,18 +48,18 @@
         d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
       />
     </svg>
-  </button>
+  </a>
 </div>
 
 <style>
-  button {
+  a {
     position: relative;
     text-decoration: none;
     width: fit-content;
   }
 
   @media (min-width: 1023px) {
-    button::after {
+    a::after {
       content: "";
       position: absolute;
       bottom: -2px;
@@ -67,7 +70,7 @@
       transition: width 0.3s ease-in-out;
     }
 
-    button:hover::after {
+    a:hover::after {
       width: 100%;
     }
   }

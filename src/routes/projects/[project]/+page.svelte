@@ -5,7 +5,6 @@
   import projectsJSON from "../../../data/projects.json";
   import { blur } from "svelte/transition";
 
-  const env = $page.url.origin;
   const project = $page.params.project;
   const currentIndex = projectsJSON.findIndex((item) => item.route === project);
   const subProjectDetails = projectsJSON[currentIndex];
@@ -17,16 +16,6 @@
     currentIndex - 1 >= 0
       ? projectsJSON[currentIndex - 1]
       : projectsJSON[projectsJSON.length - 1];
-
-  const handlePreviousProject = () => {
-    location.reload();
-    window.location.href = `${env}/projects/${prevProject.route}`;
-  };
-
-  const handleNextProject = () => {
-    location.reload();
-    window.location.href = `${env}/projects/${nextProject.route}`;
-  };
 </script>
 
 <svelte:head>
@@ -110,12 +99,7 @@
       {/each}
     </div>
   {/if}
-  <ProjectsNavigation
-    on:nextproject={handleNextProject}
-    on:previousproject={handlePreviousProject}
-    {nextProject}
-    {prevProject}
-  />
+  <ProjectsNavigation {nextProject} {prevProject} />
 </main>
 
 <style>
