@@ -32,7 +32,7 @@
     "href": "https://www.thedailyjim.be",
     "route": "thedailyjim",
     "year": 2022,
-    "techno": "Sapper, Svelte",
+    "techno": "SvelteKit",
     "pictures": [
       "tdj-screen-1",
       "tdj-screen-2",
