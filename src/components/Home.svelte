@@ -9,20 +9,16 @@
   <title>Jimmy C. | Web Developer.</title>
 </svelte:head>
 
-<main
-  class="flex justify-center items-center py-6 px-12 4xl:px-72"
-  in:blur
->
-  <div class="container_home flex justify-between items-center">
-    <div class="profile-container max-w-[50%]">
-      <div class="flex flex-col gap-6">
-        <div>
-          <h3 class="inline-block" style="padding-top: 5px;">
-            Front-end developer & photographer
-          </h3>
-        </div>
+<main class="flex justify-center items-center py-6 px-12 4xl:px-72" in:blur>
+  <div class="container_home flex justify-center items-center">
+    <div class="profile-container max-w-[75%]">
+      <div class="flex flex-col gap-6 items-start md:items-center">
+        <div />
         <h1 class="text-7xl">Jimmy Cabuy</h1>
-        <p>
+        <div class="flex gap-2 flex-col md:flex-row">
+          <h2 class="text-md sm:text-xl">Front-end developer & Photographer</h2>
+        </div>
+        <p class="text-center">
           Hi! I'm Jimmy, a versatile full-stack developer, designer, and
           photographer with a degree in e-business. I have 2+ years of digital
           marketing experience, specializing in content creation and social
@@ -54,10 +50,6 @@
         </a>
       </div>
     </div>
-    <div class="image-container max-w-[50%]">
-      <!-- svelte-ignore a11y-img-redundant-alt -->
-      <img src={banner} alt="Jimmy_Cabuy_banner" class="image_banner" preload />
-    </div>
   </div>
 </main>
 
@@ -65,14 +57,6 @@
   main {
     overflow: hidden;
     z-index: 1;
-  }
-  h3 {
-    /* background-color: #fff; */
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 0.25rem 1rem 0.25rem 1rem;
-    border-radius: 20px;
-    text-align: center;
   }
 
   h1 {
@@ -107,22 +91,9 @@
     }
   }
 
-  .image-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .image_banner {
-    max-width: 75%;
-    max-height: 75%;
-  }
-
   @media (max-width: 767px) {
     h1 {
       font-size: xxx-large;
-    }
-    h3 {
-      font-size: smaller;
     }
   }
 
@@ -137,12 +108,6 @@
 
     .profile-container {
       max-width: 100%;
-    }
-    .image-container {
-      /* max-width: 90%;
-      justify-content: center;
-      margin-top: 2rem; */
-      display: none;
     }
 
     p {
