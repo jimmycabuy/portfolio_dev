@@ -41,7 +41,7 @@
     position: fixed;
     width: 20px;
     height: 20px;
-    border: 2px solid #a1a1a1;
+    border: 2px solid #FF2F66;
     border-radius: 50%;
     pointer-events: none;
     background: none;
@@ -52,7 +52,7 @@
     position: absolute;
     width: 3px;
     height: 3px;
-    background-color: #a1a1a1;
+    background-color: #FF2F66;
     border-radius: 50%;
     top: 50%;
     left: 50%;

@@ -103,7 +103,7 @@
   }
 
   .bloc_left a:last-child {
-    border:none;
+    border: none;
   }
 
   .tag {
@@ -111,7 +111,7 @@
     border-radius: 20px;
     padding: 2px 7px;
     color: #fff;
-    padding-top: 3px;
+    padding-bottom: 3px;
   }
 
   h4 {

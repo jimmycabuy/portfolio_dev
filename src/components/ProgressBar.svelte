@@ -29,7 +29,7 @@
     appearance: none;
     background-color: transparent;
     border: none;
-    color: #a1a1a1;
+    color: #FF2F66;
     z-index: 9999;
   }
 
@@ -46,14 +46,14 @@
   }
 
   progress::-webkit-progress-value {
-    background-color: #a1a1a1;
+    background-color: #FF2F66;
   }
 
   progress::-moz-progress-bar {
-    background-color: #a1a1a1;
+    background-color: #FF2F66;
   }
 
   progress::-ms-fill {
-    background-color: #a1a1a1;
+    background-color: #FF2F66;
   }
 </style>
