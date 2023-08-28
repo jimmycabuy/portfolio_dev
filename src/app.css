@@ -1,25 +1,17 @@
+@import url("https://use.typekit.net/qwm4icu.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "DeeDee";
-  src: url("/fonts/DeeDee.ttf") format("truetype");
-  /* Autres déclarations de police si nécessaire, par exemple font-weight, font-style */
-}
-
-@font-face {
-  font-family: "DeeDee-Bold";
-  src: url("/fonts/DeeDee-Bold.ttf") format("truetype");
-  /* Autres déclarations de police si nécessaire, par exemple font-weight, font-style */
-}
-
 * {
-  font-family: "DeeDee", sans-serif;
-  /* font-family: 'DeeDee-Bold', sans-serif; */
+  font-family: "bd-supper", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 a {
@@ -34,7 +26,3 @@ button:hover {
 html {
   background-color: #121212;
 }
-
-/* html {
-  background-color: #27272a;
-} */

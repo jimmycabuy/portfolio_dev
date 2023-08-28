@@ -28,7 +28,12 @@
           challenges.
         </p>
         <!-- <Skills /> -->
-        <a href={pdf} target="_blank" rel="noopener noreferrer">
+        <a
+          href={pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="animate-bounce"
+        >
           <span class="flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -57,10 +62,6 @@
   main {
     overflow: hidden;
     z-index: 1;
-  }
-
-  h1 {
-    font-family: "DeeDee-Bold", sans-serif;
   }
 
   p {
