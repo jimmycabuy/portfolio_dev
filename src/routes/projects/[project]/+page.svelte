@@ -127,6 +127,7 @@
     font-size: xx-large;
     border-bottom: 2px solid #fff;
     text-transform: uppercase;
+    font-weight: 700;
   }
 
   .container_image {

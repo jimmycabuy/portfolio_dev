@@ -68,6 +68,9 @@
     color: #a1a1a1;
   }
 
+  h1 {
+    font-weight: 700;
+  }
   a {
     position: relative;
     text-decoration: none;
