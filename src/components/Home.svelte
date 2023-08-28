@@ -14,7 +14,7 @@
     <div class="profile-container max-w-[75%]">
       <div class="flex flex-col gap-6 items-start md:items-center">
         <div />
-        <h1 class="text-7xl">Jimmy Cabuy</h1>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
         <div class="flex gap-2 flex-col md:flex-row">
           <h2 class="text-md sm:text-xl">Front-end developer & Photographer</h2>
         </div>
@@ -109,12 +109,6 @@
 
     a:hover::after {
       width: 100%;
-    }
-  }
-
-  @media (max-width: 767px) {
-    h1 {
-      font-size: xxx-large;
     }
   }
 
