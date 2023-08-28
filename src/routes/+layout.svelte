@@ -31,5 +31,6 @@
   div {
     min-height: 100dvh;
     justify-content: space-between;
+    max-width: 100dvw;
   }
 </style>
