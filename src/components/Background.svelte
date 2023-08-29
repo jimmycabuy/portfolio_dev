@@ -3,18 +3,18 @@
 <style>
   main {
     position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent
-      url("https://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    z-index: -10;
+    top: -300%;
+    left: -150%;
+    height: 600%;
+    width: 600%;
+    -webkit-animation: bg-animation 7s steps(10) infinite;
+    animation: bg-animation 7s steps(10) infinite;
+    background-image: url("https://itssharl.ee/noise.png");
+    background-size: 200px;
     background-repeat: repeat;
-    animation: bg-animation 0.2s infinite;
-    opacity: 0.9;
-    visibility: visible;
+    opacity: 0.12;
+    pointer-events: none;
   }
 
   @keyframes bg-animation {

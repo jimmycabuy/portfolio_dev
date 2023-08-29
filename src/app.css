@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* #vantajs {
+  width: 100vw;
+  height: 100dvh;
+  z-index: -999;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+} */
+
 * {
   font-family: "bd-supper", sans-serif;
   font-weight: 400;
@@ -12,6 +25,7 @@
   padding: 0;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+  color: #fff;
 }
 
 a {

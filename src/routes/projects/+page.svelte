@@ -46,7 +46,7 @@
                 <p class="tag text-xs sm:text-xs">{project.tag}</p>
               </div>
             </div>
-            <h4 class="text-xs sm:text-lg">{project.subtitle}</h4>
+            <h4 class="text-xs text-right w-1/2 sm:text-lg sm:w-fit">{project.subtitle}</h4>
           </div>
         </a>
       {/each}
@@ -99,7 +99,7 @@
   }
 
   a {
-    border-bottom: 2px solid #a1a1a1;
+    border-bottom: 2px solid #fff;
   }
 
   .bloc_left a:last-child {
@@ -115,7 +115,7 @@
   }
 
   h4 {
-    color: #a1a1a1;
+    color: #fff;
   }
 
   svg {
@@ -171,7 +171,7 @@
   } */
 
   p {
-    color: #a1a1a1;
+    color: #fff;
   }
 
   @media (max-width: 387px) {

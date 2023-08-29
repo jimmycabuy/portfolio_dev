@@ -42,7 +42,7 @@
               stroke-width="1.5"
               stroke="currentColor"
               class="w-5 h-5"
-              color="#a1a1a1"
+              color="#fff"
             >
               <path
                 stroke-linecap="round"
@@ -65,7 +65,7 @@
   }
 
   p {
-    color: #a1a1a1;
+    color: #fff;
   }
 
   h1 {
@@ -92,7 +92,7 @@
   a {
     position: relative;
     text-decoration: none;
-    color: #a1a1a1;
+    color: #fff;
     width: fit-content;
   }
 
@@ -104,7 +104,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background-color: #a1a1a1;
+      background-color: #fff;
       transition: width 0.3s ease-in-out;
     }
 

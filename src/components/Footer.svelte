@@ -13,7 +13,7 @@
         target="_blank"
       >
         <span class="icon">{@html mail}</span>
-        <span class="link_footer_name text-md text-zinc-400">Email me</span>
+        <span class="link_footer_name text-md">Email me</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
@@ -24,7 +24,7 @@
         target="_blank"
       >
         <span class="icon">{@html github}</span>
-        <span class="link_footer_name text-md text-zinc-400">Github</span>
+        <span class="link_footer_name text-md">Github</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
@@ -35,7 +35,7 @@
         target="_blank"
       >
         <span class="icon">{@html linkedin}</span>
-        <span class="link_footer_name text-md text-zinc-400">LinkedIn</span>
+        <span class="link_footer_name text-md">LinkedIn</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
@@ -46,13 +46,13 @@
         target="_blank"
       >
         <span class="icon">{@html instagram}</span>
-        <span class="link_footer_name text-md text-zinc-400">Instagram</span>
+        <span class="link_footer_name text-md">Instagram</span>
         <span class="share mb-1 hover:cursor-pointer" />
       </a>
     </div>
   </div>
   <div>
-    <p class="text-zinc-400">Designed and coded by Jimmy © {year}</p>
+    <p class="">Designed and coded by Jimmy © {year}</p>
   </div>
 </footer>
 

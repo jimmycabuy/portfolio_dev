@@ -272,7 +272,7 @@
       display: none;
     }
     a {
-      color: #a1a1a1;
+      color: #fff;
     }
   }
 
