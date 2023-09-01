@@ -22,10 +22,10 @@
           Hi! I'm Jimmy, a versatile full-stack developer, designer, and
           photographer with a degree in e-business. I have 2+ years of digital
           marketing experience, specializing in content creation and social
-          media management. After a 6-month photography adventure, I completed a
-          JavaScript Bootcamp and now work as a front-end developer at
-          Decathlon. I'm a curious and creative professional always seeking new
-          challenges.
+          media management. After a 6-month photography adventure around the
+          world, I completed a JavaScript Bootcamp and now work as a front-end
+          developer at Decathlon. I'm a curious and creative professional always
+          seeking new challenges.
         </p>
         <!-- <Skills /> -->
         <a
