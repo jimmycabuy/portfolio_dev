@@ -34,7 +34,7 @@
 
 {#if !isMessageSent}
   <div class="container_contact">
-    <h1 class="text-5xl">Get in touch.</h1>
+    <h1 class="text-3xl md:text-5xl pb-3">Get in touch.</h1>
     <form
       action="https://getform.io/f/e0fcd5ea-3300-4659-8085-c6108ccbef1a"
       method="POST"
@@ -80,6 +80,38 @@
 {/if}
 
 <style>
+
+h1 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  h1 {
+    animation-name: fadeInBottom;
+  }
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  form {
+    animation: fadein 2.5s;
+    -moz-animation: fadein 2.5s;
+    -webkit-animation: fadein 2.5s;
+    -o-animation: fadein 2.5s;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   .container_contact {
     display: flex;
     align-items: center;
@@ -162,7 +194,7 @@
   h1 {
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: 1px #fff;
   }
 
   @media (max-width: 767px) {

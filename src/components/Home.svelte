@@ -13,7 +13,6 @@
   <div class="container_home flex justify-center items-center">
     <div class="profile-container max-w-[75%]">
       <div class="flex flex-col gap-6 items-start md:items-center">
-        <div />
         <h1 class="text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
         <div class="flex gap-2 flex-col md:flex-row">
           <h2 class="text-md sm:text-xl">Front-end developer & Photographer</h2>
@@ -59,6 +58,40 @@
 </main>
 
 <style>
+  h1 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  h1 {
+    animation-name: fadeInBottom;
+  }
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  h2,
+  p,
+  svg {
+    animation: fadein 2.5s;
+    -moz-animation: fadein 2.5s;
+    -webkit-animation: fadein 2.5s;
+    -o-animation: fadein 2.5s;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   main {
     overflow: hidden;
     z-index: 1;

@@ -24,7 +24,7 @@
           on:mouseout={() => setProject(null)}
         >
           <div class="one_project">
-            <div class="flex items-center">
+            <div class="flex items-center w-full sm:w-fit">
               <span
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -41,12 +41,14 @@
                   />
                 </svg>
               </span>
-              <div class="title-wrapper">
-                <h2 class="text-sm sm:text-lg">{project.title}</h2>
+              <div class="title-wrapper justify-between w-full">
+                <h2 class="sm:text-lg">{project.title}</h2>
                 <p class="tag text-xs sm:text-xs">{project.tag}</p>
               </div>
             </div>
-            <h4 class="text-xs text-right w-1/2 sm:text-lg sm:w-fit">{project.subtitle}</h4>
+            <h4 class="text-right hidden sm:text-lg sm:contents">
+              {project.subtitle}
+            </h4>
           </div>
         </a>
       {/each}
@@ -64,6 +66,23 @@
 </main>
 
 <style>
+  .bloc_left {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .bloc_left {
+    animation-name: fadeInBottom;
+  }
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+    }
+  }
   main {
     overflow: hidden;
     z-index: 1;

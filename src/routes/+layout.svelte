@@ -9,7 +9,7 @@
   import SidebarMenu from "../components/SidebarMenu.svelte";
 
   const isParamsInUrl = Object.keys($page.params).length !== 0;
-  let isLoading = true;
+  let isLoading = false;
 
   setTimeout(() => {
     isLoading = false;
