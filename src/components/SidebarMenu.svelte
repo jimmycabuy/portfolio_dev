@@ -13,7 +13,12 @@
     {#each menu as item, i}
       <div>
         <small class="text-sm">0{i + 1}</small>
-        <a href={item.link} on:click={closeSidebar}>
+        <a
+          href={item.link}
+          on:click={closeSidebar}
+          data-sveltekit-preload-data
+          data-sveltekit-preload-code
+        >
           {item.label}
         </a>
       </div>
