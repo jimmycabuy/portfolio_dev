@@ -29,8 +29,9 @@
     appearance: none;
     background-color: transparent;
     border: none;
-    color: #FF2F66;
+    color: #ff2f66;
     z-index: 9999;
+    top: 0;
   }
 
   progress::-webkit-progress-bar {
@@ -46,14 +47,14 @@
   }
 
   progress::-webkit-progress-value {
-    background-color: #FF2F66;
+    background-color: #ff2f66;
   }
 
   progress::-moz-progress-bar {
-    background-color: #FF2F66;
+    background-color: #ff2f66;
   }
 
   progress::-ms-fill {
-    background-color: #FF2F66;
+    background-color: #ff2f66;
   }
 </style>
