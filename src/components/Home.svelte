@@ -9,22 +9,24 @@
   <title>Jimmy C. | Web Developer.</title>
 </svelte:head>
 
-<main class="flex justify-center items-center py-6 px-12 4xl:px-72" in:blur>
+<main
+  class="flex justify-center items-center py-6 px-6 md:px-12 4xl:px-72"
+  in:blur
+>
   <div class="container_home flex justify-center items-center">
     <div class="profile-container max-w-[75%]">
-      <div class="flex flex-col gap-6 items-start md:items-center">
+      <div class="flex flex-col gap-8 items-center text-center">
         <h1 class="text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
         <div class="flex gap-2 flex-col md:flex-row">
-          <h2 class="text-md sm:text-xl">Front-end developer & Photographer</h2>
+          <h2 class="text-xl sm:text-2xl">
+            Front-end developer & Photographer
+          </h2>
         </div>
-        <p class="text-center">
-          Hi! I'm Jimmy, a versatile full-stack developer, designer, and
-          photographer with a degree in e-business. I have 2+ years of digital
-          marketing experience, specializing in content creation and social
-          media management. After a 6-month photography adventure around the
-          world, I completed a JavaScript Bootcamp and now work as a front-end
-          developer at Decathlon. I'm a curious and creative professional always
-          seeking new challenges.
+        <p class="text-center leading-6">
+          I'm Jimmy, a full-stack developer, designer, and photographer with
+          digital marketing experience. After a global photography journey, I
+          became a front-end developer at Decathlon, always seeking new
+          challenges.
         </p>
         <!-- <Skills /> -->
         <a
@@ -157,10 +159,6 @@
 
     .profile-container {
       max-width: 100%;
-    }
-
-    p {
-      text-align: justify;
     }
   }
 </style>
