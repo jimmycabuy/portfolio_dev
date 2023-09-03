@@ -16,7 +16,7 @@
     </div>
     <div class="w-full flex gap-5 flex-col lg:w-1/2">
       <h2 class="text-2xl lg:text-4xl">
-        I'm front-end developer & photographer working in sunny Brussels,
+        I'm a front-end developer & photographer working in sunny Brussels,
         Belgium.
       </h2>
       <p class="leading-8 text-justify sm:text-left">
