@@ -41,18 +41,18 @@
     position: fixed;
     width: 20px;
     height: 20px;
-    border: 2px solid #FF2F66;
+    border: 2px solid #ff2f66;
     border-radius: 50%;
     pointer-events: none;
     background: none;
-    z-index: 1;
+    z-index: 9999;
   }
 
   .mouse-follower .dot {
     position: absolute;
     width: 3px;
     height: 3px;
-    background-color: #FF2F66;
+    background-color: #ff2f66;
     border-radius: 50%;
     top: 50%;
     left: 50%;

@@ -1,0 +1,34 @@
+[
+  {
+    "label": "First Name*",
+    "type": "text",
+    "name": "firstname",
+    "inputmode": "text",
+    "required": true,
+    "autocomplete": "off"
+  },
+  {
+    "label": "Last Name*",
+    "type": "text",
+    "name": "lastname",
+    "inputmode": "text",
+    "required": true,
+    "autocomplete": "off"
+  },
+  {
+    "label": "Email*",
+    "type": "email",
+    "name": "email",
+    "inputmode": "email",
+    "required": true,
+    "autocomplete": "off"
+  },
+  {
+    "label": "Phone Number",
+    "type": "number",
+    "name": "phone",
+    "inputmode": "tel",
+    "required": false,
+    "autocomplete": "off"
+  }
+]
