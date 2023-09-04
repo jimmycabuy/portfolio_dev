@@ -13,7 +13,7 @@
 <aside class="absolute bg-black" class:open>
   <nav class="text-4xl md:text-5xl">
     {#each menu as item, i}
-      <div class:animation={open} style="animation-delay: {i * 0.3}s;">
+      <div class:animation={open} style="animation-delay: {i * 0.15}s;">
         <small class="text-sm">0{i + 1}</small>
         <a
           href={item.link}
