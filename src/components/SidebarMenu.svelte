@@ -4,7 +4,9 @@
   export let open = false;
 
   function closeSidebar() {
-    open = false;
+    setTimeout(() => {
+      open = false;
+    }, 350);
   }
 </script>
 
