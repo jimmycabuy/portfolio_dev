@@ -6,11 +6,11 @@
   import { blur } from "svelte/transition";
   import Spinner from "../../../components/Spinner.svelte";
 
-  let isLoading = false; // remove the animation for the moment.
+  let isLoading = true;
 
   setTimeout(() => {
     isLoading = false;
-  }, 1500);
+  }, 1250);
 
   const project = $page.params.project;
   const currentIndex = projectsJSON.findIndex((item) => item.route === project);
