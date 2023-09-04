@@ -87,9 +87,9 @@ h1 {
   }
 
   h1 {
-    animation-name: fadeInBottom;
+    animation-name: fadeInTop;
   }
-  @keyframes fadeInBottom {
+  @keyframes fadeInTop {
     from {
       opacity: 0;
       transform: translateY(-100%);
