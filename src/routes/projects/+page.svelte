@@ -75,16 +75,33 @@
   a {
     animation-name: fadeInBottom;
   }
-  @keyframes fadeInBottom {
-    from {
-      opacity: 0;
-      transform: translateY(100%);
-      -webkit-transform: translateY(100%);
-    }
-    to {
-      opacity: 1;
+  @media (pointer: coarse) {
+    @keyframes fadeInBottom {
+      from {
+        opacity: 0;
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -webkit-transform: translateZ(0);
+      }
+      to {
+        opacity: 1;
+      }
     }
   }
+
+  @media (pointer: fine) {
+    @keyframes fadeInBottom {
+      from {
+        opacity: 0;
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
   main {
     overflow: hidden;
     z-index: 1;
