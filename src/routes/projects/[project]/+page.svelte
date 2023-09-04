@@ -6,7 +6,7 @@
   import { blur } from "svelte/transition";
   import Spinner from "../../../components/Spinner.svelte";
 
-  let isLoading = true;
+  let isLoading = false; // remove the animation for the moment.
 
   setTimeout(() => {
     isLoading = false;
@@ -115,6 +115,40 @@
 </main>
 
 <style>
+  .bloc_image {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .bloc_image {
+    animation-name: fadeInBottom;
+  }
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .bloc_title,
+  .container_one_project,
+  .bloc_image_screen {
+    animation: fadein 2.5s;
+    -moz-animation: fadein 2.5s;
+    -webkit-animation: fadein 2.5s;
+    -o-animation: fadein 2.5s;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   .is_loading {
     display: none;
   }

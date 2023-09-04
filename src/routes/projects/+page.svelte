@@ -16,12 +16,13 @@
 <main class="px-12 flex justify-center items-center 4xl:px-72" in:blur>
   <div class="container_projects">
     <div class="bloc_left">
-      {#each projectsJSON as project}
+      {#each projectsJSON as project, index}
         <!-- svelte-ignore a11y-mouse-events-have-key-events -->
         <a
           href="projects/{project.route}"
           on:mouseover={() => setProject(project)}
           on:mouseout={() => setProject(null)}
+          style="animation-delay: {index * 0.3}s;"
         >
           <div class="one_project">
             <div class="flex items-center w-full sm:w-fit">
@@ -66,18 +67,18 @@
 </main>
 
 <style>
-  .bloc_left {
+  a {
     animation-duration: 1s;
     animation-fill-mode: both;
   }
 
-  .bloc_left {
+  a {
     animation-name: fadeInBottom;
   }
   @keyframes fadeInBottom {
     from {
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateY(100%);
     }
     to {
       opacity: 1;
