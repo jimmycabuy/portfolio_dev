@@ -22,7 +22,7 @@
           href="projects/{project.route}"
           on:mouseover={() => setProject(project)}
           on:mouseout={() => setProject(null)}
-          style="animation-delay: {index * 0.2}s;"
+          style="animation-delay: {index * 0.3}s;"
         >
           <div class="one_project">
             <div class="flex items-center w-full sm:w-fit">
