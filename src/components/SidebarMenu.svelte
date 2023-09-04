@@ -13,7 +13,7 @@
 <aside class="absolute bg-black" class:open>
   <nav class="text-4xl md:text-5xl">
     {#each menu as item, i}
-      <div>
+      <div class:animation={open} style="animation-delay: {i * 0.3}s;">
         <small class="text-sm">0{i + 1}</small>
         <a
           href={item.link}
@@ -29,6 +29,40 @@
 </aside>
 
 <style>
+  @media (pointer: coarse) {
+    @keyframes fadeInBottom {
+      from {
+        opacity: 0;
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -webkit-transform: translateZ(0);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (pointer: fine) {
+    @keyframes fadeInBottom {
+      from {
+        opacity: 0;
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  .animation {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .animation {
+    animation-name: fadeInBottom;
+  }
   aside {
     z-index: 3;
     left: -100%;
