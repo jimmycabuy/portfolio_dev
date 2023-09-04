@@ -51,5 +51,64 @@
       "tdj-screen-mobile-6",
       "tdj-screen-mobile-7"
     ]
+  },
+  {
+    "title": "Decathlon #1",
+    "subtitle": "Web Development",
+    "description": "As a personal project, I recreated selected pages of the Decathlon website using Decathlon APIs just for fun. I successfully replicated web pages from scratch, demonstrating proficiency in HTML, CSS, and JavaScript. I prioritized attention to detail, responsiveness, and clean code to deliver a seamless user experience.",
+    "tag": "web",
+    "type": "website",
+    "src": "3-decathlon",
+    "alt": "decathlon",
+    "href": "https://decathlon-exo.vercel.app/",
+    "route": "decathlon-1",
+    "year": 2022,
+    "techno": "React",
+    "pictures": ["dec1-screen-1", "dec1-screen-2"],
+    "picturesMobile": ["dec1-screen-mobile-1", "dec1-screen-mobile-2"]
+  },
+  {
+    "title": "Decathlon #2",
+    "subtitle": "Web Development",
+    "description": "For fun, I recreated a Decathlon-inspired design using Decathlon APIs. I added features like a search bar, pagination (12 sports per page), and the ability to filter Decathlon represented sports. Emphasizing a seamless user experience, I followed coding best practices to enhance functionality in web design.",
+    "tag": "web",
+    "type": "website",
+    "src": "4-decathlon",
+    "alt": "decathlon",
+    "href": "https://decathlon-jimmy.vercel.app/",
+    "route": "decathlon-2",
+    "year": 2023,
+    "techno": "SvelteKit",
+    "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"],
+    "picturesMobile": [
+      "dec2-screen-mobile-1",
+      "dec2-screen-mobile-2",
+      "dec2-screen-mobile-3"
+    ]
+  },
+  {
+    "title": "Jim's Pad",
+    "subtitle": "Web Design & Web Development",
+    "description": "Welcome to Jim's Pad - the go-to app that streamlines your note management tasks. With Jim's Pad, you can easily add, edit, and delete notes, ensuring you stay organized and in control of your information.",
+    "tag": "web",
+    "type": "website",
+    "src": "5-jimpad",
+    "alt": "jimpad",
+    "href": "https://jimnotespad.vercel.app/",
+    "route": "jimpad",
+    "year": 2023,
+    "techno": "SvelteKit, Tailwind, Firebase",
+    "pictures": [
+      "jimpad-screen-1",
+      "jimpad-screen-2",
+      "jimpad-screen-3",
+      "jimpad-screen-4"
+    ],
+    "picturesMobile": [
+      "jimpad-screen-mobile-1",
+      "jimpad-screen-mobile-2",
+      "jimpad-screen-mobile-3",
+      "jimpad-screen-mobile-4"
+    ]
   }
 ]
