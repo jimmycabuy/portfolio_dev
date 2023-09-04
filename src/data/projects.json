@@ -85,5 +85,30 @@
       "dec2-screen-mobile-2",
       "dec2-screen-mobile-3"
     ]
+  },
+  {
+    "title": "Jim's Pad",
+    "subtitle": "Web Design & Web Development",
+    "description": "Welcome to Jim's Pad - the go-to app that streamlines your note management tasks. With Jim's Pad, you can easily add, edit, and delete notes, ensuring you stay organized and in control of your information.",
+    "tag": "web",
+    "type": "website",
+    "src": "5-jimpad",
+    "alt": "jimpad",
+    "href": "https://jimnotespad.vercel.app/",
+    "route": "jimpad",
+    "year": 2023,
+    "techno": "SvelteKit, Tailwind, Firebase",
+    "pictures": [
+      "jimpad-screen-1",
+      "jimpad-screen-2",
+      "jimpad-screen-3",
+      "jimpad-screen-4"
+    ],
+    "picturesMobile": [
+      "jimpad-screen-mobile-1",
+      "jimpad-screen-mobile-2",
+      "jimpad-screen-mobile-3",
+      "jimpad-screen-mobile-4"
+    ]
   }
 ]
