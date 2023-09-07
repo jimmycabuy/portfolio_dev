@@ -1,3 +1,7 @@
+<script>
+  import Timeline from "../../components/Timeline.svelte";
+</script>
+
 <svelte:head>
   <title>Jimmy C. | About me.</title>
 </svelte:head>
@@ -35,6 +39,7 @@
       </p>
     </div>
   </div>
+  <Timeline />
 </main>
 
 <style>

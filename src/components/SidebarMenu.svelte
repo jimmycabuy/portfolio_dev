@@ -11,9 +11,9 @@
 </script>
 
 <aside class="absolute bg-black" class:open>
-  <nav class="text-4xl md:text-5xl">
+  <nav class="text-4xl md:text-5xl" class:nav-animation={open}>
     {#each menu as item, i}
-      <div class:animation={open} style="animation-delay: {i * 0.15}s;">
+      <div class:div-animation={open} style="animation-delay: {i * 0.15}s;">
         <small class="text-sm">0{i + 1}</small>
         <a
           href={item.link}
@@ -30,12 +30,11 @@
 
 <style>
   @media (pointer: coarse) {
-    @keyframes fadeInBottom {
+    @keyframes fadeInLeft {
       from {
         opacity: 0;
         transform: translateY(100%);
-        -webkit-transform: translateY(100%);
-        -webkit-transform: translateZ(0);
+        -webkit-transform: translateX(-100%);
       }
       to {
         opacity: 1;
@@ -55,14 +54,20 @@
       }
     }
   }
-  .animation {
+  .div-animation,
+  .nav-animation {
     animation-duration: 1s;
     animation-fill-mode: both;
   }
 
-  .animation {
+  .div-animation {
     animation-name: fadeInBottom;
   }
+
+  .nav-animation{
+    animation-name: fadeInLeft;
+  }
+
   aside {
     z-index: 3;
     left: -100%;

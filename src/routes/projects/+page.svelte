@@ -67,7 +67,7 @@
 </main>
 
 <style>
-  a {
+  a, .bloc_left {
     animation-duration: 1s;
     animation-fill-mode: both;
   }
@@ -75,13 +75,17 @@
   a {
     animation-name: fadeInBottom;
   }
+
+  .bloc_left{
+    animation-name: fadeInRight;
+  }
+
   @media (pointer: coarse) {
-    @keyframes fadeInBottom {
+    @keyframes fadeInRight {
       from {
         opacity: 0;
         transform: translateY(100%);
-        -webkit-transform: translateY(100%);
-        -webkit-transform: translateZ(0);
+        -webkit-transform: translateX(100%);
       }
       to {
         opacity: 1;
