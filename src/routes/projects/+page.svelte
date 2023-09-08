@@ -210,7 +210,7 @@
     }
   }
 
-  @media (pointer: coarse) {
+  @media (max-width: 1023px) or (pointer: coarse) {
     .bloc_right {
       display: none;
     }
