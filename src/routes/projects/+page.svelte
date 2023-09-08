@@ -67,7 +67,8 @@
 </main>
 
 <style>
-  a, .bloc_left {
+  a,
+  .bloc_left {
     animation-duration: 1s;
     animation-fill-mode: both;
   }
@@ -76,7 +77,7 @@
     animation-name: fadeInBottom;
   }
 
-  .bloc_left{
+  .bloc_left {
     animation-name: fadeInRight;
   }
 
@@ -199,19 +200,6 @@
     gap: 12px;
   }
 
-  /* .one_project:hover .title-wrapper {
-    animation: bounce 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) alternate;
-  }
-
-  @keyframes bounce {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(20px);
-    }
-  } */
-
   p {
     color: #fff;
   }
@@ -222,7 +210,7 @@
     }
   }
 
-  @media (max-width: 1023px) {
+  @media (pointer: coarse) {
     .bloc_right {
       display: none;
     }
