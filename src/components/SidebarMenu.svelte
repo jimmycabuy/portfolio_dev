@@ -98,7 +98,7 @@
     position: relative;
   }
 
-  @media (min-width: 1023px) {
+  @media (pointer: fine) {
     a::before {
       background: #ff2f66;
       content: "";

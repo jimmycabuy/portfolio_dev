@@ -131,7 +131,7 @@
     width: fit-content;
   }
 
-  @media (min-width: 1023px) {
+  @media (pointer: fine) {
     a::after {
       content: "";
       position: absolute;
