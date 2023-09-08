@@ -78,7 +78,7 @@
             viewBox="3 0 24 20"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-5 h-5 svg_view_website"
+            class="w-5 h-5"
             color="#fff"
           >
             <path
@@ -301,9 +301,6 @@
     }
     .bloc_right {
       width: 100%;
-    }
-    .svg_view_website {
-      display: none;
     }
     a {
       color: #fff;
