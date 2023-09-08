@@ -170,7 +170,7 @@
     display: none;
   }
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1023px) and (pointer: fine) {
     .one_project .title-wrapper {
       transition: transform 0.3s ease;
     }
