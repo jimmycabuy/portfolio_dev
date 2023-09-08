@@ -42,6 +42,10 @@
     max-width: 100vw;
   }
 
+  span {
+    max-width: 100vw;
+  }
+
   .open {
     display: none;
   }
