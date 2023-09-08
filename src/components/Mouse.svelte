@@ -59,7 +59,7 @@
     transform: translate(-50%, -50%);
   }
 
-  @media (max-width: 1023px) {
+  @media (pointer: coarse) {
     .mouse-follower {
       display: none;
     }
