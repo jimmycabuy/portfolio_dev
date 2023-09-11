@@ -39,7 +39,7 @@
       </p>
     </div>
   </div>
-  <Timeline />
+  <!-- <Timeline /> -->
 </main>
 
 <style>

@@ -1,9 +1,9 @@
 <script>
-  import ProjectsNavigation from "../../../components/ProjectsNavigation.svelte";
-  import ProgressBar from "../../../components/ProgressBar.svelte";
   import { page } from "$app/stores";
   import projectsJSON from "../../../data/projects.json";
   import { blur } from "svelte/transition";
+  import ProjectsNavigation from "../../../components/ProjectsNavigation.svelte";
+  import ProgressBar from "../../../components/ProgressBar.svelte";
   import Spinner from "../../../components/Spinner.svelte";
 
   let isLoading = true;
