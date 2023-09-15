@@ -1,0 +1,50 @@
+[
+  {
+    "year": "2015-2016",
+    "title": "Australia",
+    "startRow": "1",
+    "startCol": "1",
+    "endRow": "2",
+    "endCol": "2"
+  },
+  {
+    "year": "2016-2019",
+    "title": "E-bussines student",
+    "startRow": "2",
+    "startCol": "2",
+    "endRow": "3",
+    "endCol": "5"
+  },
+  {
+    "year": "2018-2021",
+    "title": "Digital Marketing Expert",
+    "startRow": "4",
+    "startCol": "4",
+    "endRow": "7",
+    "endCol": "7"
+  },
+  {
+    "year": "2018-2024",
+    "title": "Photographer",
+    "startRow": "3",
+    "startCol": "4",
+    "endRow": "5",
+    "endCol": "10"
+  },
+  {
+    "year": "2022-2024",
+    "title": "Web Developer",
+    "startRow": "6",
+    "startCol": "8",
+    "endRow": "6",
+    "endCol": "10"
+  },
+  {
+    "year": "2021-2022",
+    "title": "America",
+    "startRow": "5",
+    "startCol": "7",
+    "endRow": "6",
+    "endCol": "8"
+  }
+]
