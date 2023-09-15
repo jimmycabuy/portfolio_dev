@@ -21,7 +21,7 @@
           <div class="timeline-item-description">
             <span>{item?.year} > {item?.title}</span>
           </div>
-          <div class="comment">
+          <div class="description">
             <p class="md:text-justify">
               {item?.description}
             </p>
@@ -57,10 +57,6 @@
     flex-shrink: 0;
     overflow: hidden;
   }
-  .timeline-item-icon svg {
-    width: 20px;
-    height: 20px;
-  }
   .timeline-item-icon.filled-icon {
     background-color: #fff;
   }
@@ -69,9 +65,8 @@
     padding-top: 6px;
   }
 
-  .comment {
+  .description {
     margin-top: 12px;
-    border-radius: 6px;
   }
   h1 {
     color: transparent;
