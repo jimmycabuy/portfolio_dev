@@ -29,6 +29,10 @@ textarea:focus {
   outline: none;
 }
 
+img {
+  pointer-events: none;
+}
+
 html {
   background-color: #121212;
 }
