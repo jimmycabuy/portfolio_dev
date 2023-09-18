@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     padding: 32px 0 32px 32px;
-    border-left: 2px solid #ff2f66;
+    border-left: 2px solid #fff;
     gap: 2rem;
   }
   .timeline-item {
@@ -51,7 +51,7 @@
     overflow: hidden;
   }
   .timeline-item-icon.filled-icon {
-    background-color: #ff2f66;
+    background-color: #fff;
   }
   .timeline-item-description {
     display: flex;
