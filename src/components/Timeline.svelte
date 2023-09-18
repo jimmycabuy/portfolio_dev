@@ -7,19 +7,11 @@
   <ol class="timeline">
     {#each timeline as item}
       <li class="timeline-item">
-        <span class="timeline-item-icon | filled-icon">
-          <svg
-            width="24"
-            height="24"
-            viewBox={item?.viewbox}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill="#ff2f66" d={item?.d} />
-          </svg>
-        </span>
+        <span class="timeline-item-icon | filled-icon" />
         <div class="timeline-item-wrapper">
-          <div class="timeline-item-description">
-            <span>{item?.year} > {item?.title}</span>
+          <div class="timeline-item-description flex flex-col">
+            <span class="text-2xl font-bold">{item?.title}</span>
+            <span class="year text-xs">{item?.year}</span>
           </div>
           <div class="description">
             <p class="md:text-justify">
@@ -38,7 +30,7 @@
     display: flex;
     flex-direction: column;
     padding: 32px 0 32px 32px;
-    border-left: 2px solid #fff;
+    border-left: 2px solid #ff2f66;
     gap: 2rem;
   }
   .timeline-item {
@@ -50,19 +42,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    margin-left: -52px;
+    margin-left: -40px;
+    margin-top: 13px;
     flex-shrink: 0;
     overflow: hidden;
   }
   .timeline-item-icon.filled-icon {
-    background-color: #fff;
+    background-color: #ff2f66;
   }
   .timeline-item-description {
     display: flex;
     padding-top: 6px;
+  }
+
+  .year {
+    color: #ff2f66;
   }
 
   .description {
