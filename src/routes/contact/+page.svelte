@@ -48,6 +48,7 @@
               type={item?.type}
               name={item?.name}
               id={item?.name}
+              inputmode={item?.inputmode}
               required={item?.required}
               autocomplete={item?.autocomplete}
             />
