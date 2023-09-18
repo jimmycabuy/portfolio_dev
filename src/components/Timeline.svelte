@@ -14,7 +14,7 @@
             <span class="year text-xs">{item?.year}</span>
           </div>
           <div class="description">
-            <p class="md:text-justify">
+            <p class="text-justify">
               {item?.description}
             </p>
           </div>
