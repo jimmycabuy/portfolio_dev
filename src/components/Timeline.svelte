@@ -2,7 +2,7 @@
   import timeline from "../data/timeline.json";
 </script>
 
-<main class="px-10 xl:px-36 py-6 w-full">
+<main class="px-10 xl:px-36 py-6 w-full mb-8">
   <h1 class="my-10 text-5xl md:text-7xl">Timeline</h1>
   <ol class="timeline">
     {#each timeline as item}
