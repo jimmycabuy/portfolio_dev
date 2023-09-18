@@ -1,5 +1,6 @@
 [
   {
+    "tag": "input",
     "label": "First Name*",
     "type": "text",
     "name": "firstname",
@@ -8,6 +9,7 @@
     "autocomplete": "off"
   },
   {
+    "tag": "input",
     "label": "Last Name*",
     "type": "text",
     "name": "lastname",
@@ -16,6 +18,7 @@
     "autocomplete": "off"
   },
   {
+    "tag": "input",
     "label": "Email*",
     "type": "email",
     "name": "email",
@@ -24,11 +27,19 @@
     "autocomplete": "off"
   },
   {
+    "tag": "input",
     "label": "Phone Number",
     "type": "number",
     "name": "phone",
     "inputmode": "tel",
     "required": false,
+    "autocomplete": "off"
+  },
+  {
+    "tag": "textarea",
+    "label": "Message*",
+    "name": "message",
+    "required": true,
     "autocomplete": "off"
   }
 ]

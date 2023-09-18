@@ -42,20 +42,25 @@
     >
       {#each form as item}
         <div class="one_element_form">
-          <label for={item.name}>{item.label}</label>
-          <input
-            type={item.type}
-            name={item.name}
-            id={item.name}
-            required={item.required}
-            autocomplete={item.autocomplete}
-          />
+          <label for={item?.name}>{item?.label}</label>
+          {#if item?.tag === "input"}
+            <input
+              type={item?.type}
+              name={item?.name}
+              id={item?.name}
+              required={item?.required}
+              autocomplete={item?.autocomplete}
+            />
+          {:else if item?.tag === "textarea"}
+            <textarea
+              name={item?.name}
+              id={item?.name}
+              required={item?.required}
+              autocomplete={item?.autocomplete}
+            />
+          {/if}
         </div>
       {/each}
-      <div class="one_element_form">
-        <label for="message">Message*</label>
-        <textarea name="message" id="message" required autocomplete="off" />
-      </div>
       <input
         type="hidden"
         name="_gotcha"
@@ -80,8 +85,7 @@
 {/if}
 
 <style>
-
-h1 {
+  h1 {
     animation-duration: 1s;
     animation-fill-mode: both;
   }
