@@ -2,9 +2,6 @@
   import projectsJSON from "../../data/projects.json";
   import { blur } from "svelte/transition";
 
-  projectsJSON.sort((a, b) => {
-    return a.title.localeCompare(b.title);
-  });
   let currentProject = null;
 
   const setProject = (e) => {
