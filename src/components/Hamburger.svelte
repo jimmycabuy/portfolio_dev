@@ -19,9 +19,6 @@
 <style>
   button {
     z-index: 4;
-  }
-
-  h2 {
-    font-variation-settings: "ital" 0, "wdth" 150, "wght" 800;
+    font-weight: 700;
   }
 </style>
