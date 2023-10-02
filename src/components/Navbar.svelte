@@ -26,6 +26,10 @@
     z-index: 2;
   }
 
+  a {
+    font-weight: 700;
+  }
+
   @media (max-width: 767px) {
   }
 </style>
