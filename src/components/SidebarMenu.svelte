@@ -62,9 +62,11 @@
 
   .div-animation {
     animation-name: fadeInBottom;
+
+
   }
 
-  .nav-animation{
+  .nav-animation {
     animation-name: fadeInLeft;
   }
 
@@ -91,11 +93,13 @@
 
   a {
     text-decoration: none;
-    -webkit-text-stroke: 1px #fff;
-    color: transparent;
+    font-variation-settings: "ital" 0, "wdth" 150, "wght" 800;
     text-transform: uppercase;
-    font-weight: 700;
     position: relative;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
   }
 
   @media (pointer: fine) {
@@ -117,7 +121,7 @@
 
     a:hover {
       color: #fff;
-      transition: 0.5s;
+      font-variation-settings: "ital" 0, "wdth" 125, "wght" 800;
     }
   }
 </style>

@@ -77,6 +77,10 @@
       opacity: 1;
     }
   }
+
+  h2{
+    font-variation-settings: "ital" 0, "wdth" 150, "wght" 800;
+  }
   h2,
   p,
   svg {
@@ -108,6 +112,7 @@
     font-weight: 700;
     position: relative;
     white-space: nowrap;
+    font-variation-settings: "ital" 0, "wdth" 150, "wght" 800;
   }
 
   h1:after {

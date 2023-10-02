@@ -28,6 +28,7 @@
 
   a {
     font-weight: 700;
+    font-variation-settings: "ital" 0, "wdth" 150, "wght" 800;
   }
 
   @media (max-width: 767px) {
