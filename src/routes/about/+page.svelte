@@ -6,11 +6,11 @@
   <title>Jimmy C. | About me.</title>
 </svelte:head>
 
-<main class="flex justify-center flex-col items-center">
+<main class="flex justify-center flex-col items-center 4xl:px-72 px-10">
   <div>
-    <h1 class="text-5xl md:text-7xl px-12 py-6">I'm Jimmy.</h1>
+    <h1 class="text-5xl md:text-7xl py-6">I'm Jimmy.</h1>
   </div>
-  <div class="flex gap-10 px-10 xl:px-36 py-6 flex-col lg:flex-row">
+  <div class="flex gap-10 py-6 flex-col lg:flex-row">
     <div class="w-full lg:w-1/2 bloc_image">
       <img
         src="https://www.thedailyjim.be/assets/profilepic/jimmycabuy.webp"
