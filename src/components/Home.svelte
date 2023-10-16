@@ -19,7 +19,7 @@
 
     gsap.from(".my_title, .my_description, .my_resume", {
       duration: 3,
-      delay: 0.8,
+      delay: 1.3,
       opacity: 0,
     });
   }
