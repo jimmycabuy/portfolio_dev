@@ -1,12 +1,27 @@
 <script>
+  import { onMount } from "svelte";
+  import { gsap } from "gsap";
   import projectsJSON from "../../data/projects.json";
   import { blur } from "svelte/transition";
 
   let currentProject = null;
+  let main;
 
   const setProject = (e) => {
     currentProject = e;
   };
+
+  $: if (main) {
+    gsap.from(".link", {
+      y: 100,
+      duration: 1,
+      stagger: 0.3,
+      opacity: 0,
+    });
+  }
+  onMount(() => {
+    main = document.querySelector("main");
+  });
 </script>
 
 <svelte:head>
@@ -16,13 +31,14 @@
 <main class="px-12 flex justify-center items-center 4xl:px-72" in:blur>
   <div class="container_projects">
     <div class="bloc_left">
-      {#each projectsJSON as project, index}
-        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+      {#each projectsJSON as project}
         <a
+          class="link"
           href="projects/{project.route}"
           on:mouseover={() => setProject(project)}
+          on:focus={() => setProject(project)}
           on:mouseout={() => setProject(null)}
-          style="animation-delay: {index * 0.3}s;"
+          on:blur={() => setProject(project)}
         >
           <div class="one_project">
             <div class="flex items-center w-full sm:w-fit">
@@ -67,46 +83,6 @@
 </main>
 
 <style>
-  a,
-  .bloc_left {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
-  a {
-    animation-name: fadeInBottom;
-  }
-
-  .bloc_left {
-    animation-name: fadeInRight;
-  }
-
-  @media (pointer: coarse) {
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateY(100%);
-        -webkit-transform: translateX(100%);
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
-
-  @media (pointer: fine) {
-    @keyframes fadeInBottom {
-      from {
-        opacity: 0;
-        transform: translateY(100%);
-        -webkit-transform: translateY(100%);
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
-
   main {
     overflow: hidden;
     z-index: 1;
