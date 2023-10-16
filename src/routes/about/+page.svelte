@@ -1,5 +1,44 @@
 <script>
+  import { onMount } from "svelte";
   import Timeline from "../../components/Timeline.svelte";
+  import { gsap } from "gsap";
+
+  let main;
+
+  $: if (main) {
+    gsap.from(".bloc_title", {
+      y: -100,
+      duration: 1,
+      delay: 0.5,
+      opacity: 0,
+    });
+
+    if (window.innerWidth >= 767) {
+      gsap.from(".bloc_image", {
+        x: -500,
+        duration: 1,
+        opacity: 0,
+        delay: 0.5,
+      });
+
+      gsap.from(".bloc_text", {
+        x: 500,
+        duration: 1,
+        opacity: 0,
+        delay: 0.5,
+      });
+    } else {
+      gsap.from(".bloc", {
+        y: 100,
+        duration: 1,
+        opacity: 0,
+        delay: 0.5,
+      });
+    }
+  }
+  onMount(() => {
+    main = document.querySelector("main");
+  });
 </script>
 
 <svelte:head>
@@ -7,10 +46,10 @@
 </svelte:head>
 
 <main class="flex justify-center flex-col items-center 4xl:px-72 px-10">
-  <div>
+  <div class="bloc_title">
     <h1 class="text-5xl md:text-7xl py-6">I'm Jimmy.</h1>
   </div>
-  <div class="flex gap-10 py-6 flex-col lg:flex-row">
+  <div class="flex gap-10 py-6 flex-col lg:flex-row bloc">
     <div class="w-full lg:w-1/2 bloc_image">
       <img
         src="https://www.thedailyjim.be/assets/profilepic/jimmycabuy.webp"
@@ -43,76 +82,6 @@
 </main>
 
 <style>
-  h1,
-  .bloc_text,
-  .bloc_image {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
-  h1 {
-    animation-name: fadeInTop;
-  }
-  @keyframes fadeInTop {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @media (width >= 1030px) {
-    .bloc_image {
-      animation-name: fadeInLeft;
-    }
-
-    .bloc_text {
-      animation-name: fadeInRight;
-    }
-  }
-
-  @media (width < 1030px) {
-    h2,
-    p,
-    img {
-      animation: fadein 2.5s;
-      -moz-animation: fadein 2.5s;
-      -webkit-animation: fadein 2.5s;
-      -o-animation: fadein 2.5s;
-    }
-  }
-
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
   h1 {
     color: transparent;
     -webkit-text-stroke: 2px #fff;

@@ -32,13 +32,12 @@
   <div class="container_projects">
     <div class="bloc_left">
       {#each projectsJSON as project}
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
         <a
           class="link"
           href="projects/{project.route}"
           on:mouseover={() => setProject(project)}
-          on:focus={() => setProject(project)}
           on:mouseout={() => setProject(null)}
-          on:blur={() => setProject(project)}
         >
           <div class="one_project">
             <div class="flex items-center w-full sm:w-fit">
