@@ -18,21 +18,21 @@
         x: -500,
         duration: 1,
         opacity: 0,
-        delay: 0.5,
+        delay: 1.5,
       });
 
       gsap.from(".bloc_text", {
         x: 500,
         duration: 1,
         opacity: 0,
-        delay: 0.5,
+        delay: 1.5,
       });
     } else {
       gsap.from(".bloc", {
         y: 100,
         duration: 1,
         opacity: 0,
-        delay: 0.5,
+        delay: 1.5,
       });
     }
   }

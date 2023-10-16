@@ -16,6 +16,7 @@
       y: 100,
       duration: 1,
       stagger: 0.3,
+      delay: 0.5,
       opacity: 0,
     });
   }

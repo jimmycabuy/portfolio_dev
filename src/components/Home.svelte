@@ -1,8 +1,31 @@
 <script>
   import Skills from "./Skills.svelte";
-  const banner = "/assets/banner.webp";
-  const pdf = "/document/jimmy_cabuy_resume.pdf";
   import { blur } from "svelte/transition";
+  import { onMount } from "svelte";
+  import { gsap } from "gsap";
+
+  const pdf = "/document/jimmy_cabuy_resume.pdf";
+  const banner = "/assets/banner.webp";
+
+  let main;
+
+  $: if (main) {
+    gsap.from(".my_name", {
+      y: -100,
+      duration: 0.8,
+      delay: 0.5,
+      opacity: 0,
+    });
+
+    gsap.from(".my_title, .my_description, .my_resume", {
+      duration: 3,
+      delay: 0.8,
+      opacity: 0,
+    });
+  }
+  onMount(() => {
+    main = document.querySelector("main");
+  });
 </script>
 
 <svelte:head>
@@ -16,13 +39,13 @@
   <div class="container_home flex justify-center items-center">
     <div class="profile-container max-w-[75%]">
       <div class="flex flex-col gap-8 items-center text-center">
-        <h1 class="text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
+        <h1 class="my_name text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
         <div class="flex gap-2 flex-col md:flex-row">
-          <h2 class="text-xl sm:text-2xl">
+          <h2 class="my_title text-xl sm:text-2xl">
             Front-end developer & Photographer
           </h2>
         </div>
-        <p class="text-center leading-6">
+        <p class="my_description text-center leading-6">
           I'm Jimmy, a full-stack developer, designer, and photographer with
           digital marketing experience. After a global photography journey, I
           became a front-end developer at Decathlon, always seeking new
@@ -33,7 +56,7 @@
           href={pdf}
           target="_blank"
           rel="noopener noreferrer"
-          class="animate-bounce"
+          class="my_resume animate-bounce"
         >
           <span class="flex">
             <svg
@@ -60,40 +83,6 @@
 </main>
 
 <style>
-  h1 {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
-  h1 {
-    animation-name: fadeInTop;
-  }
-  @keyframes fadeInTop {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  h2,
-  p,
-  svg {
-    animation: fadein 2.5s;
-    -moz-animation: fadein 2.5s;
-    -webkit-animation: fadein 2.5s;
-    -o-animation: fadein 2.5s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
   main {
     overflow: hidden;
     z-index: 1;

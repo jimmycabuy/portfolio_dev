@@ -2,10 +2,14 @@
   import { onMount } from "svelte";
   import Spinner from "../../components/Spinner.svelte";
   import form from "../../data/form.json";
+  import { gsap } from "gsap";
+
   let isMessageSent = false;
   let isLoading = true;
+  let main;
 
   onMount(() => {
+    main = document.querySelector("main");
     const formElement = document.querySelector("#form_container");
     formElement.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -26,6 +30,27 @@
       isMessageSent = false;
     }, 7000);
   }
+
+  $: if (main) {
+    gsap.from(".get_in_touch", {
+      y: -100,
+      duration: 1,
+      delay: 0.5,
+      opacity: 0,
+    });
+    gsap.from(".one_element_form", {
+      y: 50,
+      duration: 1,
+      delay: 1.5,
+      opacity: 0,
+      stagger:0.3
+    });
+    gsap.from(".send_button", {
+      duration: 3,
+      delay: 3.7,
+      opacity: 0,
+    });
+  }
 </script>
 
 <svelte:head>
@@ -33,8 +58,8 @@
 </svelte:head>
 
 {#if !isMessageSent}
-  <div class="container_contact">
-    <h1 class="text-3xl md:text-5xl pb-3">Get in touch.</h1>
+  <main class="container_contact">
+    <h1 class="get_in_touch text-3xl md:text-5xl pb-3">Get in touch.</h1>
     <form
       action="https://getform.io/f/e0fcd5ea-3300-4659-8085-c6108ccbef1a"
       method="POST"
@@ -68,11 +93,11 @@
         style="display:none !important"
         autocomplete="off"
       />
-      <div class="flex justify-center">
+      <div class="send_button flex justify-center">
         <button type="submit">Send</button>
       </div>
     </form>
-  </div>
+  </main>
 {:else if isLoading}
   <Spinner />
 {:else}
@@ -86,37 +111,7 @@
 {/if}
 
 <style>
-  h1 {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
-  h1 {
-    animation-name: fadeInTop;
-  }
-  @keyframes fadeInTop {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  form {
-    animation: fadein 2.5s;
-    -moz-animation: fadein 2.5s;
-    -webkit-animation: fadein 2.5s;
-    -o-animation: fadein 2.5s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  
   .container_contact {
     display: flex;
     align-items: center;
