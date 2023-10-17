@@ -5,8 +5,29 @@
   import ProjectsNavigation from "../../../components/ProjectsNavigation.svelte";
   import ProgressBar from "../../../components/ProgressBar.svelte";
   import Spinner from "../../../components/Spinner.svelte";
+  import { onMount } from "svelte";
+  import { gsap } from "gsap";
 
   let isLoading = true;
+  let main;
+
+  $: if (main) {
+    gsap.from(".container_image", {
+      y: -500,
+      duration: 1,
+      delay: 1.35,
+      opacity: 0,
+    });
+
+    gsap.from(".bloc_title, .container_one_project, .container_image_screens", {
+      duration: 3,
+      delay: 2.35,
+      opacity: 0,
+    });
+  }
+  onMount(() => {
+    main = document.querySelector("main");
+  });
 
   setTimeout(() => {
     isLoading = false;
@@ -115,40 +136,6 @@
 </main>
 
 <style>
-  .bloc_image {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
-  .bloc_image {
-    animation-name: fadeInTop;
-  }
-  @keyframes fadeInTop {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .bloc_title,
-  .container_one_project,
-  .bloc_image_screen {
-    animation: fadein 2.5s;
-    -moz-animation: fadein 2.5s;
-    -webkit-animation: fadein 2.5s;
-    -o-animation: fadein 2.5s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
   .is_loading {
     display: none;
   }
