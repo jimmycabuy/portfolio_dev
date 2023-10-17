@@ -202,7 +202,7 @@
 
   @media (max-width: 767px) {
     #form_container {
-      width: 75%;
+      width: 85%;
     }
   }
 </style>
