@@ -154,6 +154,8 @@
     border: none;
     font-size: 0.9rem;
     background: none;
+    border-radius: 0;
+    -webkit-appearance: none;
   }
 
   input {
