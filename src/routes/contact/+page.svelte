@@ -156,6 +156,7 @@
     background: none;
     border-radius: 0;
     -webkit-appearance: none;
+    appearance: none;
   }
 
   input {
