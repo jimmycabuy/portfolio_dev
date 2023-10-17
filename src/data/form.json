@@ -28,7 +28,7 @@
   },
   {
     "tag": "input",
-    "label": "Phone Number",
+    "label": "Phone number",
     "type": "number",
     "name": "phone",
     "inputmode": "tel",

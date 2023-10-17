@@ -43,7 +43,7 @@
       duration: 1,
       delay: 1.5,
       opacity: 0,
-      stagger:0.3
+      stagger: 0.3,
     });
     gsap.from(".send_button", {
       duration: 3,
@@ -111,7 +111,6 @@
 {/if}
 
 <style>
-  
   .container_contact {
     display: flex;
     align-items: center;
@@ -132,15 +131,18 @@
     flex-direction: column;
   }
 
+  button,
+  .backhome {
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+
   input,
   textarea,
   button,
   .backhome {
     font-family: "bd-supper", sans-serif;
-    font-weight: 700;
     font-style: normal;
-    padding: 0.5rem;
-    border-radius: 10px;
   }
 
   label {
@@ -151,18 +153,17 @@
   textarea {
     border: none;
     font-size: 0.9rem;
-    padding-left: 0.5rem;
     background: none;
   }
 
   input {
-    height: 2.5rem;
-    border: 1px solid #fff;
+    height: 2rem;
+    border-bottom: 1px solid #fff;
   }
 
   textarea {
     resize: none;
-    border: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     height: 8rem;
     padding-top: 0.5rem;
   }
