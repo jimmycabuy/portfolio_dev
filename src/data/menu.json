@@ -8,6 +8,10 @@
     "link": "/projects"
   },
   {
+    "label": "Gallery.",
+    "link": "/gallery"
+  },
+  {
     "label": "About me.",
     "link": "/about"
   },
