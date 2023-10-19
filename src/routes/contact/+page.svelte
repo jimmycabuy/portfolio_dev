@@ -6,10 +6,27 @@
 
   let isMessageSent = false;
   let isLoading = true;
-  let main;
 
   onMount(() => {
-    main = document.querySelector("main");
+    gsap.from(".get_in_touch", {
+      y: -100,
+      duration: 1,
+      delay: 0.5,
+      opacity: 0,
+    });
+    gsap.from(".one_element_form", {
+      y: 50,
+      duration: 1,
+      delay: 1.5,
+      opacity: 0,
+      stagger: 0.3,
+    });
+    gsap.from(".send_button", {
+      duration: 3,
+      delay: 3.7,
+      opacity: 0,
+    });
+
     const formElement = document.querySelector("#form_container");
     formElement.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -29,27 +46,6 @@
     setTimeout(() => {
       isMessageSent = false;
     }, 7000);
-  }
-
-  $: if (main) {
-    gsap.from(".get_in_touch", {
-      y: -100,
-      duration: 1,
-      delay: 0.5,
-      opacity: 0,
-    });
-    gsap.from(".one_element_form", {
-      y: 50,
-      duration: 1,
-      delay: 1.5,
-      opacity: 0,
-      stagger: 0.3,
-    });
-    gsap.from(".send_button", {
-      duration: 3,
-      delay: 3.7,
-      opacity: 0,
-    });
   }
 </script>
 

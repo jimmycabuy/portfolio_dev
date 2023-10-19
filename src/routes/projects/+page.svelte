@@ -5,13 +5,12 @@
   import { blur } from "svelte/transition";
 
   let currentProject = null;
-  let main;
 
   const setProject = (e) => {
     currentProject = e;
   };
 
-  $: if (main) {
+  onMount(() => {
     gsap.from(".link", {
       y: 100,
       duration: 1,
@@ -19,9 +18,6 @@
       delay: 0.5,
       opacity: 0,
     });
-  }
-  onMount(() => {
-    main = document.querySelector("main");
   });
 </script>
 

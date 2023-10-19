@@ -3,8 +3,6 @@
   import { onMount } from "svelte";
   import { gsap } from "gsap";
 
-  let main;
-
   const uniquePictures = new Set();
 
   while (uniquePictures.size < 60) {
@@ -14,7 +12,7 @@
 
   const randomPictures = Array.from(uniquePictures);
 
-  $: if (main) {
+  onMount(() => {
     gsap.from(".box", {
       y: 100,
       duration: 1,
@@ -22,9 +20,6 @@
       delay: 1,
       opacity: 0,
     });
-  }
-  onMount(() => {
-    main = document.querySelector("main");
   });
 </script>
 

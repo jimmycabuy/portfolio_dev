@@ -3,9 +3,7 @@
   import Timeline from "../../components/Timeline.svelte";
   import { gsap } from "gsap";
 
-  let main;
-
-  $: if (main) {
+  onMount(() => {
     gsap.from(".bloc_title", {
       y: -100,
       duration: 1,
@@ -35,9 +33,6 @@
         delay: 1.5,
       });
     }
-  }
-  onMount(() => {
-    main = document.querySelector("main");
   });
 </script>
 

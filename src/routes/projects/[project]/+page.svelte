@@ -9,9 +9,8 @@
   import { gsap } from "gsap";
 
   let isLoading = true;
-  let main;
 
-  $: if (main) {
+  onMount(() => {
     gsap.from(".container_image", {
       y: -500,
       duration: 1,
@@ -24,9 +23,6 @@
       delay: 2.35,
       opacity: 0,
     });
-  }
-  onMount(() => {
-    main = document.querySelector("main");
   });
 
   setTimeout(() => {

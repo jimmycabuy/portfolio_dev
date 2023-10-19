@@ -1,15 +1,11 @@
 <script>
-  import Skills from "./Skills.svelte";
   import { blur } from "svelte/transition";
   import { onMount } from "svelte";
   import { gsap } from "gsap";
 
   const pdf = "/document/jimmy_cabuy_resume.pdf";
-  const banner = "/assets/banner.webp";
 
-  let main;
-
-  $: if (main) {
+  onMount(() => {
     gsap.from(".my_name", {
       y: -100,
       duration: 0.8,
@@ -22,9 +18,6 @@
       delay: 1.3,
       opacity: 0,
     });
-  }
-  onMount(() => {
-    main = document.querySelector("main");
   });
 </script>
 
@@ -51,7 +44,6 @@
           became a front-end developer at Decathlon, always seeking new
           challenges.
         </p>
-        <!-- <Skills /> -->
         <a
           href={pdf}
           target="_blank"
