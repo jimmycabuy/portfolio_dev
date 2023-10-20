@@ -1,9 +1,34 @@
 <script>
+  import { onMount } from "svelte";
   import timeline from "../data/timeline.json";
+  import { gsap } from "gsap";
+
+  onMount(() => {
+    gsap.from(".title", {
+      y: -100,
+      duration: 1,
+      delay: 2.5,
+      opacity: 0,
+    });
+
+    gsap.from(".timeline", {
+      duration: 1,
+      delay: 3.5,
+      opacity: 0,
+    });
+
+    gsap.from(".timeline-item", {
+      y: -100,
+      duration: 1,
+      delay: 3.5,
+      stagger: 0.3,
+      opacity: 0,
+    });
+  });
 </script>
 
 <main class="py-6 w-full mb-8">
-  <h1 class="my-10 text-5xl md:text-7xl">Timeline</h1>
+  <h1 class="title my-10 text-5xl md:text-7xl">Timeline</h1>
   <ol class="timeline">
     {#each timeline as item}
       <li class="timeline-item">
