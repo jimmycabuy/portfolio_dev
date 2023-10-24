@@ -11,6 +11,7 @@
     "route": "uwork",
     "year": 2022,
     "techno": "React Native, Node.js, MongoDB",
+    "showlink": true,
     "pictures": ["uwork-screen-1", "uwork-screen-2"],
     "picturesMobile": [
       "uwork-screen-mobile-1",
@@ -33,6 +34,7 @@
     "route": "thedailyjim",
     "year": 2022,
     "techno": "SvelteKit",
+    "showlink": true,
     "pictures": [
       "tdj-screen-1",
       "tdj-screen-2",
@@ -64,6 +66,7 @@
     "route": "decathlon-1",
     "year": 2022,
     "techno": "React",
+    "showlink": false,
     "pictures": ["dec1-screen-1", "dec1-screen-2"],
     "picturesMobile": ["dec1-screen-mobile-1", "dec1-screen-mobile-2"]
   },
@@ -79,6 +82,7 @@
     "route": "decathlon-2",
     "year": 2023,
     "techno": "SvelteKit",
+    "showlink": false,
     "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"],
     "picturesMobile": [
       "dec2-screen-mobile-1",
@@ -98,6 +102,7 @@
     "route": "jimpad",
     "year": 2023,
     "techno": "SvelteKit, Tailwind, Firebase",
+    "showlink": true,
     "pictures": [
       "jimpad-screen-1",
       "jimpad-screen-2",
