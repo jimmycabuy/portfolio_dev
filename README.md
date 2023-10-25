@@ -1,3 +1,3 @@
-# My portfolio2.0
+# My portfolio
 
 Work in progress: [jimmycabuy.com](https://www.jimmycabuy.com/)
