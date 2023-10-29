@@ -13,17 +13,19 @@
 <aside class="absolute bg-black" class:open>
   <nav class="text-4xl md:text-5xl" class:nav-animation={open}>
     {#each menu as item, i}
-      <div class:div-animation={open} style="animation-delay: {i * 0.15}s;">
-        <small class="text-sm">0{i + 1}</small>
-        <a
-          href={item.link}
-          on:click={closeSidebar}
-          data-sveltekit-preload-data
-          data-sveltekit-preload-code
-        >
-          {item.label}
-        </a>
-      </div>
+      {#if item.show}
+        <div class:div-animation={open} style="animation-delay: {i * 0.15}s;">
+          <small class="text-sm">0{i + 1}</small>
+          <a
+            href={item.link}
+            on:click={closeSidebar}
+            data-sveltekit-preload-data
+            data-sveltekit-preload-code
+          >
+            {item.label}
+          </a>
+        </div>
+      {/if}
     {/each}
   </nav>
 </aside>
