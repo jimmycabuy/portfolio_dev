@@ -1,22 +1,27 @@
 [
   {
     "label": "Home.",
-    "link": "/"
+    "link": "/",
+    "show": true
   },
   {
     "label": "My work.",
-    "link": "/projects"
+    "link": "/projects",
+    "show": true
   },
   {
     "label": "Gallery.",
-    "link": "/gallery"
+    "link": "/gallery",
+    "show": false
   },
   {
     "label": "About me.",
-    "link": "/about"
+    "link": "/about",
+    "show": true
   },
   {
     "label": "Contact.",
-    "link": "/contact"
+    "link": "/contact",
+    "show": true
   }
 ]
