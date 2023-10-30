@@ -34,6 +34,7 @@
     height: 100dvh;
     width: 100vw;
     z-index: 1;
+    background-color: black;
   }
 
   .loader {

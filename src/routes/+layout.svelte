@@ -9,7 +9,7 @@
   import SidebarMenu from "../components/SidebarMenu.svelte";
 
   const isParamsInUrl = Object.keys($page.params).length !== 0;
-  let isLoading = false; // remove the animation for the moment.
+  let isLoading = true;
 
   setTimeout(() => {
     isLoading = false;
