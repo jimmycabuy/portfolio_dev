@@ -1,5 +1,6 @@
 <script>
   import menu from "../data/menu.json";
+  import gsap from "gsap";
 
   export let open = false;
 
@@ -8,13 +9,23 @@
       open = false;
     }, 350);
   }
+
+  $: if (open) {
+    gsap.from(".one_menu_item", {
+      y: 30,
+      duration: 0.6,
+      delay: 0.3,
+      opacity: 0,
+      stagger: 0.2,
+    });
+  }
 </script>
 
 <aside class="absolute bg-black" class:open>
-  <nav class="text-4xl md:text-5xl" class:nav-animation={open}>
+  <nav class="text-4xl md:text-5xl">
     {#each menu as item, i}
       {#if item.show}
-        <div class:div-animation={open} style="animation-delay: {i * 0.15}s;">
+        <div class="one_menu_item">
           <small class="text-sm">0{i + 1}</small>
           <a
             href={item.link}
@@ -31,45 +42,6 @@
 </aside>
 
 <style>
-  @media (pointer: coarse) {
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateY(100%);
-        -webkit-transform: translateX(-100%);
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
-
-  @media (pointer: fine) {
-    @keyframes fadeInBottom {
-      from {
-        opacity: 0;
-        transform: translateY(100%);
-        -webkit-transform: translateY(100%);
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
-  .div-animation,
-  .nav-animation {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
-  .div-animation {
-    animation-name: fadeInBottom;
-  }
-
-  .nav-animation {
-    animation-name: fadeInLeft;
-  }
-
   aside {
     z-index: 3;
     left: -100%;
