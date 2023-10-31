@@ -15,12 +15,16 @@
   color: #fff;
 }
 
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
+  width: 0;
+  background: transparent;
 }
 
-body {
+html {
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 a {
