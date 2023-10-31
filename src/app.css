@@ -15,6 +15,14 @@
   color: #fff;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
