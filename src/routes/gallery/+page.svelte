@@ -34,7 +34,7 @@
       if (!paused) {
         currentIndex = (currentIndex + 1) % photos.length;
       }
-    }, 250);
+    }, 500);
 
     return () => {
       clearInterval(interval);
