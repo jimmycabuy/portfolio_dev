@@ -35,7 +35,7 @@
         <h1 class="my_name text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
         <div class="flex gap-2 flex-col md:flex-row">
           <h2 class="my_title text-xl sm:text-2xl">
-            Front-end developer & Photographer
+            Front-end developer & photographer
           </h2>
         </div>
         <p class="my_description text-center leading-6">

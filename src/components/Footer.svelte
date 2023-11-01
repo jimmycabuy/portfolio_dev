@@ -52,7 +52,7 @@
     </div>
   </div>
   <div>
-    <p class="">Designed and coded by Jimmy © {year}</p>
+    <p class="">Designed and coded by me © {year}</p>
   </div>
 </footer>
 
