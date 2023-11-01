@@ -12,7 +12,7 @@
   {
     "label": "Gallery.",
     "link": "/gallery",
-    "isActive": false
+    "isActive": true
   },
   {
     "label": "About me.",
