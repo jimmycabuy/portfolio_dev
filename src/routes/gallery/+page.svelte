@@ -64,10 +64,10 @@
         {#if paused && i === currentIndex}
           <div class="description">
             <p class="description_text">
-              {image.place}
+              {image.place},
             </p>
             <p class="description_text">
-              {image.country}
+              {image.country}.
             </p>
           </div>
         {/if}
