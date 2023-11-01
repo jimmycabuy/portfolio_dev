@@ -9,7 +9,7 @@
   let screenWidth = window.innerWidth;
 
   const handleSlideshow = (event) => {
-    if (event.target.classList.contains("slide")) {
+    if (event.target.classList.contains("slide") || event.target.classList.contains("description")) {
       paused = !paused;
     }
   };
