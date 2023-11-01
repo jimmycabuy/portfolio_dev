@@ -46,8 +46,10 @@
   });
 </script>
 
-<article class="px-12 4xl:px-72">
-  <main class="slideshow">
+<svelte:window on:resize={handleResize} />
+
+<main class="px-12 4xl:px-72">
+  <article class="slideshow">
     {#each photos as image, i}
       <div class="slide {i === currentIndex ? 'active' : ''}">
         <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -57,7 +59,7 @@
           on:mouseup={handleSlideshow}
           on:touchstart={handleSlideshow}
           on:touchend={handleSlideshow}
-          src={`../../assets/photos/${image.folder}/${image.name}.webp`}
+          src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
         />
         {#if paused && i === currentIndex}
           <div class="description">
@@ -65,14 +67,14 @@
               {image.place}
             </p>
             <p class="description_text">
-              {image.folder}
+              {image.country}
             </p>
           </div>
         {/if}
       </div>
     {/each}
-  </main>
-</article>
+  </article>
+</main>
 
 <style>
   .slideshow {
