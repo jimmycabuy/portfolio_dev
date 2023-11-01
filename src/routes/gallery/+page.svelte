@@ -135,5 +135,8 @@
     .description_text {
       font-size: x-large;
     }
+    .slideshow {
+      height: 70vh;
+    }
   }
 </style>
