@@ -9,7 +9,7 @@
   let screenWidth = window.innerWidth;
 
   const handleSlideshow = (event) => {
-    if (event.target.tagName !== "H2") {
+    if (event.target.classList !== "slide") {
       paused = !paused;
     }
   };
