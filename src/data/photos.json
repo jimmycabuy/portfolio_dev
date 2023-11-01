@@ -145,8 +145,8 @@
   },
   {
     "name": "falafel",
-    "country": "XXX",
-    "place": "XXX",
+    "country": "USA",
+    "place": "Santa Cruz, California",
     "extension": "jpeg"
   },
   {
@@ -223,7 +223,7 @@
   },
   {
     "name": "krusty",
-    "country": "USa",
+    "country": "USA",
     "place": "Los Angeles, California",
     "extension": "jpeg"
   },
