@@ -2,26 +2,26 @@
   {
     "label": "Home.",
     "link": "/",
-    "show": true
+    "isActive": true
   },
   {
     "label": "My work.",
     "link": "/projects",
-    "show": true
+    "isActive": true
   },
   {
     "label": "Gallery.",
     "link": "/gallery",
-    "show": false
+    "isActive": false
   },
   {
     "label": "About me.",
     "link": "/about",
-    "show": true
+    "isActive": true
   },
   {
     "label": "Contact.",
     "link": "/contact",
-    "show": true
+    "isActive": true
   }
 ]

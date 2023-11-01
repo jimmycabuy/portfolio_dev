@@ -24,16 +24,16 @@
 <aside class="absolute bg-black" class:open>
   <nav class="text-4xl md:text-5xl">
     {#each menu as item, i}
-      {#if item.show}
+      {#if item?.isActive}
         <div class="one_menu_item">
           <small class="text-sm">0{i + 1}</small>
           <a
-            href={item.link}
+            href={item?.link}
             on:click={closeSidebar}
             data-sveltekit-preload-data
             data-sveltekit-preload-code
           >
-            {item.label}
+            {item?.label}
           </a>
         </div>
       {/if}

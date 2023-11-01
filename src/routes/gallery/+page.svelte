@@ -1,53 +1,139 @@
 <script>
   import photos from "../../data/photos.json";
   import { onMount } from "svelte";
-  import { gsap } from "gsap";
 
-  const uniquePictures = new Set();
+  let currentIndex = 0;
+  let paused = false;
+  let interval;
+  let imageSide;
+  let screenWidth = window.innerWidth;
 
-  while (uniquePictures.size < 60) {
-    const randomIndex = Math.floor(Math.random() * photos.length);
-    uniquePictures.add(photos[randomIndex]);
+  const handleSlideshow = (event) => {
+    if (event.target.tagName !== "H2") {
+      paused = !paused;
+    }
+  };
+
+  const handleResize = () => {
+    screenWidth = window.innerWidth;
+  };
+
+  $: if (screenWidth <= 768) {
+    imageSide = "vertical";
+  } else {
+    imageSide = "horizontal";
   }
 
-  const randomPictures = Array.from(uniquePictures);
-
   onMount(() => {
-    gsap.from(".box", {
-      y: 100,
-      duration: 1,
-      stagger: 0.2,
-      delay: 1,
-      opacity: 0,
-    });
+    document.addEventListener("mousedown", handleSlideshow);
+    document.addEventListener("mouseup", handleSlideshow);
+    document.addEventListener("touchstart", handleSlideshow);
+    document.addEventListener("touchend", handleSlideshow);
+
+    interval = setInterval(() => {
+      if (!paused) {
+        currentIndex = (currentIndex + 1) % photos.length;
+      }
+    }, 250);
+
+    return () => {
+      clearInterval(interval);
+      document.removeEventListener("mousedown", handleSlideshow);
+      document.removeEventListener("mouseup", handleSlideshow);
+      document.removeEventListener("touchstart", handleSlideshow);
+      document.removeEventListener("touchend", handleSlideshow);
+    };
   });
 </script>
 
-<main class="px-12 4xl:px-72">
-  <div class="auto-grid">
-    {#each randomPictures as photo}
-      <div class="box">
+<article class="px-12 4xl:px-72">
+  <main class="slideshow">
+    {#each photos as image, i}
+      <div class="slide {i === currentIndex ? 'active' : ''}">
+        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
         <img
-          src={`../../assets/photos/${photo.folder}/${photo.name}.webp`}
-          alt={photo.name}
-          width="100%"
-          height="100%"
-          preload
-          class="object-cover aspect-square"
+          alt={image.alt}
+          on:mousedown={handleSlideshow}
+          on:mouseup={handleSlideshow}
+          on:touchstart={handleSlideshow}
+          on:touchend={handleSlideshow}
+          src={`../../assets/photos/${image.folder}/${image.name}.webp`}
         />
+        {#if paused && i === currentIndex}
+          <div class="description">
+            <p class="description_text">
+              {image.place}
+            </p>
+            <p class="description_text">
+              {image.folder}
+            </p>
+          </div>
+        {/if}
       </div>
     {/each}
-  </div>
-</main>
+  </main>
+</article>
 
 <style>
-  .auto-grid {
-    --auto-grid-min-size: 16rem;
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(var(--auto-grid-min-size), 1fr)
-    );
-    grid-gap: 2rem;
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    margin: auto;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .slide:hover {
+    cursor: pointer;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    opacity: 1;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .description_text {
+    padding: 0 2rem;
+    font-size: xx-large;
+    text-transform: uppercase;
+  }
+
+  @media (width <= 768px) {
+    .description_text {
+      font-size: x-large;
+    }
   }
 </style>
