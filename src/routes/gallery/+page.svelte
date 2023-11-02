@@ -57,12 +57,12 @@
     <div class="slide {i === currentIndex ? 'active' : ''}">
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
       <img
-        alt={image.alt}
+        src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
+        alt={image.name}
         on:mousedown={handleSlideshow}
         on:mouseup={handleSlideshow}
         on:touchstart={handleSlideshow}
         on:touchend={handleSlideshow}
-        src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
       />
       {#if paused && i === currentIndex}
         <div class="description">
