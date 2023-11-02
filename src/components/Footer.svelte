@@ -51,8 +51,8 @@
       </a>
     </div>
   </div>
-  <div>
-    <p class="">Designed and coded by me © {year}</p>
+  <div class="block_right_home">
+    <p>Designed and coded by me © {year}</p>
   </div>
 </footer>
 
@@ -68,6 +68,11 @@
   }
   .icon {
     margin-bottom: 0.2rem;
+  }
+
+  .block_left_home,
+  .block_right_home {
+    z-index: 2;
   }
 
   /* Media Queries*/

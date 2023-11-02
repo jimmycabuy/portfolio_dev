@@ -9,7 +9,11 @@
   let screenWidth = window.innerWidth;
 
   const handleSlideshow = (event) => {
-    if (event.target.classList.contains("slide") || event.target.classList.contains("description")) {
+    console.log(event.target.classList);
+    if (
+      event.target.classList.contains("slide") ||
+      event.target.classList.contains("description")
+    ) {
       paused = !paused;
     }
   };
@@ -48,40 +52,38 @@
 
 <svelte:window on:resize={handleResize} />
 
-<main class="px-12 4xl:px-72">
-  <article class="slideshow">
-    {#each photos as image, i}
-      <div class="slide {i === currentIndex ? 'active' : ''}">
-        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-        <img
-          alt={image.alt}
-          on:mousedown={handleSlideshow}
-          on:mouseup={handleSlideshow}
-          on:touchstart={handleSlideshow}
-          on:touchend={handleSlideshow}
-          src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
-        />
-        {#if paused && i === currentIndex}
-          <div class="description">
-            <p class="description_text">
-              {image.place},
-            </p>
-            <p class="description_text">
-              {image.country}.
-            </p>
-          </div>
-        {/if}
-      </div>
-    {/each}
-  </article>
-</main>
+<article class="slideshow">
+  {#each photos as image, i}
+    <div class="slide {i === currentIndex ? 'active' : ''}">
+      <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+      <img
+        alt={image.alt}
+        on:mousedown={handleSlideshow}
+        on:mouseup={handleSlideshow}
+        on:touchstart={handleSlideshow}
+        on:touchend={handleSlideshow}
+        src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
+      />
+      {#if paused && i === currentIndex}
+        <div class="description">
+          <p class="description_text">
+            {image.place},
+          </p>
+          <p class="description_text">
+            {image.country}.
+          </p>
+        </div>
+      {/if}
+    </div>
+  {/each}
+</article>
 
 <style>
   .slideshow {
-    position: relative;
-    width: 100%;
-    height: 75vh;
-    margin: auto;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
   }
 
   .slide {
@@ -92,7 +94,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 20px;
+    /* border-radius: 20px; */
   }
 
   .slide:hover {
@@ -136,9 +138,6 @@
   @media (width <= 768px) {
     .description_text {
       font-size: x-large;
-    }
-    .slideshow {
-      height: 70vh;
     }
   }
 </style>
