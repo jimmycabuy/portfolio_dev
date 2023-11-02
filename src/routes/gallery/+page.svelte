@@ -8,6 +8,7 @@
   let interval;
   let imageSide;
   let screenWidth;
+  let screenHeight;
   let isLoading = true;
 
   const handleSlideshow = (event) => {
@@ -23,7 +24,7 @@
     screenWidth = window.innerWidth;
   };
 
-  $: if (screenWidth < 846) {
+  $: if (screenWidth < screenHeight) {
     imageSide = "vertical";
   } else {
     imageSide = "horizontal";
@@ -35,6 +36,7 @@
 
   onMount(() => {
     screenWidth = window.innerWidth;
+    screenHeight = window.innerHeight;
     document.addEventListener("mousedown", handleSlideshow);
     document.addEventListener("mouseup", handleSlideshow);
     document.addEventListener("touchstart", handleSlideshow);
@@ -107,7 +109,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* border-radius: 20px; */
   }
 
   .slide:hover {
