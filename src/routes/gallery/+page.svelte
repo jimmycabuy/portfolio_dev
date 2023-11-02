@@ -31,7 +31,7 @@
 
   setTimeout(() => {
     isLoading = false;
-  }, 1250);
+  }, 1600);
 
   onMount(() => {
     screenWidth = window.innerWidth;
