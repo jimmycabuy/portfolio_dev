@@ -1,15 +1,16 @@
 <script>
   import photos from "../../data/photos.json";
+  import Spinner from "../../components/Spinner.svelte";
   import { onMount } from "svelte";
 
   let currentIndex = 0;
   let paused = false;
   let interval;
   let imageSide;
-  let screenWidth = window.innerWidth;
+  let screenWidth;
+  let isLoading = true;
 
   const handleSlideshow = (event) => {
-    console.log(event.target.classList);
     if (
       event.target.classList.contains("slide") ||
       event.target.classList.contains("description")
@@ -28,7 +29,12 @@
     imageSide = "horizontal";
   }
 
+  setTimeout(() => {
+    isLoading = false;
+  }, 1250);
+
   onMount(() => {
+    screenWidth = window.innerWidth;
     document.addEventListener("mousedown", handleSlideshow);
     document.addEventListener("mouseup", handleSlideshow);
     document.addEventListener("touchstart", handleSlideshow);
@@ -52,7 +58,11 @@
 
 <svelte:window on:resize={handleResize} />
 
-<article class="slideshow">
+{#if isLoading}
+  <Spinner />
+{/if}
+
+<article class="slideshow" class:isLoading>
   {#each photos as image, i}
     <div class="slide {i === currentIndex ? 'active' : ''}">
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -79,6 +89,9 @@
 </article>
 
 <style>
+  .isLoading {
+    display: none;
+  }
   .slideshow {
     position: fixed;
     width: 100vw;

@@ -8,8 +8,10 @@
   import { page } from "$app/stores";
   import SidebarMenu from "../components/SidebarMenu.svelte";
 
-  const isParamsInUrl = Object.keys($page.params).length !== 0;
   let isLoading = true;
+
+  const isParamsInUrl = Object.keys($page.params).length !== 0;
+  const isGallery = $page.route.id === "/gallery";
 
   setTimeout(() => {
     isLoading = false;
@@ -19,7 +21,7 @@
 </script>
 
 <div class="flex flex-col text-white">
-  {#if isLoading && !isParamsInUrl}
+  {#if isLoading && !isParamsInUrl && !isGallery}
     <Loader />
   {:else}
     <SidebarMenu bind:open />
