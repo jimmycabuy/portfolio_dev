@@ -23,7 +23,7 @@
     screenWidth = window.innerWidth;
   };
 
-  $: if (screenWidth <= 768) {
+  $: if (screenWidth < 846) {
     imageSide = "vertical";
   } else {
     imageSide = "horizontal";
