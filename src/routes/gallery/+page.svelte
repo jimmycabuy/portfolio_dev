@@ -59,6 +59,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>Jimmy C. | My pictures.</title>
+</svelte:head>
+
 <svelte:window on:resize={handleResize} />
 
 {#if isLoading}
