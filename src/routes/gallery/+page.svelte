@@ -13,9 +13,10 @@
 
   const handleSlideshow = (event) => {
     if (
-      event.target.classList.contains("slide") ||
-      event.target.classList.contains("description") ||
-      event.target.classList.contains("description_text")
+      event.button === 0 &&
+      (event.target.classList.contains("slide") ||
+        event.target.classList.contains("description") ||
+        event.target.classList.contains("description_text"))
     ) {
       paused = !paused;
     }
