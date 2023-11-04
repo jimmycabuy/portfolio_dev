@@ -13,7 +13,7 @@
 
   const handleSlideshow = (event) => {
     if (
-      event.button === 0 &&
+      (event.button === 0 || navigator.maxTouchPoints > 0) &&
       (event.target.classList.contains("slide") ||
         event.target.classList.contains("description") ||
         event.target.classList.contains("description_text"))
