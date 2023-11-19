@@ -117,9 +117,9 @@
     overflow: hidden;
   }
 
-  .slide:hover {
+  /* .slide:hover {
     cursor: pointer;
-  }
+  } */
 
   .slide.active {
     opacity: 1;

@@ -13,6 +13,7 @@
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   color: #fff;
+  cursor: none;
 }
 
 html::-webkit-scrollbar {
@@ -33,7 +34,8 @@ a {
 
 a:hover,
 button:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: none;
 }
 
 input:focus,

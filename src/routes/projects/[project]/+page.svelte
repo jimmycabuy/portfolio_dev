@@ -88,15 +88,15 @@
     <div class="bloc_right">
       <p>{subProjectDetails.description}</p>
       {#if subProjectDetails.showlink}
-        <a href={subProjectDetails.href} target="_blank">
-          <span class="view_website">
+        <a href={subProjectDetails.href} target="_blank" class="enlarged">
+          <span class="enlarged view_website">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="3 0 24 20"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-5 h-5"
+              class="enlarged w-5 h-5"
               color="#fff"
             >
               <path
@@ -105,7 +105,7 @@
                 d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
               />
             </svg>
-            <span>View {subProjectDetails.type}</span>
+            <span class="enlarged">View {subProjectDetails.type}</span>
           </span>
         </a>
       {/if}

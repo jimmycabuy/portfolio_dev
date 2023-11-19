@@ -31,13 +31,13 @@
       {#each projectsJSON as project}
         <!-- svelte-ignore a11y-mouse-events-have-key-events -->
         <a
-          class="link"
+          class="enlarged link"
           href="projects/{project.route}"
           on:mouseover={() => setProject(project)}
           on:mouseout={() => setProject(null)}
         >
-          <div class="one_project">
-            <div class="flex items-center w-full sm:w-fit">
+          <div class="enlarged one_project">
+            <div class="enlarged flex items-center w-full sm:w-fit">
               <span
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  class="enlarged w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -54,12 +54,12 @@
                   />
                 </svg>
               </span>
-              <div class="title-wrapper justify-between w-full">
-                <h2 class="sm:text-lg">{project.title}</h2>
-                <p class="tag text-xs sm:text-xs">{project.tag}</p>
+              <div class="enlarged title-wrapper justify-between w-full">
+                <h2 class="enlarged sm:text-lg">{project.title}</h2>
+                <p class="enlarged tag text-xs sm:text-xs">{project.tag}</p>
               </div>
             </div>
-            <h4 class="text-right hidden sm:text-lg sm:contents">
+            <h4 class="enlarged text-right hidden sm:text-lg sm:contents">
               {project.subtitle}
             </h4>
           </div>

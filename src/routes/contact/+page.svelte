@@ -90,7 +90,7 @@
         autocomplete="off"
       />
       <div class="send_button flex justify-center">
-        <button type="submit">Send</button>
+        <button type="submit" class="enlarged">Send</button>
       </div>
     </form>
   </main>
@@ -102,7 +102,7 @@
       I have received your message. <br />Thank you very much. I will get back
       to you as soon as possible. <br />Have a beautiful day!
     </p>
-    <a href="/" class="backhome">Go gack home</a>
+    <a href="/" class="enlarged backhome">Go gack home</a>
   </div>
 {/if}
 

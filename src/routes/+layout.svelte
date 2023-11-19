@@ -1,7 +1,8 @@
 <script>
   import Navbar from "../components/Navbar.svelte";
   import Footer from "../components/Footer.svelte";
-  import Mouse from "../components/Mouse.svelte";
+  import MouseFollower from "../components/MouseFollower.svelte";
+  import MouseCursor from "../components/MouseCursor.svelte";
   import Background from "../components/Background.svelte";
   import Loader from "../components/Loader.svelte";
   import "../app.css";
@@ -32,7 +33,8 @@
     <span class:open>
       <Footer />
     </span>
-    <Mouse />
+    <MouseCursor />
+    <MouseFollower />
     <Background />
   {/if}
 </div>

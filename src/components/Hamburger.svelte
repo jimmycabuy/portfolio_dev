@@ -7,7 +7,7 @@
   class:open
   on:click={() => (open = !open)}
 >
-  <h2 class="text-2xl sm:text-3xl">
+  <h2 class="enlarged text-2xl sm:text-3xl">
     {#if !open}
       MENU.
     {:else}

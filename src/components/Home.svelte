@@ -48,16 +48,16 @@
           href={pdf}
           target="_blank"
           rel="noopener noreferrer"
-          class="my_resume animate-bounce"
+          class="enlarged my_resume animate-bounce"
         >
-          <span class="flex">
+          <span class="enlarged flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="3 0 24 16"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-5 h-5"
+              class="enlarged w-5 h-5"
               color="#fff"
             >
               <path
@@ -66,7 +66,7 @@
                 d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
               />
             </svg>
-            <p class="text-lg">My resume.</p>
+            <p class="enlarged text-lg">My resume.</p>
           </span>
         </a>
       </div>

@@ -5,19 +5,27 @@
   const x = writable(0);
   const y = writable(0);
   const smoothness = 0.2;
-  const delay = 20;
+  let targetTagName = false;
 
   let mouseX = 0;
   let mouseY = 0;
 
   onMount(() => {
     window.addEventListener("mousemove", handleMouseMove);
-    setInterval(updatePosition, delay);
+    setInterval(updatePosition);
   });
 
   function handleMouseMove(event) {
     mouseX = event.clientX;
     mouseY = event.clientY;
+
+    const targetElement = document.elementFromPoint(mouseX, mouseY);
+
+    if (targetElement.classList.contains("enlarged")) {
+      targetTagName = true;
+    } else {
+      targetTagName = false;
+    }
   }
 
   function updatePosition() {
@@ -32,35 +40,40 @@
   }
 </script>
 
-<div class="mouse-follower" style="left: {$x - 10}px; top: {$y - 10}px;">
-  <div class="dot" />
+<div class="custom-cursor" style="left: {$x}px; top: {$y}px;">
+  <div class="dot" class:enlarged={targetTagName} />
 </div>
 
 <style>
-  .mouse-follower {
+  .custom-cursor {
     position: fixed;
     width: 20px;
     height: 20px;
-    border: 2px solid #ff2f66;
-    border-radius: 50%;
     pointer-events: none;
-    background: none;
-    z-index: 9999;
+    z-index: 10000;
+    cursor: none;
   }
 
-  .mouse-follower .dot {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background-color: #ff2f66;
+  .custom-cursor .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
     border-radius: 50%;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 0.2s, width 0.2s, height 0.2s;
+  }
+
+  .custom-cursor .dot.enlarged {
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
   }
 
   @media (pointer: coarse) {
-    .mouse-follower {
+    .custom-cursor {
       display: none;
     }
   }
