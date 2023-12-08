@@ -40,7 +40,7 @@
   }
 </script>
 
-<div class="custom-cursor" style="left: {$x}px; top: {$y}px;">
+<div class="custom-cursor" style="left: {$x - 10}px; top: {$y - 10}px;">
   <div class="dot" class:enlarged={targetTagName} />
 </div>
 
@@ -63,7 +63,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.2s, width 0.2s, height 0.2s;
+    transition:
+      transform 0.2s,
+      width 0.2s,
+      height 0.2s;
   }
 
   .custom-cursor .dot.enlarged {

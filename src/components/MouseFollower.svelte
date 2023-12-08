@@ -41,7 +41,7 @@
 </script>
 
 {#if displayCursorFollewer}
-  <div class="mouse-follower" style="left: {$x}px; top: {$y}px;">
+  <div class="mouse-follower" style="left: {$x - 10}px; top: {$y - 10}px;">
     <div class="dot" />
   </div>
 {/if}
