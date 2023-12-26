@@ -101,7 +101,7 @@
     "href": "https://jimnotespad.vercel.app/",
     "route": "jimpad",
     "year": 2023,
-    "techno": "SvelteKit, Tailwind, Firebase",
+    "techno": "SvelteKit, Tailwind, Firebase, GSAP",
     "showlink": true,
     "pictures": [
       "jimpad-screen-1",
