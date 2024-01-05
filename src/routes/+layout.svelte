@@ -19,6 +19,19 @@
   }, 2500);
 
   let open = false;
+  let shouldDisplayNone = false;
+  let displayNoneTimeout;
+
+  $: if (open) {
+    displayNoneTimeout = setTimeout(() => {
+      shouldDisplayNone = true;
+    }, 300);
+  } else {
+    shouldDisplayNone = false;
+    if (displayNoneTimeout) {
+      clearTimeout(displayNoneTimeout);
+    }
+  }
 </script>
 
 <div class="flex flex-col text-white">
@@ -27,10 +40,10 @@
   {:else}
     <SidebarMenu bind:open />
     <Navbar bind:sidebar={open} />
-    <span class:open>
+    <span class:open={shouldDisplayNone}>
       <slot />
     </span>
-    <span class:open>
+    <span class:open={shouldDisplayNone}>
       <Footer />
     </span>
     <MouseCursor />
