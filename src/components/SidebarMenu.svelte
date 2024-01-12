@@ -30,8 +30,8 @@
           <a
             href={item?.link}
             on:click={closeSidebar}
-            data-sveltekit-preload-data
-            data-sveltekit-preload-code
+            data-sveltekit-preload-data="hover"
+            data-sveltekit-preload-code="hover"
             class="enlarged"
           >
             {item?.label}

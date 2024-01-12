@@ -6,9 +6,7 @@
   <a
     href="/projects/{prevProject.route}"
     style="display: inline-flex; gap:5px"
-    data-sveltekit-preload-code
     data-sveltekit-reload
-    data-sveltekit-prefetch
     class="enlarged"
   >
     <svg
