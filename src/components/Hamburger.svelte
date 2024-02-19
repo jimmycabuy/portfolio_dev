@@ -18,7 +18,7 @@
 
 <style>
   button {
-    z-index: 4;
+    z-index: 12;
     font-weight: 700;
   }
 </style>
