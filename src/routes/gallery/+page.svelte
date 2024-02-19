@@ -9,7 +9,7 @@
   let imageSide;
   let screenWidth;
   let screenHeight;
-  let isLoading = true;
+  let photosPromise = Promise.resolve([]);
 
   const handleSlideshow = (event) => {
     if (
@@ -32,11 +32,20 @@
     imageSide = "horizontal";
   }
 
-  setTimeout(() => {
-    isLoading = false;
-  }, 1600);
+  function preloadImages() {
+    const promises = photos.map((image) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = `../../assets/photos/${imageSide}/${image.name}.${image.extension}`;
+      });
+    });
+    return Promise.all(promises);
+  }
 
   onMount(() => {
+    photosPromise = preloadImages();
     screenWidth = window.innerWidth;
     screenHeight = window.innerHeight;
     document.addEventListener("mousedown", handleSlideshow);
@@ -48,7 +57,7 @@
       if (!paused) {
         currentIndex = (currentIndex + 1) % photos.length;
       }
-    }, 350);
+    }, 450);
 
     return () => {
       clearInterval(interval);
@@ -66,40 +75,37 @@
 
 <svelte:window on:resize={handleResize} />
 
-{#if isLoading}
+{#await photosPromise}
   <Spinner />
-{/if}
-
-<article class="slideshow" class:isLoading>
-  {#each photos as image, i}
-    <div class="slide {i === currentIndex ? 'active' : ''}">
-      <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-      <img
-        src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
-        alt={image.name}
-        on:mousedown={handleSlideshow}
-        on:mouseup={handleSlideshow}
-        on:touchstart={handleSlideshow}
-        on:touchend={handleSlideshow}
-      />
-      {#if paused && i === currentIndex}
-        <div class="description">
-          <p class="description_text">
-            {image.place},
-          </p>
-          <p class="description_text">
-            {image.country}.
-          </p>
-        </div>
-      {/if}
-    </div>
-  {/each}
-</article>
+{:then}
+  <article class="slideshow">
+    {#each photos as image, i}
+      <div class="slide {i === currentIndex ? 'active' : ''}">
+        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+        <img
+          src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
+          alt={image.name}
+          on:mousedown={handleSlideshow}
+          on:mouseup={handleSlideshow}
+          on:touchstart={handleSlideshow}
+          on:touchend={handleSlideshow}
+        />
+        {#if paused && i === currentIndex}
+          <div class="description">
+            <p class="description_text">
+              {image.place},
+            </p>
+            <p class="description_text">
+              {image.country}.
+            </p>
+          </div>
+        {/if}
+      </div>
+    {/each}
+  </article>
+{/await}
 
 <style>
-  .isLoading {
-    display: none;
-  }
   .slideshow {
     position: fixed;
     width: 100vw;
