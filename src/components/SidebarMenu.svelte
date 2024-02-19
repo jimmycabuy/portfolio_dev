@@ -44,7 +44,7 @@
 
 <style>
   aside {
-    z-index: 3;
+    z-index: 9999;
     left: -100%;
     transition: left 0.3s ease-in-out;
     min-height: 100dvh;
