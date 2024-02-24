@@ -32,7 +32,7 @@
         <!-- svelte-ignore a11y-mouse-events-have-key-events -->
         <a
           class="enlarged link"
-          href="projects/{project.route}"
+          href="/projects/{project.route}"
           on:mouseover={() => setProject(project)}
           on:mouseout={() => setProject(null)}
         >
@@ -157,7 +157,9 @@
       position: absolute;
       left: -20px; /* Ajustez la position de départ */
       opacity: 0;
-      transition: left 0.3s ease, opacity 0.3s ease;
+      transition:
+        left 0.3s ease,
+        opacity 0.3s ease;
     }
 
     .one_project:hover span {

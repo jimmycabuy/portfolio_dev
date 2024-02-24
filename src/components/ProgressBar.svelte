@@ -19,7 +19,9 @@
   });
 </script>
 
-<progress id="progressBar" value={progressValue} max="100" />
+{#if typeof progressValue === "number" && !isNaN(progressValue)}
+  <progress id="progressBar" value={progressValue} max="100" />
+{/if}
 
 <style>
   progress {

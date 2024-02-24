@@ -43,12 +43,15 @@
     background-color: #bbb;
     border-radius: 50%;
     position: relative;
-    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
+    box-shadow:
+      0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
       0 5px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     opacity: 0;
     filter: blur(6px);
-    transition: opacity 0.5s, filter 0.5s;
+    transition:
+      opacity 0.5s,
+      filter 0.5s;
   }
   .loader:before,
   .loader:after {
