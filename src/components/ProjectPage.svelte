@@ -4,11 +4,21 @@
   import { blur } from "svelte/transition";
   import { onMount } from "svelte";
   import { gsap } from "gsap";
+  import { page } from "$app/stores";
+  import projects from "../data/projects.json";
 
-  export let isLoading,
-    currentProjectDetails,
-    nextProjectDetails,
-    prevProjectDetails;
+  export let isLoading;
+
+  const project = $page.params.project;
+  const currentProjectIndex = projects.findIndex(
+    (item) => item.route === project
+  );
+  const totalProjects = projects.length;
+  const nextIndex = (currentProjectIndex + 1) % totalProjects;
+  const prevIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
+  const currentProjectDetails = projects[currentProjectIndex];
+  const nextProjectDetails = projects[nextIndex];
+  const prevProjectDetails = projects[prevIndex];
 
   onMount(() => {
     gsap.from(".container_image", {
@@ -25,6 +35,10 @@
     });
   });
 </script>
+
+<svelte:head>
+  <title>Jimmy C. | {currentProjectDetails.title}.</title>
+</svelte:head>
 
 <ProgressBar />
 <main
