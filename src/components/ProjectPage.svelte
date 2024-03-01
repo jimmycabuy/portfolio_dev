@@ -1,10 +1,32 @@
 <script>
   import ProjectsNavigation from "./ProjectsNavigation.svelte";
+  import ProgressBar from "./ProgressBar.svelte";
   import { blur } from "svelte/transition";
+  import { onMount } from "svelte";
+  import { gsap } from "gsap";
 
-  export let isLoading, subProjectDetails, nextProject, prevProject;
+  export let isLoading,
+    currentProjectDetails,
+    nextProjectDetails,
+    prevProjectDetails;
+
+  onMount(() => {
+    gsap.from(".container_image", {
+      y: -500,
+      duration: 1,
+      delay: 1.35,
+      opacity: 0,
+    });
+
+    gsap.from(".bloc_title, .container_one_project, .container_image_screens", {
+      duration: 3,
+      delay: 2.35,
+      opacity: 0,
+    });
+  });
 </script>
 
+<ProgressBar />
 <main
   class="py-6 px-12 flex justify-center items-center flex-col md:px-24 4xl:px-72"
   class:is_loading={isLoading}
@@ -15,34 +37,34 @@
     <div class="bloc_image">
       <img
         preload
-        src={`/assets/${subProjectDetails.src}.webp`}
-        alt={subProjectDetails.title}
+        src={`/assets/${currentProjectDetails.src}.webp`}
+        alt={currentProjectDetails.title}
       />
     </div>
   </div>
   <div class="bloc_title">
-    <h1>{subProjectDetails.title}</h1>
+    <h1>{currentProjectDetails.title}</h1>
   </div>
   <div class="container_one_project">
     <div class="bloc_left">
       <div class="flex gap-12">
         <h6 class="col1">CATEGORY</h6>
-        <h6 class="col2">{subProjectDetails.subtitle}</h6>
+        <h6 class="col2">{currentProjectDetails.subtitle}</h6>
       </div>
       <div class="flex gap-12">
         <h6 class="col1">YEAR</h6>
-        <h6 class="col2">{subProjectDetails.year}</h6>
+        <h6 class="col2">{currentProjectDetails.year}</h6>
       </div>
       <div class="flex gap-12">
         <h6 class="col1">TECHNO</h6>
-        <h6 class="col2">{subProjectDetails.techno}</h6>
+        <h6 class="col2">{currentProjectDetails.techno}</h6>
       </div>
     </div>
 
     <div class="bloc_right">
-      <p>{subProjectDetails.description}</p>
-      {#if subProjectDetails.showlink}
-        <a href={subProjectDetails.href} target="_blank" class="enlarged">
+      <p>{currentProjectDetails.description}</p>
+      {#if currentProjectDetails.showlink}
+        <a href={currentProjectDetails.href} target="_blank" class="enlarged">
           <span class="enlarged view_website">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,32 +81,32 @@
                 d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
               />
             </svg>
-            <span class="enlarged">View {subProjectDetails.type}</span>
+            <span class="enlarged">View {currentProjectDetails.type}</span>
           </span>
         </a>
       {/if}
     </div>
   </div>
 
-  {#if subProjectDetails.pictures}
+  {#if currentProjectDetails.pictures}
     <div class="container_image_screens desktop">
-      {#each subProjectDetails.pictures as picture}
+      {#each currentProjectDetails.pictures as picture}
         <div class="bloc_image_screen">
           <img preload src="/assets/screens/{picture}.webp" alt={picture} />
         </div>
       {/each}
     </div>
   {/if}
-  {#if subProjectDetails.picturesMobile}
+  {#if currentProjectDetails.picturesMobile}
     <div class="container_image_screens mobile">
-      {#each subProjectDetails.picturesMobile as picture}
+      {#each currentProjectDetails.picturesMobile as picture}
         <div class="bloc_image_screen">
           <img preload src="/assets/screens/{picture}.webp" alt={picture} />
         </div>
       {/each}
     </div>
   {/if}
-  <ProjectsNavigation {nextProject} {prevProject} />
+  <ProjectsNavigation {nextProjectDetails} {prevProjectDetails} />
 </main>
 
 <style>

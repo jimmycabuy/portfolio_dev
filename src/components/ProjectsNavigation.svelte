@@ -1,10 +1,10 @@
 <script>
-  export let prevProject, nextProject;
+  export let prevProjectDetails, nextProjectDetails;
 </script>
 
 <div class="container_navigation">
   <a
-    href="/projects/{prevProject.route}"
+    href="/projects/{prevProjectDetails.route}"
     style="display: inline-flex; gap:5px"
     data-sveltekit-reload
     class="enlarged"
@@ -23,17 +23,17 @@
         d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
       />
     </svg>
-    {prevProject.title}
+    {prevProjectDetails.title}
   </a>
   <a
-    href="/projects/{nextProject.route}"
+    href="/projects/{nextProjectDetails.route}"
     style="display: inline-flex; gap:5px"
     data-sveltekit-preload-code
     data-sveltekit-reload
     data-sveltekit-prefetch
     class="enlarged"
   >
-    {nextProject.title}
+    {nextProjectDetails.title}
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
