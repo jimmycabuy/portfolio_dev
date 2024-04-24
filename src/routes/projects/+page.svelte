@@ -3,7 +3,7 @@
   import { gsap } from "gsap";
   import projectsJSON from "../../data/projects.json";
   import { blur } from "svelte/transition";
-  import Project from "../../components/Project.svelte";
+  import ProjectLine from "../../components/ProjectLine.svelte";
 
   let currentProject = null;
 
@@ -30,7 +30,7 @@
   <div class="container_projects">
     <div class="bloc_left">
       {#each projectsJSON as project}
-        <Project {project} on:project={setProject} />
+        <ProjectLine {project} on:project={setProject} />
       {/each}
     </div>
     <div class="bloc_right">
