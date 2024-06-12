@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { gsap } from "gsap";
-  import projectsJSON from "../../data/projects.json";
+  import projects from "../../data/projects.json";
   import { blur } from "svelte/transition";
   import ProjectLine from "../../components/ProjectLine.svelte";
 
@@ -29,7 +29,7 @@
 <main class="px-12 flex justify-center items-center 4xl:px-72" in:blur>
   <div class="container_projects">
     <div class="bloc_left">
-      {#each projectsJSON as project}
+      {#each projects as project}
         <ProjectLine {project} on:project={setProject} />
       {/each}
     </div>

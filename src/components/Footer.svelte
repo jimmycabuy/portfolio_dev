@@ -6,15 +6,11 @@
 
 <footer class="py-6 px-12 flex flex-row justify-between items-center 4xl:px-72">
   <div class="block_left_home flex flex-row justify-start items-center gap-8">
-    {#each socials as social}
+    {#each socials as { label, href, target, icon }}
       <div class="enlarged flex flex-row justify-between gap-1 items-end">
-        <a
-          class="enlarged flex items-center"
-          href={social.href}
-          target={social.target}
-        >
-          <span class="icon enlarged">{@html social.icon}</span>
-          <span class="enlarged link_footer_name text-md">{social.label}</span>
+        <a class="enlarged flex items-center" {href} {target}>
+          <span class="icon enlarged">{@html icon}</span>
+          <span class="enlarged link_footer_name text-md">{label}</span>
           <span class="enlarged share mb-1" />
         </a>
       </div>

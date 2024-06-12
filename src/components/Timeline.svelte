@@ -30,17 +30,17 @@
 <main class="py-6 w-full mb-8">
   <h1 class="title my-10 text-5xl md:text-7xl">Timeline</h1>
   <ol class="timeline">
-    {#each timeline as item}
+    {#each timeline as { year, title, description }}
       <li class="timeline-item">
         <span class="timeline-item-icon | filled-icon" />
         <div class="timeline-item-wrapper">
           <div class="timeline-item-description flex flex-col">
-            <span class="text-2xl font-bold">{item?.title}</span>
-            <span class="year text-xs">{item?.year}</span>
+            <span class="text-2xl font-bold">{title}</span>
+            <span class="year text-xs">{year}</span>
           </div>
           <div class="description">
             <p class="text-justify">
-              {item?.description}
+              {description}
             </p>
           </div>
         </div>

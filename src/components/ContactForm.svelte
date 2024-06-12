@@ -48,25 +48,20 @@
     method="POST"
     id="form_container"
   >
-    {#each form as item}
+    {#each form as { tag, label, type, name, inputmode, required, autocomplete }}
       <div class="one_element_form">
-        <label for={item?.name}>{item?.label}</label>
-        {#if item?.tag === "input"}
+        <label for={name}>{label}</label>
+        {#if tag === "input"}
           <input
-            type={item?.type}
-            name={item?.name}
-            id={item?.name}
-            inputmode={item?.inputmode}
-            required={item?.required}
-            autocomplete={item?.autocomplete}
+            {type}
+            {name}
+            id={name}
+            {inputmode}
+            {required}
+            {autocomplete}
           />
-        {:else if item?.tag === "textarea"}
-          <textarea
-            name={item?.name}
-            id={item?.name}
-            required={item?.required}
-            autocomplete={item?.autocomplete}
-          />
+        {:else if tag === "textarea"}
+          <textarea {name} id={name} {required} {autocomplete} />
         {/if}
       </div>
     {/each}

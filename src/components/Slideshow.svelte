@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  
+
   export let imageSide;
   export let photos;
 
@@ -42,12 +42,12 @@
 </script>
 
 <article class="slideshow">
-  {#each photos as image, i}
+  {#each photos as { name, country, place, extension }, i}
     <div class="slide {i === currentIndex ? 'active' : ''}">
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
       <img
-        src={`../../assets/photos/${imageSide}/${image.name}.${image.extension}`}
-        alt={image.name}
+        src={`../../assets/photos/${imageSide}/${name}.${extension}`}
+        alt={name}
         on:mousedown={handleSlideshow}
         on:mouseup={handleSlideshow}
         on:touchstart={handleSlideshow}
@@ -56,10 +56,10 @@
       {#if paused && i === currentIndex}
         <div class="description">
           <p class="description_text">
-            {image.place},
+            {place},
           </p>
           <p class="description_text">
-            {image.country}.
+            {country}.
           </p>
         </div>
       {/if}

@@ -1,27 +1,27 @@
 [
   {
     "label": "Home.",
-    "link": "/",
+    "href": "/",
     "isActive": true
   },
   {
     "label": "My work.",
-    "link": "/projects",
+    "href": "/projects",
     "isActive": true
   },
   {
     "label": "Pictures.",
-    "link": "/gallery",
+    "href": "/gallery",
     "isActive": true
   },
   {
     "label": "About me.",
-    "link": "/about",
+    "href": "/about",
     "isActive": true
   },
   {
     "label": "Contact.",
-    "link": "/contact",
+    "href": "/contact",
     "isActive": true
   }
 ]

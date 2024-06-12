@@ -23,18 +23,18 @@
 
 <aside class="absolute bg-black" class:open>
   <nav class="text-4xl md:text-5xl">
-    {#each menu as item, i}
-      {#if item?.isActive}
+    {#each menu as { label, href, isActive }, i}
+      {#if isActive}
         <div class="enlarged one_menu_item">
           <small class="text-sm">0{i + 1}</small>
           <a
-            href={item?.link}
+            {href}
             on:click={closeSidebar}
             data-sveltekit-preload-data="hover"
             data-sveltekit-preload-code="hover"
             class="enlarged"
           >
-            {item?.label}
+            {label}
           </a>
         </div>
       {/if}
