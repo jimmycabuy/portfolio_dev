@@ -1,18 +1,16 @@
 <script>
-  import ProjectsNavigation from "./ProjectsNavigation.svelte";
-  import ProgressBar from "./ProgressBar.svelte";
-  import { blur } from "svelte/transition";
-  import { onMount } from "svelte";
-  import { gsap } from "gsap";
-  import { page } from "$app/stores";
-  import projects from "../data/projects.json";
+  import ProjectsNavigation from './ProjectsNavigation.svelte';
+  import ProgressBar from './ProgressBar.svelte';
+  import { blur } from 'svelte/transition';
+  import { onMount } from 'svelte';
+  import { gsap } from 'gsap';
+  import { page } from '$app/stores';
+  import projects from '../data/projects.json';
 
   export let isLoading;
 
   const project = $page.params.project;
-  const currentProjectIndex = projects.findIndex(
-    (item) => item.route === project
-  );
+  const currentProjectIndex = projects.findIndex((item) => item.route === project);
   const totalProjects = projects.length;
   const nextIndex = (currentProjectIndex + 1) % totalProjects;
   const prevIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
@@ -21,17 +19,17 @@
   const prevProjectDetails = projects[prevIndex];
 
   onMount(() => {
-    gsap.from(".container_image", {
+    gsap.from('.container_image', {
       y: -500,
       duration: 1,
       delay: 1.35,
-      opacity: 0,
+      opacity: 0
     });
 
-    gsap.from(".bloc_title, .container_one_project, .container_image_screens", {
+    gsap.from('.bloc_title, .container_one_project, .container_image_screens', {
       duration: 3,
       delay: 2.35,
-      opacity: 0,
+      opacity: 0
     });
   });
 </script>
@@ -49,11 +47,7 @@
 >
   <div class="container_image flex justify-center">
     <div class="bloc_image">
-      <img
-        preload
-        src={`/assets/${currentProjectDetails.src}.webp`}
-        alt={currentProjectDetails.title}
-      />
+      <img preload src={`/assets/${currentProjectDetails.src}.webp`} alt={currentProjectDetails.title} />
     </div>
   </div>
   <div class="bloc_title">
@@ -89,11 +83,7 @@
               class="enlarged w-5 h-5"
               color="#fff"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
             </svg>
             <span class="enlarged">View {currentProjectDetails.type}</span>
           </span>
@@ -228,7 +218,7 @@
 
   @media (pointer: fine) {
     a::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -2px;
       left: 0;

@@ -1,12 +1,12 @@
 <script>
-  import { page } from "$app/stores";
+  import { page } from '$app/stores';
 </script>
 
 <main>
   <h1>{$page.status}</h1>
   <h1>Oops! Page not found</h1>
   <h4>Sorry, the page you are looking for does not exist.</h4>
-  <a href="/">Homepage</a>
+  <a href="/" class="enlarged">Homepage</a>
 </main>
 
 <style>
@@ -34,7 +34,7 @@
       height: 80vh;
     }
     a::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -2px;
       left: 0;

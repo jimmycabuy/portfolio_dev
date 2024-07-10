@@ -1,8 +1,8 @@
 <script>
-  import photos from "../../data/photos.json";
-  import Spinner from "../../components/Spinner.svelte";
-  import { onMount } from "svelte";
-  import Slideshow from "../../components/Slideshow.svelte";
+  import photos from '../../data/photos.json';
+  import Spinner from '../../components/Spinner.svelte';
+  import { onMount } from 'svelte';
+  import Slideshow from '../../components/Slideshow.svelte';
 
   let screenWidth, screenHeight;
   let photosPromise = Promise.resolve([]);
@@ -23,7 +23,7 @@
     return Promise.all(promises);
   };
 
-  $: imageSide = screenWidth < screenHeight ? "vertical" : "horizontal";
+  $: imageSide = screenWidth < screenHeight ? 'vertical' : 'horizontal';
 
   onMount(() => {
     photosPromise = preloadImages();

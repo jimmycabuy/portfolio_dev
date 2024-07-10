@@ -1,12 +1,12 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher } from 'svelte';
 
   export let project;
 
   const dispatch = createEventDispatcher();
 
   const setProject = (e) => {
-    dispatch("project", e);
+    dispatch('project', e);
   };
 </script>
 
@@ -28,11 +28,7 @@
           stroke="currentColor"
           class="enlarged w-6 h-6"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-          />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
         </svg>
       </span>
       <div class="enlarged title-wrapper justify-between w-full">

@@ -1,37 +1,37 @@
 <script>
-  import form from "../data/form.json";
-  import { onMount } from "svelte";
-  import { gsap } from "gsap";
+  import form from '../data/form.json';
+  import { onMount } from 'svelte';
+  import { gsap } from 'gsap';
 
   export let isLoading, isMessageSent;
 
   onMount(() => {
-    gsap.from(".get_in_touch", {
+    gsap.from('.get_in_touch', {
       y: -100,
       duration: 1,
       delay: 0.5,
-      opacity: 0,
+      opacity: 0
     });
-    gsap.from(".one_element_form", {
+    gsap.from('.one_element_form', {
       y: 50,
       duration: 1,
       delay: 1.5,
       opacity: 0,
-      stagger: 0.3,
+      stagger: 0.3
     });
-    gsap.from(".send_button", {
+    gsap.from('.send_button', {
       duration: 3,
       delay: 3.7,
-      opacity: 0,
+      opacity: 0
     });
 
-    const formElement = document.querySelector("#form_container");
-    formElement.addEventListener("submit", (event) => {
+    const formElement = document.querySelector('#form_container');
+    formElement.addEventListener('submit', (event) => {
       event.preventDefault();
       const data = new URLSearchParams(new FormData(formElement));
-      fetch("https://getform.io/f/e0fcd5ea-3300-4659-8085-c6108ccbef1a", {
-        method: "POST",
-        body: data,
+      fetch('https://getform.io/f/e0fcd5ea-3300-4659-8085-c6108ccbef1a', {
+        method: 'POST',
+        body: data
       });
       setTimeout(() => {
         isLoading = false;
@@ -43,34 +43,18 @@
 
 <main class="container_contact">
   <h1 class="get_in_touch text-3xl md:text-5xl pb-3">Get in touch.</h1>
-  <form
-    action="https://getform.io/f/e0fcd5ea-3300-4659-8085-c6108ccbef1a"
-    method="POST"
-    id="form_container"
-  >
+  <form action="https://getform.io/f/e0fcd5ea-3300-4659-8085-c6108ccbef1a" method="POST" id="form_container">
     {#each form as { tag, label, type, name, inputmode, required, autocomplete }}
       <div class="one_element_form">
         <label for={name}>{label}</label>
-        {#if tag === "input"}
-          <input
-            {type}
-            {name}
-            id={name}
-            {inputmode}
-            {required}
-            {autocomplete}
-          />
-        {:else if tag === "textarea"}
+        {#if tag === 'input'}
+          <input {type} {name} id={name} {inputmode} {required} {autocomplete} />
+        {:else if tag === 'textarea'}
           <textarea {name} id={name} {required} {autocomplete} />
         {/if}
       </div>
     {/each}
-    <input
-      type="hidden"
-      name="_gotcha"
-      style="display:none !important"
-      autocomplete="off"
-    />
+    <input type="hidden" name="_gotcha" style="display:none !important" autocomplete="off" />
     <div class="send_button flex justify-center">
       <button type="submit" class="enlarged">Send</button>
     </div>
@@ -106,7 +90,7 @@
   input,
   textarea,
   button {
-    font-family: "bd-supper", sans-serif;
+    font-family: 'bd-supper', sans-serif;
     font-style: normal;
   }
 

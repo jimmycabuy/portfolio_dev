@@ -1,5 +1,5 @@
 <script>
-  import socials from "../data/socials";
+  import socials from '../data/socials';
   const date = new Date();
   const year = date.getFullYear();
 </script>

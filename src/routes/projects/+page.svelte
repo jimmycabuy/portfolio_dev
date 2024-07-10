@@ -1,9 +1,9 @@
 <script>
-  import { onMount } from "svelte";
-  import { gsap } from "gsap";
-  import projects from "../../data/projects.json";
-  import { blur } from "svelte/transition";
-  import ProjectLine from "../../components/ProjectLine.svelte";
+  import { onMount } from 'svelte';
+  import { gsap } from 'gsap';
+  import projects from '../../data/projects.json';
+  import { blur } from 'svelte/transition';
+  import ProjectLine from '../../components/ProjectLine.svelte';
 
   let currentProject = null;
 
@@ -12,12 +12,12 @@
   };
 
   onMount(() => {
-    gsap.from(".link", {
+    gsap.from('.link', {
       y: 100,
       duration: 1,
       stagger: 0.3,
       delay: 0.5,
-      opacity: 0,
+      opacity: 0
     });
   });
 </script>

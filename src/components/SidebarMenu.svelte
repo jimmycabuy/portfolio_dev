@@ -1,6 +1,6 @@
 <script>
-  import menu from "../data/menu.json";
-  import gsap from "gsap";
+  import menu from '../data/menu.json';
+  import gsap from 'gsap';
 
   export let open = false;
 
@@ -11,12 +11,12 @@
   }
 
   $: if (open) {
-    gsap.from(".one_menu_item", {
+    gsap.from('.one_menu_item', {
       y: 30,
       duration: 0.6,
       delay: 0.3,
       opacity: 0,
-      stagger: 0.2,
+      stagger: 0.2
     });
   }
 </script>
@@ -76,7 +76,7 @@
   @media (pointer: fine) {
     a::before {
       background: #ff2f66;
-      content: "";
+      content: '';
       inset: 0;
       position: absolute;
       transform: scaleX(0);

@@ -10,7 +10,7 @@
     width: 600%;
     -webkit-animation: bg-animation 7s steps(10) infinite;
     animation: bg-animation 7s steps(10) infinite;
-    background-image: url("https://itssharl.ee/noise.png");
+    background-image: url('https://itssharl.ee/noise.png');
     background-size: 200px;
     background-repeat: repeat;
     opacity: 0.12;

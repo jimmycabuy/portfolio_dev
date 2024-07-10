@@ -4,10 +4,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        '4xl': '2050px',
-      },
-    },
+        '4xl': '2050px'
+      }
+    }
   },
-  plugins: [],
-}
-
+  plugins: []
+};

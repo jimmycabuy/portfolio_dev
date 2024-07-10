@@ -1,6 +1,6 @@
 <script>
-  import { onMount } from "svelte";
-  import { writable, get } from "svelte/store";
+  import { onMount } from 'svelte';
+  import { writable, get } from 'svelte/store';
 
   const x = writable(0);
   const y = writable(0);
@@ -11,7 +11,7 @@
   let mouseY = 0;
 
   onMount(() => {
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
     setInterval(updatePosition);
   });
 
@@ -21,7 +21,7 @@
 
     const targetElement = document.elementFromPoint(mouseX, mouseY);
 
-    if (targetElement.classList.contains("enlarged")) {
+    if (targetElement.classList.contains('enlarged')) {
       targetTagName = true;
     } else {
       targetTagName = false;

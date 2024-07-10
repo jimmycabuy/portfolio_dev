@@ -1,5 +1,5 @@
 <script>
-  import Hamburger from "./Hamburger.svelte";
+  import Hamburger from './Hamburger.svelte';
   export let sidebar = false;
 
   function toggleSidebar() {
@@ -7,9 +7,7 @@
   }
 </script>
 
-<nav
-  class="py-6 px-12 flex flex-row justify-between items-center text-white 4xl:px-72"
->
+<nav class="py-6 px-12 flex flex-row justify-between items-center text-white 4xl:px-72">
   <h2 class="enlarged text-2xl sm:text-3xl">
     <a href="/" class="enlarged">JIMMY.</a>
   </h2>

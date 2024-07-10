@@ -1,7 +1,7 @@
 <div class="flex flex-col items-center gap-4 text-center">
   <p>
-    I have received your message. <br />Thank you very much. I will get back to
-    you as soon as possible. <br />Have a beautiful day!
+    I have received your message. <br />Thank you very much. I will get back to you as soon as possible. <br />Have a
+    beautiful day!
   </p>
   <a href="/" class="enlarged backhome">Go gack home</a>
 </div>
@@ -10,7 +10,7 @@
   .backhome {
     border-radius: 10px;
     padding: 0.5rem;
-    font-family: "bd-supper", sans-serif;
+    font-family: 'bd-supper', sans-serif;
     font-style: normal;
     background: none;
     border: 1px solid #fff;

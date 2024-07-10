@@ -1,25 +1,24 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
 
   let progressValue = 0;
 
   onMount(() => {
-    window.addEventListener("scroll", updateProgress);
+    window.addEventListener('scroll', updateProgress);
 
     function updateProgress() {
-      const totalHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = (window.scrollY / totalHeight) * 100;
       progressValue = progress;
     }
 
     return () => {
-      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener('scroll', updateProgress);
     };
   });
 </script>
 
-{#if typeof progressValue === "number" && !isNaN(progressValue)}
+{#if typeof progressValue === 'number' && !isNaN(progressValue)}
   <progress id="progressBar" value={progressValue} max="100" />
 {/if}
 

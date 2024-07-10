@@ -1,28 +1,28 @@
 <script>
-  import { onMount } from "svelte";
-  import timeline from "../data/timeline.json";
-  import { gsap } from "gsap";
+  import { onMount } from 'svelte';
+  import timeline from '../data/timeline.json';
+  import { gsap } from 'gsap';
 
   onMount(() => {
-    gsap.from(".title", {
+    gsap.from('.title', {
       y: -100,
       duration: 1,
       delay: 2.5,
-      opacity: 0,
+      opacity: 0
     });
 
-    gsap.from(".timeline", {
+    gsap.from('.timeline', {
       duration: 1,
       delay: 3.5,
-      opacity: 0,
+      opacity: 0
     });
 
-    gsap.from(".timeline-item", {
+    gsap.from('.timeline-item', {
       y: -100,
       duration: 1,
       delay: 3.5,
       stagger: 0.3,
-      opacity: 0,
+      opacity: 0
     });
   });
 </script>

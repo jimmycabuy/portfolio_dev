@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
 
   export let imageSide;
   export let photos;
@@ -11,19 +11,19 @@
   const handleSlideshow = (event) => {
     if (
       (event.button === 0 || navigator.maxTouchPoints > 0) &&
-      (event.target.classList.contains("slide") ||
-        event.target.classList.contains("description") ||
-        event.target.classList.contains("description_text"))
+      (event.target.classList.contains('slide') ||
+        event.target.classList.contains('description') ||
+        event.target.classList.contains('description_text'))
     ) {
       paused = !paused;
     }
   };
 
   onMount(() => {
-    document.addEventListener("mousedown", handleSlideshow);
-    document.addEventListener("mouseup", handleSlideshow);
-    document.addEventListener("touchstart", handleSlideshow);
-    document.addEventListener("touchend", handleSlideshow);
+    document.addEventListener('mousedown', handleSlideshow);
+    document.addEventListener('mouseup', handleSlideshow);
+    document.addEventListener('touchstart', handleSlideshow);
+    document.addEventListener('touchend', handleSlideshow);
 
     interval = setInterval(() => {
       if (!paused) {
@@ -33,10 +33,10 @@
 
     return () => {
       clearInterval(interval);
-      document.removeEventListener("mousedown", handleSlideshow);
-      document.removeEventListener("mouseup", handleSlideshow);
-      document.removeEventListener("touchstart", handleSlideshow);
-      document.removeEventListener("touchend", handleSlideshow);
+      document.removeEventListener('mousedown', handleSlideshow);
+      document.removeEventListener('mouseup', handleSlideshow);
+      document.removeEventListener('touchstart', handleSlideshow);
+      document.removeEventListener('touchend', handleSlideshow);
     };
   });
 </script>

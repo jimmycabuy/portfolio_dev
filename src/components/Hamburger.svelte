@@ -3,7 +3,7 @@
 </script>
 
 <button class="border-none focus:outline-none" on:click={() => (open = !open)}>
-  <h2 class="enlarged text-2xl sm:text-3xl">{open ? "CLOSE." : "MENU."}</h2>
+  <h2 class="enlarged text-2xl sm:text-3xl">{open ? 'CLOSE.' : 'MENU.'}</h2>
 </button>
 
 <style>

@@ -1,22 +1,22 @@
 <script>
-  import { blur } from "svelte/transition";
-  import { onMount } from "svelte";
-  import { gsap } from "gsap";
+  import { blur } from 'svelte/transition';
+  import { onMount } from 'svelte';
+  import { gsap } from 'gsap';
 
-  const pdf = "/document/jimmy_cabuy_resume.pdf";
+  const pdf = '/document/jimmy_cabuy_resume.pdf';
 
   onMount(() => {
-    gsap.from(".my_name", {
+    gsap.from('.my_name', {
       y: -100,
       duration: 0.8,
       delay: 0.5,
-      opacity: 0,
+      opacity: 0
     });
 
-    gsap.from(".my_title, .my_description, .my_resume", {
+    gsap.from('.my_title, .my_description, .my_resume', {
       duration: 3,
       delay: 1.3,
-      opacity: 0,
+      opacity: 0
     });
   });
 </script>
@@ -25,31 +25,19 @@
   <title>Jimmy C. | Web Developer.</title>
 </svelte:head>
 
-<main
-  class="flex justify-center items-center py-6 px-6 md:px-12 4xl:px-72"
-  in:blur
->
+<main class="flex justify-center items-center py-6 px-6 md:px-12 4xl:px-72" in:blur>
   <div class="container_home flex justify-center items-center">
     <div class="profile-container max-w-[75%]">
       <div class="flex flex-col gap-8 items-center text-center">
         <h1 class="my_name text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
         <div class="flex gap-2 flex-col md:flex-row">
-          <h2 class="my_title text-xl sm:text-2xl">
-            Front-end developer & photographer
-          </h2>
+          <h2 class="my_title text-xl sm:text-2xl">Front-end developer & photographer</h2>
         </div>
         <p class="my_description text-center leading-6">
-          I'm Jimmy, a full-stack developer, designer, and photographer with
-          digital marketing experience. After a global photography journey, I
-          became a front-end developer at Decathlon, always seeking new
-          challenges.
+          I'm Jimmy, a full-stack developer, designer, and photographer with digital marketing experience. After a global
+          photography journey, I became a front-end developer at Decathlon, always seeking new challenges.
         </p>
-        <a
-          href={pdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="enlarged my_resume animate-bounce"
-        >
+        <a href={pdf} target="_blank" rel="noopener noreferrer" class="enlarged my_resume animate-bounce">
           <span class="enlarged flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +48,7 @@
               class="enlarged w-5 h-5"
               color="#fff"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
             </svg>
             <p class="enlarged text-lg">My resume.</p>
           </span>
@@ -93,7 +77,7 @@
 
   h1:after {
     --deco-height: 0.3125em;
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
@@ -114,7 +98,7 @@
 
   @media (pointer: fine) {
     a::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -2px;
       left: 0;

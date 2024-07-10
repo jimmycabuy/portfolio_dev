@@ -1,7 +1,7 @@
 <script>
-  import Spinner from "../../components/Spinner.svelte";
-  import ContactForm from "../../components/ContactForm.svelte";
-  import MessageSent from "../../components/MessageSent.svelte";
+  import Spinner from '../../components/Spinner.svelte';
+  import ContactForm from '../../components/ContactForm.svelte';
+  import MessageSent from '../../components/MessageSent.svelte';
 
   let isMessageSent = false;
   let isLoading = true;

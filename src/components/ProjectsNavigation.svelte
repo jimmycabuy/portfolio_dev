@@ -17,11 +17,7 @@
       stroke="currentColor"
       class="enlarged w-5 h-5"
     >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-      />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
     </svg>
     {prevProjectDetails.title}
   </a>
@@ -42,11 +38,7 @@
       stroke="currentColor"
       class="enlarged w-5 h-5"
     >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-      />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
     </svg>
   </a>
 </div>
@@ -60,7 +52,7 @@
 
   @media (pointer: fine) {
     a::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -2px;
       left: 0;

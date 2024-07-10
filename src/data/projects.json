@@ -84,11 +84,7 @@
     "techno": "SvelteKit",
     "showlink": false,
     "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"],
-    "picturesMobile": [
-      "dec2-screen-mobile-1",
-      "dec2-screen-mobile-2",
-      "dec2-screen-mobile-3"
-    ]
+    "picturesMobile": ["dec2-screen-mobile-1", "dec2-screen-mobile-2", "dec2-screen-mobile-3"]
   },
   {
     "title": "Jim's Pad",
@@ -103,12 +99,7 @@
     "year": 2023,
     "techno": "SvelteKit, Tailwind, Firebase, GSAP",
     "showlink": true,
-    "pictures": [
-      "jimpad-screen-1",
-      "jimpad-screen-2",
-      "jimpad-screen-3",
-      "jimpad-screen-4"
-    ],
+    "pictures": ["jimpad-screen-1", "jimpad-screen-2", "jimpad-screen-3", "jimpad-screen-4"],
     "picturesMobile": [
       "jimpad-screen-mobile-1",
       "jimpad-screen-mobile-2",

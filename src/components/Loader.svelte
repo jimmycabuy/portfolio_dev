@@ -1,22 +1,22 @@
 <script>
-  import Background from "./Background.svelte";
-  import { onMount } from "svelte";
+  import Background from './Background.svelte';
+  import { onMount } from 'svelte';
   onMount(() => {
-    var loadingDiv = document.querySelector(".loader");
-    loadingDiv.style.opacity = "0";
-    loadingDiv.style.filter = "blur(6px)";
+    var loadingDiv = document.querySelector('.loader');
+    loadingDiv.style.opacity = '0';
+    loadingDiv.style.filter = 'blur(6px)';
     setTimeout(function () {
-      loadingDiv.style.transition = "opacity 0.3s, filter 0.3s";
-      loadingDiv.style.opacity = "1";
-      loadingDiv.style.filter = "blur(0)";
+      loadingDiv.style.transition = 'opacity 0.3s, filter 0.3s';
+      loadingDiv.style.opacity = '1';
+      loadingDiv.style.filter = 'blur(0)';
     }, 500);
     setTimeout(function () {
-      var loadingDiv = document.querySelector(".loader");
-      loadingDiv.style.filter = "blur(6px)";
+      var loadingDiv = document.querySelector('.loader');
+      loadingDiv.style.filter = 'blur(6px)';
     }, 2200);
     setTimeout(function () {
-      var loadingDiv = document.querySelector(".loader");
-      loadingDiv.style.opacity = "0";
+      var loadingDiv = document.querySelector('.loader');
+      loadingDiv.style.opacity = '0';
     }, 2400);
   });
 </script>
@@ -55,7 +55,7 @@
   }
   .loader:before,
   .loader:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;

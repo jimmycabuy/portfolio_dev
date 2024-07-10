@@ -1,6 +1,6 @@
 <script>
-  import ProjectPage from "../../../components/ProjectPage.svelte";
-  import Spinner from "../../../components/Spinner.svelte";
+  import ProjectPage from '../../../components/ProjectPage.svelte';
+  import Spinner from '../../../components/Spinner.svelte';
 
   let isLoading = true;
 
