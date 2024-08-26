@@ -11,7 +11,6 @@
         <a class="enlarged flex items-center" {href} {target}>
           <span class="icon enlarged">{@html icon}</span>
           <span class="enlarged link_footer_name text-md">{label}</span>
-          <span class="enlarged share mb-1" />
         </a>
       </div>
     {/each}

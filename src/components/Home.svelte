@@ -2,8 +2,9 @@
   import { blur } from 'svelte/transition';
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
+  import data from '../data/about.json';
 
-  const pdf = '/document/jimmy_cabuy_resume.pdf';
+  const { title, description, paragraphs, resume } = data.home;
 
   onMount(() => {
     gsap.from('.my_name', {
@@ -29,15 +30,14 @@
   <div class="container_home flex justify-center items-center">
     <div class="profile-container max-w-[75%]">
       <div class="flex flex-col gap-8 items-center text-center">
-        <h1 class="my_name text-4xl sm:text-5xl md:text-7xl">Jimmy Cabuy</h1>
+        <h1 class="my_name text-4xl sm:text-5xl md:text-7xl">{title}</h1>
         <div class="flex gap-2 flex-col md:flex-row">
-          <h2 class="my_title text-xl sm:text-2xl">Front-end developer & photographer</h2>
+          <h2 class="my_title text-xl sm:text-2xl">{description}</h2>
         </div>
-        <p class="my_description text-center leading-6">
-          I'm Jimmy, a full-stack developer, designer, and photographer with digital marketing experience. After a global
-          photography journey, I became a front-end developer at Decathlon, always seeking new challenges.
-        </p>
-        <a href={pdf} target="_blank" rel="noopener noreferrer" class="enlarged my_resume animate-bounce">
+        {#each paragraphs as p}
+          <p class="my_description text-center leading-6">{p}</p>
+        {/each}
+        <a href={resume.link} target="_blank" rel="noopener noreferrer" class="enlarged my_resume animate-bounce">
           <span class="enlarged flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@
             >
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
             </svg>
-            <p class="enlarged text-lg">My resume.</p>
+            <p class="enlarged text-lg">{resume.text}</p>
           </span>
         </a>
       </div>

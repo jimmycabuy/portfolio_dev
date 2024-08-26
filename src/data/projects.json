@@ -9,8 +9,20 @@
     "alt": "uwork",
     "href": "https://youtu.be/pDvhGFhw3gk",
     "route": "uwork",
-    "year": 2022,
-    "techno": "React Native, Node.js, MongoDB",
+    "info": [
+      {
+        "label": "category",
+        "value": "UI/UX Design & Web Development"
+      },
+      {
+        "label": "year",
+        "value": "2022"
+      },
+      {
+        "label": "techno",
+        "value": "React Native, Node.js, MongoDB"
+      }
+    ],
     "showlink": true,
     "pictures": ["uwork-screen-1", "uwork-screen-2"],
     "picturesMobile": [
@@ -32,8 +44,20 @@
     "alt": "thedailyjim",
     "href": "https://www.thedailyjim.be",
     "route": "thedailyjim",
-    "year": 2022,
-    "techno": "SvelteKit",
+    "info": [
+      {
+        "label": "category",
+        "value": "Web Design & Web Development"
+      },
+      {
+        "label": "year",
+        "value": "2022"
+      },
+      {
+        "label": "techno",
+        "value": "SvelteKit"
+      }
+    ],
     "showlink": true,
     "pictures": [
       "tdj-screen-1",
@@ -64,8 +88,20 @@
     "alt": "decathlon",
     "href": "https://decathlon-exo.vercel.app/",
     "route": "decathlon-1",
-    "year": 2022,
-    "techno": "React",
+    "info": [
+      {
+        "label": "category",
+        "value": "Web Development"
+      },
+      {
+        "label": "year",
+        "value": "2022"
+      },
+      {
+        "label": "techno",
+        "value": "React"
+      }
+    ],
     "showlink": false,
     "pictures": ["dec1-screen-1", "dec1-screen-2"],
     "picturesMobile": ["dec1-screen-mobile-1", "dec1-screen-mobile-2"]
@@ -80,8 +116,20 @@
     "alt": "decathlon",
     "href": "https://decathlon-jimmy.vercel.app/",
     "route": "decathlon-2",
-    "year": 2023,
-    "techno": "SvelteKit",
+    "info": [
+      {
+        "label": "category",
+        "value": "Web Development"
+      },
+      {
+        "label": "year",
+        "value": "2023"
+      },
+      {
+        "label": "techno",
+        "value": "SvelteKit"
+      }
+    ],
     "showlink": false,
     "pictures": ["dec2-screen-1", "dec2-screen-2", "dec2-screen-3"],
     "picturesMobile": ["dec2-screen-mobile-1", "dec2-screen-mobile-2", "dec2-screen-mobile-3"]
@@ -96,8 +144,20 @@
     "alt": "jimpad",
     "href": "https://jimnotespad.vercel.app/",
     "route": "jimpad",
-    "year": 2023,
-    "techno": "SvelteKit, Tailwind, Firebase, GSAP",
+    "info": [
+      {
+        "label": "category",
+        "value": "Web Design & Web Development"
+      },
+      {
+        "label": "year",
+        "value": "2023"
+      },
+      {
+        "label": "techno",
+        "value": "SvelteKit, Tailwind, Firebase, GSAP"
+      }
+    ],
     "showlink": true,
     "pictures": ["jimpad-screen-1", "jimpad-screen-2", "jimpad-screen-3", "jimpad-screen-4"],
     "picturesMobile": [

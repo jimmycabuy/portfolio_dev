@@ -2,6 +2,9 @@
   import { onMount } from 'svelte';
   import Timeline from '../../components/Timeline.svelte';
   import { gsap } from 'gsap';
+  import data from '../../data/about.json';
+
+  const { title, description, paragraphs } = data.about;
 
   onMount(() => {
     gsap.from('.bloc_title', {
@@ -42,7 +45,7 @@
 
 <main class="flex justify-center flex-col items-center 4xl:px-72 px-10">
   <div class="bloc_title">
-    <h1 class="text-5xl md:text-7xl py-6">I'm Jimmy.</h1>
+    <h1 class="text-5xl md:text-7xl py-6">{title}</h1>
   </div>
   <div class="flex gap-10 py-6 flex-col lg:flex-row bloc">
     <div class="w-full lg:w-1/2 bloc_image">
@@ -53,19 +56,12 @@
       />
     </div>
     <div class="w-full flex gap-5 flex-col lg:w-1/2 bloc_text">
-      <h2 class="text-2xl lg:text-4xl">I'm a front-end developer & photographer working in sunny Brussels, Belgium.</h2>
-
-      <p class="leading-8 text-justify sm:text-left">
-        I graduated with a degree in e-business from EPHEC and spent over 2 years at a digital marketing agency as a content
-        creator, social ads expert, and social media manager. I then traveled the world for 6 months, capturing unique
-        moments and landscapes as a photographer. I expanded my technical skills with an intensive JavaScript Bootcamp and
-        became a front-end developer at Decathlon Belgium, combining my diverse experiences to create exceptional web
-        experiences.
-      </p>
-      <p class="leading-8 text-justify sm:text-left">
-        My journey has shaped me into a curious and creative professional, always seeking new challenges and pushing my
-        skills to the limit.
-      </p>
+      <h2 class="text-2xl lg:text-4xl">{description}</h2>
+      {#each paragraphs as p}
+        <p class="leading-8 text-justify sm:text-left">
+          {p}
+        </p>
+      {/each}
     </div>
   </div>
   <Timeline />

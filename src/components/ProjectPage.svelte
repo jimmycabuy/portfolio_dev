@@ -55,18 +55,12 @@
   </div>
   <div class="container_one_project">
     <div class="bloc_left">
-      <div class="flex gap-12">
-        <h6 class="col1">CATEGORY</h6>
-        <h6 class="col2">{currentProjectDetails.subtitle}</h6>
-      </div>
-      <div class="flex gap-12">
-        <h6 class="col1">YEAR</h6>
-        <h6 class="col2">{currentProjectDetails.year}</h6>
-      </div>
-      <div class="flex gap-12">
-        <h6 class="col1">TECHNO</h6>
-        <h6 class="col2">{currentProjectDetails.techno}</h6>
-      </div>
+      {#each currentProjectDetails.info as { label, value }}
+        <div class="flex gap-12">
+          <h6 class="col1">{label.toUpperCase()}</h6>
+          <h6 class="col2">{value}</h6>
+        </div>
+      {/each}
     </div>
 
     <div class="bloc_right">

@@ -11,7 +11,15 @@
     currentProject = detail;
   };
 
+  const preloadImages = () => {
+    projects.forEach((project) => {
+      const img = new Image();
+      img.src = `/assets/${project.src}.webp`;
+    });
+  };
+
   onMount(() => {
+    preloadImages();
     gsap.from('.link', {
       y: 100,
       duration: 1,
