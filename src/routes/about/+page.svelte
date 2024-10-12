@@ -50,7 +50,7 @@
   <div class="flex gap-10 py-6 flex-col lg:flex-row bloc">
     <div class="w-full lg:w-1/2 bloc_image">
       <img
-        src="https://www.thedailyjim.be/assets/profilepic/jimmycabuy.webp"
+        src="https://thedailyjim.vercel.app/assets/profilepic/jimmycabuy.webp"
         alt="jimmycabuy"
         class="object-cover h-auto rounded-3xl aspect-square object-top"
       />
