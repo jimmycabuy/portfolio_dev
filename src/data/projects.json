@@ -166,5 +166,44 @@
       "jimpad-screen-mobile-3",
       "jimpad-screen-mobile-4"
     ]
+  },
+  {
+    "title": "evidensy",
+    "subtitle": "Web Design & Web Development",
+    "description": "Evidensy transforms EHRs with advanced biomedical intelligence, automating data retrieval, organization, and analysis in real time. It supports clinicians with structured notes, evidence-based insights, and secure, GDPR-compliant data handling, enabling faster, smarter precision healthcare.",
+    "tag": "web",
+    "type": "website",
+    "src": "6-evidensy",
+    "alt": "evidensy",
+    "href": "https://evidensy.vercel.app/",
+    "route": "evidensy",
+    "info": [
+      {
+        "label": "category",
+        "value": "Web Design & Web Development"
+      },
+      {
+        "label": "year",
+        "value": "2024"
+      },
+      {
+        "label": "techno",
+        "value": "SvelteKit, Tailwind, GSAP, Three.js"
+      }
+    ],
+    "showlink": true,
+    "pictures": [
+      "evidensy-screen-1.gif",
+      "evidensy-screen-2",
+      "evidensy-screen-3",
+      "evidensy-screen-4",
+      "evidensy-screen-5"
+    ],
+    "picturesMobile": [
+      "evidensy-screen-mobile-1",
+      "evidensy-screen-mobile-2",
+      "evidensy-screen-mobile-3",
+      "evidensy-screen-mobile-4"
+    ]
   }
 ]

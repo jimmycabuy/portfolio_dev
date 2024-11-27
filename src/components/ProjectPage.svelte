@@ -90,7 +90,7 @@
     <div class="container_image_screens desktop">
       {#each currentProjectDetails.pictures as picture}
         <div class="bloc_image_screen">
-          <img preload src="/assets/screens/{picture}.webp" alt={picture} />
+          <img preload src="/assets/screens/{picture.includes('gif') ? picture : picture + '.webp'}" alt={picture} />
         </div>
       {/each}
     </div>
