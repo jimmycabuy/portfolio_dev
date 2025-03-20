@@ -11,36 +11,38 @@
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<a
-  class="enlarged link"
-  href="/projects/{project.route}"
-  on:mouseover={() => setProject(project)}
-  on:mouseout={() => setProject(null)}
->
-  <div class="enlarged one_project">
-    <div class="enlarged flex items-center w-full sm:w-fit">
-      <span
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="enlarged w-6 h-6"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-        </svg>
-      </span>
-      <div class="enlarged title-wrapper justify-between w-full">
-        <h2 class="enlarged sm:text-lg">{project.title}</h2>
-        <p class="enlarged tag text-xs sm:text-xs">{project.tag}</p>
+{#if project.displayProject}
+  <a
+    class="enlarged link"
+    href="/projects/{project.route}"
+    on:mouseover={() => setProject(project)}
+    on:mouseout={() => setProject(null)}
+  >
+    <div class="enlarged one_project">
+      <div class="enlarged flex items-center w-full sm:w-fit">
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="enlarged w-6 h-6"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+        </span>
+        <div class="enlarged title-wrapper justify-between w-full">
+          <h2 class="enlarged sm:text-lg">{project.title}</h2>
+          <p class="enlarged tag text-xs sm:text-xs">{project.tag}</p>
+        </div>
       </div>
+      <h4 class="enlarged text-right hidden sm:text-lg sm:contents">
+        {project.subtitle}
+      </h4>
     </div>
-    <h4 class="enlarged text-right hidden sm:text-lg sm:contents">
-      {project.subtitle}
-    </h4>
-  </div>
-</a>
+  </a>
+{/if}
 
 <style>
   .one_project {
