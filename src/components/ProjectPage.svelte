@@ -11,12 +11,14 @@
 
   const project = $page.params.project;
   const currentProjectIndex = projects.findIndex((item) => item.route === project);
-  const totalProjects = projects.length;
-  const nextIndex = (currentProjectIndex + 1) % totalProjects;
-  const prevIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
+  const displayedProjects = projects.filter((project) => project.displayProject);
+  const totalProjects = displayedProjects.length;
   const currentProjectDetails = projects[currentProjectIndex];
-  const nextProjectDetails = projects[nextIndex];
-  const prevProjectDetails = projects[prevIndex];
+  const filteredIndex = displayedProjects.findIndex((p) => p.title === currentProjectDetails.title);
+  const nextIndex = (filteredIndex + 1) % totalProjects;
+  const prevIndex = (filteredIndex - 1 + totalProjects) % totalProjects;
+  const nextProjectDetails = displayedProjects[nextIndex];
+  const prevProjectDetails = displayedProjects[prevIndex];
 
   onMount(() => {
     gsap.from('.container_image', {
